@@ -2,9 +2,9 @@ Home, index.html, Home page;
 Site map, toc.html, Table of Contents;
 People, people.html, Project participants;
 
-Applications:  Application Areas;
-Chemistry, chem.html, Organic Chemistry;
-Biology, bio.html, RNA Splicing;
-Cognitive Science, cognitive.html, Cognitive and Behavioral Science;
-Systems, systems.html , Computing Systems;
+Chemistry Application, chem.html, Organic Chemistry;
+Biology Application, bio.html, RNA Splicing;
+Cognitive Science Application, cognitive.html, Cognitive and Behavioral Science;
+Systems Application, systems.html , Modeling Computer Systems;
+
 
