@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The title of the page</title>
+<title>People</title>
 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -48,18 +48,71 @@ title="Navigation" width="34pt"></img>
 </div>
 <script type="text/javascript">
 loadNavBar();
+
+function loadPeople(name){
+	var div = document.getElementById(name);
+	var list = div.innerHTML.split(';');
+	var html = "";
+	list.forEach((line)=>{
+			var linelist = line.split(',');
+			if(linelist.length < 3){return;}
+			var name = linelist[0];
+			if(linelist.length >5 ){
+				name = `<a href='${linelist[4]}'>${name}</a>`
+			}
+			var school = linelist[2];
+			var title = linelist[1];
+			html += `
+			<div style="width:200pt">
+			<img height="150" src='images/${linelist[3].trim()}'><BR>${name}<BR>
+			${title}, ${school}
+			</div>`;		
+	});
+	div.innerHTML = html;
+}
+
 </script>
 
 <div class="content">
 
-Your content goes here. 
-It should be good content, we want to make sure our page is awesome. 
+<h1>People</h1>
 
 
+<h2>PIs</h2>
+<div id="pi" style="flex-flow: row wrap; display: flex;">
+Armando Solar-Lezama, Associate Professor, MIT, asolar.jpg, http://people.csail.mit.edu/asolar/;
+Swarat Chaudhuri, Associate Professor, UT Austin, chaudhuri.jpg;
+Yisong Yue, Assistant Professor, Caltech, yue.jpg;
+Regina Barzilay, Professor, MIT, barzilay.jpg;
+Isil Dillig, Associate Professor, UT Austin, dillig.jpg;
+Osbert Bastani, Research Assistant Professor, University of Pennsylvania, bastani.jpg;
+Michael Carbin, Assistant Professor, MIT, carbin.jpg;
+Martin Rinard, Professor, MIT, rinard.jpg;
+Phillip Sharp, Institute Professor and Professor of Biology, MIT, sharp.jpg;
+Tommi Jaakkola, Professor, MIT, jaakkola.jpg;
+Noah Goodman, Associate Professor, Stanford, goodman.jpg;
+Chris Jermaine, Professor, Rice, jermaine.jpg;
+</div>
+
+
+<h2>Advisory Board</h2>
+<div id="advisory" style="flex-flow: row wrap; display: flex;">
+Josh Tenenbaum, Professor, MIT, tenenbaum.jpg;
+Pushmeet Kohli,  Principal scientist and research team leader, Deep Mind, kohli.jpg;
+Rishabh Singh, Research scientist, Google Brain, singh.jpg;
+Justin Gottschlich,Head of Machine Programming Research, Intel, gottschlich.jpg; 
+</div>
+
+<h2>Students</h2>
+<div id="students"></div>
 
 
 
 <script>
+
+loadPeople("pi");
+loadPeople("advisory");
+
 processDocument();
 </script>
 

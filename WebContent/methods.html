@@ -1,0 +1,115 @@
+<html>
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Machine learning meets programs synthesis</title>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="http://sketch2.csail.mit.edu/SynthesisCourse/library.js"></script>
+<script type="text/javascript" src="overrides.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onresize="resizing()">
+
+
+<div class="header">
+<h1 style="color: rgb(165, 42, 42);">Expeditions in Neurosymbolic Discovery: Understanding the World Through Code</h1>
+<p>
+<img title='mit' src='images/mit.png' height='30pt' />
+<img title='ut' src='images/ut.png' height='30pt'/>
+<img title='caltech' src='images/caltech.png' height='30pt'/>
+<img title='rice' src='images/rice.png' height='30pt'/>
+<img title='penn' src='images/penn.png' height='30pt'/>
+<img title='stanford' src='images/stanford.png' height='30pt'/>
+</p>
+<div id='navicon.div' class='navicon'>
+<img id = 'navicon' src="images/burger.rest.png" 
+onmouseenter="iconEnter(this, 'burger')"
+onmouseleave="iconLeave(this, 'burger')"
+onclick = 'toggleNav()'
+title="Navigation" width="34pt"></img>
+</div>
+</div>
+
+
+<div id="navigator" class="sidenav">
+<a href="#about">Lecture 1</a> 
+<a href="#services">Lecture 2</a> 
+<a href="#clients">Lecture 3</a> 
+<a href="#contact">Lecture 4</a>
+</div>
+<script type="text/javascript">
+loadNavBar();
+</script>
+
+<div class="content">
+
+<h1>Machine learning meets programs synthesis</h1>
+
+<p>
+<slide>
+Main:Slide25
+</slide>
+Our goal is to build a meta-framework that can be used to synthesize 
+programs to predict and understand data in a range of scientific domains. 
+In particular, this framework will synthesize <i>neurosymbolic</i> programs 
+that combine both neural and program-like logical components.
+
+For example, the figure illustrates a few examples of the kinds of compositions 
+of neural and logical components that our meta-framework will handle. 
+We plan to explore neurosymbolic models that go beyond these specific examples 
+and interleave neural and symbolic modules following complex hierarchical or 
+sequential architectures. Developing a <i>framework</i> that facilitates 
+the expression of such rich compositions --- an equivalent of Pytorch or Tensorflow 
+for neurosymbolic programming, if you will --- is a central goal of this project. 
+</p>
+
+<p>
+
+More broadly, a major goal for the project is to develop a <i>science</i> of 
+neurosymbolic learning. 
+This will include developing new algorithms 
+that specifically address the challenges in the neurosymbolic setting---e.g. 
+how to design good domain specific languages (DSLs) to support the symbolic 
+part of a model, the presence of uncertainty, the need to perform continuous 
+optimization over the neural network parameters in conjunction with discrete 
+optimization over the program structure, and the need to actively design 
+experiments to disambiguate between candidate hypotheses/programs.
+
+It will also include developing an understanding of when to deploy different 
+algorithms, as well as which combinations of neural and symbolic components work 
+better for which settings. 
+
+Our proposed framework will serve as a platform for exploring these algorithms 
+and deploying them in each of our problem domains.
+</p>
+
+
+
+
+<script>
+processDocument();
+</script>
+
+<div class="footnotes">
+
+<footnotes>
+
+</footnotes>
+
+</div>
+</div>
+
+</body>
+
+
+
+</html>

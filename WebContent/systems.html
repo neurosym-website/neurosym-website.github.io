@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The title of the page</title>
+<title>Software systems</title>
 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -52,10 +52,67 @@ loadNavBar();
 
 <div class="content">
 
-Your content goes here. 
-It should be good content, we want to make sure our page is awesome. 
+<h1>Software systems</h1>
 
 
+While many of the research questions in this proposal have been motivated from the 
+natural sciences (e.g., organic chemistry or understanding animal behavior), 
+we believe that the proposed ideas can also be gainfully applied to address  
+a number of concerns of real-world software systems. 
+
+In many ways, reasoning large scale software is akin to scientific discovery. 
+For example, consider software security: As new attacks and exploits are discovered 
+almost on a daily basis and existing software is patched to address these exploits, 
+it becomes increasingly important to construct models that explain what constitutes 
+a security vulnerability or malicious behavior. 
+
+<h2>Understanding software vulnerabilities.</h2>
+
+What constitutes a software vulnerability is not a static notion, but one that 
+evolves dynamically as attackers discover new exploits or reasonable security-theoretic 
+assumptions are challenged over time and become obsolete 
+(e.g., regarding what constitutes a sufficiently good source of entropy). 
+As a result, security experts must invest significant time and effort into  
+understanding root causes of vulnerable behavior, finding instances of these 
+vulnerabilities, and making recommendations about how to fix these vulnerabilities. 
+We believe that our proposed techniques can greatly facilitate the jobs of security 
+analysists and software developers and ultimate make secure software development a much 
+easier task than it is today.
+
+In this context, there are many sources of existing data that we can learn from. These 
+include known vulnerabilities as cataloged in CVE databases 
+and patches to existing software.  We can learn such data to both develop a model of 
+<i>what</i> constitutes a vulnerability as well as <i>how</i> to
+ fix the underlying vulnerability. Recent efforts by our team and others have already 
+ demonstrated the feasibility of this approach for some specific types of 
+ vulnerabilities<cite>long2015staged</cite><cite>Long2016</cite><cite>apisan</cite>, 
+ and we believe that the ideas outlined in this proposal can help us dramatically 
+ expand the class of vulnerabilities that can be automatically detected and patched.
+
+
+<h2>Characterizing and detecting malware.</h2> 
+While vulnerabilities correspond to unintended mistakes in otherewise-benign code, 
+another huge problem in software security is the presence of malicious applications 
+that masquerade as useful  software. Malicious applications are becoming a particularly 
+severe concern due to the soaring popularity of smart phone applications and the 
+near-infeasibility of manually vetting the enormous number of applications that 
+are submitted to a growing number of app markets. We believe that our proposed ideas 
+are ideally suited for understanding and detecting real-world malware by automatically 
+synthesizing programmatic models  of malicious behavior.
+
+While there is a large body of work on detecting malicious behavior using machine 
+learning (and, in particular, deep learning), such techniques are not widely adopted in 
+industry due to the opaque nature of these models. In particular, a significant 
+drawback of standard machine learning models is that they fail to provide <i>evidence
+ of malice</i> in cases where an application is classified as malware. 
+ Prior work by PIs Dillig and Bastani has shown that it is feasible to 
+ automatically synthesize such malware-characterizing programs given samples of benign 
+ and malicious applications<cite>feng2017automated</cite>. Building on this prior work, 
+ we plan to develop techniques that can both synthesize models for a much larger class 
+ of malware and allow security analysts gain insights into malicious behavior by 
+ querying the learned models    (e.g., ``which of these applications belong to the 
+ same malware family?'' or ''what changes are required to make this otherwise-useful 
+ application benign?'').
 
 
 

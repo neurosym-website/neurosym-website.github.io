@@ -117,7 +117,7 @@ li, ul{
   .content {
     margin-left: 5px;
     margin-right:55px;
-    margin-top:120px;
+    margin-top:140px;
   }
 }
 
@@ -140,7 +140,8 @@ td, th {
 }@media  only screen and (max-width: 1000px) {
   .slideview {
     float: none; 
-	width:100%;	
+	width:90%;	
+	height: auto;
   }
 }
 .expandslide{
@@ -195,7 +196,7 @@ tr:nth-child(even) {
     font-size: 80%;
 }@media only screen and (max-width: 700px) {
   .header {
-   height: 120px;
+   height: 140px;
    padding-top: 0px;
   }
 }
@@ -225,7 +226,7 @@ tr:nth-child(even) {
     display:inline;
 }@media  only screen and (max-width: 700px) {
   .sidenav {    
-    top: 120px;
+    top: 140px;
     display:none;
   }
 }
