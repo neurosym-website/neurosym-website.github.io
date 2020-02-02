@@ -69,7 +69,7 @@ li, ul{
 .navicon{
 	display:none;
 	position: absolute;
-	top: 35px;
+	top: 50px;
 	right: 50px;
 	padding-right: 5px;
 	padding-bottom: 5px;
@@ -77,6 +77,12 @@ li, ul{
 	padding-top: 5px;
 }@media  only screen and (max-width: 700px) {
   .navicon{
+    right: 10%;
+    display:inline
+  }
+}@media  only screen and (max-width: 465px) {
+  .navicon{
+    top: 50px;
     right: 10%;
     display:inline
   }
@@ -109,15 +115,15 @@ li, ul{
 
 .content {
 	margin-left: 60px;
-	margin-top:130px;
-	margin-right:160px;
+	margin-top:140px;
+	margin-right:190px;
 	line-height: 1.5;
 	
 }@media  only screen and (max-width: 700px) {
   .content {
     margin-left: 5px;
     margin-right:55px;
-    margin-top:140px;
+    margin-top:95px;
   }
 }
 
@@ -183,8 +189,8 @@ tr:nth-child(even) {
 
 
 .header {
-    height: 120px;
-    width: 100%;
+    height: 130px;
+    width: 90%;
     position: fixed;
     z-index: 2;
     top: 0;
@@ -193,10 +199,11 @@ tr:nth-child(even) {
     overflow-x: hidden;
     padding-top: 2px;
     padding-left:16px;
+
     font-size: 80%;
 }@media only screen and (max-width: 700px) {
   .header {
-   height: 140px;
+   height: 90px;
    padding-top: 0px;
   }
 }
@@ -206,19 +213,51 @@ tr:nth-child(even) {
     text-decoration: none;
     font-size: 180%;
     color: rgb(165, 42, 42);
-    
+    margin-bottom: 1px;
+    text-align: center;
 }@media only screen and (max-width: 700px) {
   .header h1{
+  text-align: left;
    padding: 0px 6px 0px 0px;
+  }
+}@media only screen and (max-width: 464px) {
+  .header h1{
+  text-align: left;
+  font-size: 150%;
+   padding: 0px 6px 0px 0px;
+  }
+}
+
+.logos{
+	text-align:center;
+	height:28pt;
+}@media only screen and (max-width: 700px){
+	.logos{
+	height:15pt;
+	text-align: left;
+	}
+}
+
+.header h2{
+	margin-top: 1px;
+	text-align: center;
+}@media only screen and (max-width: 700px) {
+  .header h2{
+  text-align: left;   
+  }
+}@media only screen and (max-width: 464px) {
+  .header h2{
+  text-align: left;
+  font-size: 100%;
   }
 }
 
 .sidenav {
     height: 86%;
-    width: 160px;
+    width: 180px;
     position: fixed;
     z-index: 1;
-    top: 120px;
+    top: 130px;
     right: 0;
     background-color: #FFFFFF;
     overflow-x: hidden;
@@ -226,13 +265,19 @@ tr:nth-child(even) {
     display:inline;
 }@media  only screen and (max-width: 700px) {
   .sidenav {    
-    top: 140px;
+    top: 90px;
     display:none;
   }
 }
 
 .sidenav {   
     font-size: 100%;
+}
+
+.sidenav div{
+	margin-top: 6pt;
+	margin-bottom:3pt;
+	margin-left:-3pt;
 }
 
 .sidenav a, .sidelink {

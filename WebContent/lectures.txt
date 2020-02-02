@@ -1,7 +1,8 @@
 Home, index.html, Home page;
 Site map, toc.html, Table of Contents;
 People, people.html, Project participants;
-
+Events, events.html, Events;
+Research:;
 Neurosymbolic Learning, methods.html, Machine learning meets program synthesis; 
 Chemistry Application, chem.html, Organic Chemistry;
 Biology Application, bio.html, RNA Splicing;
