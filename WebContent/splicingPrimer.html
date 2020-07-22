@@ -83,13 +83,13 @@ The first two (adenine and guanine) are known as purines, and the other two
 (thiamine and cytosine)
 are known as pyrimidines. The most important thing to know about DNA is that
 adenine and thiamine always match together as do guanine and cytosine.
-
+<p/>
 DNA is generally aranged as two complementary sequences of nucleotides, where every
 base in the first sequence has a corresponding matching base in the second sequence
 as illustrated in the figure. Each sequence has a starting point,
 known as the 5' (five prime) end, and an end point,
 known as the 3' end.
-
+<p/>
 A fragment of DNA that encodes for a protein is known as a gene. The first step in
 creating a protein from a gene is known as RNA transctiption.
 
@@ -100,7 +100,7 @@ strands of DNA are separated , and an enzyme called RNA polymerase assembles a s
 of RNA by adding one nucleotide at a time to the 3' end of an RNA sequence. As a computer
 scientist, the most important thing to know about RNA is that it is also composed
 of nucleotides, but the thiamine is replaced with the pyrimidine uracil (abreviated as u).
-
+<p/>
 This strand of RNA is called a messenger RNA (mRNA) and it will
 carry the information about how to construct the
 protein out of the nucleus and into the
@@ -117,20 +117,20 @@ Some RNA sequences are always spliced the same way (this is known
 as constitutive splicing), although in some instances,
 the same sequence can splice in multiple different ways depending on the
 environment (this is known as alternative splicing).
-
+<p/>
 The fundamental question that we want to answer is: How does splicing work?
 More specifically, there are multiple different questions that we can answer.
 
 <h3>The constitutive splicing code.</h3>
 The simplest version of the question is, can we identify all the locations in
 an RNA sequence that could be the start or end of an intron.
-
+<p/>
 Some of the standard measures of quality for such a model are:
 <ul>
 <li>False positives and false negatives in identifying start and end of introns</li>
 <li>Fraction of genes with correctly predicted splices</li>
 </ul>
-
+<p/>
 In the simplest case, we can just train a model with a set of RNA sequences
 labeled with the start and end of all their introns and use it to make predictions
 for new sequences. However, we would like to have models that satisfy the
@@ -161,7 +161,7 @@ a single sequence of pre-mRNA?
 <h2>Some things we know about splicing</h2>
 There is a broad literature on splicing, but below are a few of the things we know
 about how splicing works that would be useful to incorporate into any model.
-
+<p/>
 First, introns tend to follow a common pattern. The start of an intron (the 5' end)
 often refered to as the <i>donor site</i> usually starts with the sequence 'GU'.
 The end of the intron, (the 3' end) often refered to as the <i>acceptor site</i>,
@@ -170,17 +170,17 @@ usually ends with the sequence 'AG'. These patterns are known as
 sequences</a>, and you can find published data on the
 <a href="http://science.umd.edu/labs/mount/RNAinfo/matrices.html">matrices that define
 these consensus sequences</a>.
-
+<p/>
 In the middle of the intron, there is a region known as the branch site that
 always includes an 'A', and often has a distinctive pattern. Between the
 branch site and the acceptor site, there is usually a <i>pyrimidine tract</i>,
 a sequence of 'U's or 'C's.
-
+<p/>
 Splicing is performed by a complex of <i>small nuclear ribonucleoproteins</i>
 (snRNPs pronounced as "snurps") known as the <i>spliceosome</i>. The spliceosome
 is composed of 5 snRNPs called U1, U2, U4, U5 and U6, and is aided and regulated by a
 large number (about 150) of RNA-binding molecules.
-
+<p/>
 The figure provides a cartoon illustration of how these snRNPs attach to the
 RNA and manipulate it in order to splice out the intron into a structure known
 as a lariat. The crucial question is: how do these snRNPs know where to attach?
@@ -188,7 +188,7 @@ The consensus sequences at the ends of the intron are not specific enough to reg
 process. We cannnot just say "Every GU is the start of an intron and every AG is
 the end of one". Consensus sequences that don't correspond to actual start and
 ends of introns are known as cryptic splice sites.
-
+<p/>
 We know the proces is regulated by additional RNA-binding molecules
 that attach to particular sequences of RNA known as Splicing Regulatory Elements (SREs).
 
@@ -214,20 +214,20 @@ attach to the donor site. A consensus sequence that does not have this ESE nearb
 more likely to be a cryptic splice site. As another examples, ESSs can bind
 a type of proteins called hnRNP I, which can inhibit splicing by blocking the
 interaction between U1 and U2.
-
+<p/>
 Usually, the SREs will correspond to short patterns. When modeling, it is common
 to assume they are hexamers (aka 6mers or 6-base long patterns). One important
 consideration is that some SRE sequences have been observed to be context
 dependent, so they can act as silencers or enhancers depending on the context.
 The patterns can also be species specific, and some categories of organisms rely more on intronic
 SREs, whereas others rely more on exonic SREs.
-
+<p/>
 In many cases, the action of SREs is additive, so more enhancers nearby will
 increase the probability that a particular consensus sequence is a real splice
 site. However, sometimes the interactions are non-linear, so a particular
 combination of enhancers will have a strong effect even if each enhancer individually
 would have none.
-
+<p/>
 A key aspect of the models we are trying to build will be to incorporate what
 is known about existing SREs to help train models with less data, as well as
 to generate new hypothesis about SREs and their interactions.
