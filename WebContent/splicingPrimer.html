@@ -1,0 +1,257 @@
+<html>
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RNA Splicing primer for the FM community</title>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="http://sketch2.csail.mit.edu/SynthesisCourse/library.js"></script>
+<script type="text/javascript" src="overrides.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onresize="resizing()">
+
+
+<div class="header">
+<h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
+<h2 style="color: 'black';">Funded through the NSF Expeditions in Computing Program</h2>
+<div class="logos">
+<img title='mit' src='images/mit.png' height='100%' />
+<img title='ut' src='images/ut.png' height='100%'/>
+<img title='caltech' src='images/caltech.png' height='100%'/>
+<img title='rice' src='images/rice.png' height='100%'/>
+<img title='penn' src='images/penn.png' height='100%'/>
+<img title='stanford' src='images/stanford.png' height='100%'/>
+</div>
+<div id='navicon.div' class='navicon'>
+<img id = 'navicon' src="images/burger.rest.png"
+onmouseenter="iconEnter(this, 'burger')"
+onmouseleave="iconLeave(this, 'burger')"
+onclick = 'toggleNav()'
+title="Navigation" width="34pt"></img>
+</div>
+</div>
+
+
+<div id="navigator" class="sidenav">
+<a href="#about">Lecture 1</a>
+<a href="#services">Lecture 2</a>
+<a href="#clients">Lecture 3</a>
+<a href="#contact">Lecture 4</a>
+</div>
+<script type="text/javascript">
+loadNavBar();
+</script>
+
+<div class="content">
+
+<h1>An RNA splicing primer</h1>
+
+The problem of predicting RNA splicing is of crucial importance to biology, and
+is one where formal methods and machine learning have a lot to contribute.
+In this tutorial we explain the basics of the RNA splicing problem.
+This content sumarizes data from multiple sources<cite>WangCooper07</cite><cite>WangBurge08</cite>
+and is expected to serve as a quick primer for researchers from the ML and PL community
+who want to work on this problem.
+
+<iframe class="alwaysbig" style="padding:0; border:10px solid #ffffff;"
+src="https://code.playskript.com/view.html?id=7ada05c8da0b0be99857662dd432356db6b1c14f29e03ce826"
+sandbox="allow-forms
+allow-pointer-lock
+allow-same-origin
+allow-scripts
+allow-top-navigation"
+height="500"
+width="500">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+<h2>The basics of DNA </h2>
+To understand the RNA splicing problem, it is important to first understand how
+cells make proteins. The starting point for the synthesis of a protein is a sequence of
+DNA (the primary sequence). DNA is composed of 4 basic nucleotides:
+adenine, guanine, thiamine and cytosine, usually abreviated as a, g, t and c.
+The first two (adenine and guanine) are known as purines, and the other two
+(thiamine and cytosine)
+are known as pyrimidines. The most important thing to know about DNA is that
+adenine and thiamine always match together as do guanine and cytosine.
+
+DNA is generally aranged as two complementary sequences of nucleotides, where every
+base in the first sequence has a corresponding matching base in the second sequence
+as illustrated in the figure. Each sequence has a starting point,
+known as the 5' (five prime) end, and an end point,
+known as the 3' end.
+
+A fragment of DNA that encodes for a protein is known as a gene. The first step in
+creating a protein from a gene is known as RNA transctiption.
+
+<h2>Transcription at a glance</h2>
+The goal of transcription is to create a strand of RNA that copies the information
+contained in the original DNA strand. During transcription, the two complementary
+strands of DNA are separated , and an enzyme called RNA polymerase assembles a strand
+of RNA by adding one nucleotide at a time to the 3' end of an RNA sequence. As a computer
+scientist, the most important thing to know about RNA is that it is also composed
+of nucleotides, but the thiamine is replaced with the pyrimidine uracil (abreviated as u).
+
+This strand of RNA is called a messenger RNA (mRNA) and it will
+carry the information about how to construct the
+protein out of the nucleus and into the
+ribosomes where the proteins will be assembled.
+But before that happens, in fact as the
+RNA polymerase is assembling the RNA, this RNA
+must be spliced.
+
+<h2>Splicing basics</h2>
+Before the mRNA is spliced, it is called a pre-mRNA. The parts of the pre-mRNA
+that will be cut out (spliced) are known as introns. Those that will stay as
+part of the final RNA are called exons (the ex stands for expressed).
+Some RNA sequences are always spliced the same way (this is known
+as constitutive splicing), although in some instances,
+the same sequence can splice in multiple different ways depending on the
+environment (this is known as alternative splicing).
+
+The fundamental question that we want to answer is: How does splicing work?
+More specifically, there are multiple different questions that we can answer.
+
+<h3>The constitutive splicing code.</h3>
+The simplest version of the question is, can we identify all the locations in
+an RNA sequence that could be the start or end of an intron.
+
+Some of the standard measures of quality for such a model are:
+<ul>
+<li>False positives and false negatives in identifying start and end of introns</li>
+<li>Fraction of genes with correctly predicted splices</li>
+</ul>
+
+In the simplest case, we can just train a model with a set of RNA sequences
+labeled with the start and end of all their introns and use it to make predictions
+for new sequences. However, we would like to have models that satisfy the
+following properties:
+<ul>
+<li>Generalize well to unseen data
+  (bonus points if they generalize to brand new mutations.)</li>
+  <li>Transfer across species. It is unlikely that the models will generalize out-of-the-box
+    across species,
+  but it would be great to be able to do meta-learning to help you
+  train a model for a new species very efficiently with little data
+based on knowledge accumulated from other species.</li>
+<li>Provide insight about the underlying splicing mechanisms.</li>
+<li>Incorporate our existing knowledge about splicing.</li>
+<li>Can make use of all the different sources of data available.</li>
+</ul>
+
+<h3>Alternative splicing.</h3>
+
+For sequences that are alternatively spliced, can we label each splice site
+with the probability that it will splice at that point?
+
+And even better, can we identify the actual sequences that can be produced from
+a single sequence of pre-mRNA?
+
+
+
+<h2>Some things we know about splicing</h2>
+There is a broad literature on splicing, but below are a few of the things we know
+about how splicing works that would be useful to incorporate into any model.
+
+First, introns tend to follow a common pattern. The start of an intron (the 5' end)
+often refered to as the <i>donor site</i> usually starts with the sequence 'GU'.
+The end of the intron, (the 3' end) often refered to as the <i>acceptor site</i>,
+usually ends with the sequence 'AG'. These patterns are known as
+<a href='https://science.umd.edu/labs/mount/RNAinfo/consensus.html'> consensus
+sequences</a>, and you can find published data on the
+<a href="http://science.umd.edu/labs/mount/RNAinfo/matrices.html">matrices that define
+these consensus sequences</a>.
+
+In the middle of the intron, there is a region known as the branch site that
+always includes an 'A', and often has a distinctive pattern. Between the
+branch site and the acceptor site, there is usually a <i>pyrimidine tract</i>,
+a sequence of 'U's or 'C's.
+
+Splicing is performed by a complex of <i>small nuclear ribonucleoproteins</i>
+(snRNPs pronounced as "snurps") known as the <i>spliceosome</i>. The spliceosome
+is composed of 5 snRNPs called U1, U2, U4, U5 and U6, and is aided and regulated by a
+large number (about 150) of RNA-binding molecules.
+
+The figure provides a cartoon illustration of how these snRNPs attach to the
+RNA and manipulate it in order to splice out the intron into a structure known
+as a lariat. The crucial question is: how do these snRNPs know where to attach?
+The consensus sequences at the ends of the intron are not specific enough to regulate this
+process. We cannnot just say "Every GU is the start of an intron and every AG is
+the end of one". Consensus sequences that don't correspond to actual start and
+ends of introns are known as cryptic splice sites.
+
+We know the proces is regulated by additional RNA-binding molecules
+that attach to particular sequences of RNA known as Splicing Regulatory Elements (SREs).
+
+<h3>Splicing regulatory elemsnts (SREs)</h3>
+There are 4 main types of SREs:
+<ul>
+<li>ESE: Exonic splicing enhancer, attaches to an exon and promotes splicing nearby.</li>
+<li>ESS: Exonic splicing silencer, attaches to an exon and inhibits splicing nearby.</li>
+<li>ISE: Intronic splicing enhancer, attaches to an intron and promotes splicing nearby.</li>
+<li>ISS: Intronic splicing silencer, attaches to an intron and inhibits splicing nearby.</li>
+</ul>
+
+These splicing enhancer and silencers
+are known as cis-acting elements (cis==same) because they are a pattern in the
+RNA molecule that affects the splicing of that molecule.
+These elements work by recruiting trans-acting elements (trans==different), which
+are different proteins present in the nucleus which are recruited into the splicing
+machinery.
+For example, in the exon,
+we generally find ESE sequences close to the exon-intron boundary. These help
+recruit SR proteins (a type of RNA-binding protein) which then help the U1 snRNP
+attach to the donor site. A consensus sequence that does not have this ESE nearby is
+more likely to be a cryptic splice site. As another examples, ESSs can bind
+a type of proteins called hnRNP I, which can inhibit splicing by blocking the
+interaction between U1 and U2.
+
+Usually, the SREs will correspond to short patterns. When modeling, it is common
+to assume they are hexamers (aka 6mers or 6-base long patterns). One important
+consideration is that some SRE sequences have been observed to be context
+dependent, so they can act as silencers or enhancers depending on the context.
+The patterns can also be species specific, and some categories of organisms rely more on intronic
+SREs, whereas others rely more on exonic SREs.
+
+In many cases, the action of SREs is additive, so more enhancers nearby will
+increase the probability that a particular consensus sequence is a real splice
+site. However, sometimes the interactions are non-linear, so a particular
+combination of enhancers will have a strong effect even if each enhancer individually
+would have none.
+
+A key aspect of the models we are trying to build will be to incorporate what
+is known about existing SREs to help train models with less data, as well as
+to generate new hypothesis about SREs and their interactions.
+
+
+
+
+
+
+<script>
+processDocument();
+</script>
+
+<div class="footnotes">
+
+<footnotes>
+
+</footnotes>
+
+</div>
+</div>
+
+</body>
+
+
+
+</html>
