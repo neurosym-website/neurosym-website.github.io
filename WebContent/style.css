@@ -57,6 +57,24 @@ th, td {
 }
 }
 
+.talk_box{
+	border: 1px solid lavender;
+	background-color: white;
+  	padding: 10px;
+  	padding-left:30px;
+  	padding-right:30px;
+	width:80%;
+	margin-left:20px;
+}
+
+.talk_box h1{
+	font-size:100%;
+}
+
+.whenwhere{
+	
+}
+
 
 
 li, ul{
