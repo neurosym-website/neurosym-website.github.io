@@ -65,15 +65,19 @@ Pietro Perona &mdash; leader of the Computation and Neural Systems program at th
 <div class="talk_box">
 <h1>A sense for number and quantity as an emergent property of a manipulating agent</h1>
 
-The ability to understand and manipulate numbers and quantities emerges during childhood, but the mechanism through which this ability is developed is still poorly understood. In particular, it is not known whether acquiring such a `number sense’ is possible without supervision from a teacher.
+The ability to understand and manipulate numbers and quantities emerges during childhood, but the mechanism through which this ability is developed is still poorly understood. In particular, it is not known whether acquiring such a number sense is possible without supervision from a teacher.
 <br/>
-To explore this question, we propose a model in which spontaneous and undirected manipulation of small objects trains perception to predict the resulting scene changes. We find that, from this task, a representation emerges that supports understanding numbers and quantity. Emergent properties include distinct categories for zero and the first few natural numbers, a notion of order, and a signal that correlates with numerical quantity. As a result, our model acquires the ability to estimate the number of objects in the scene, as well as `subitization’, i.e. the ability to recognize at a glance the exact number of objects in small scenes. We conclude that important aspects of a facility with numbers and quantities may be learned without explicit teacher supervision.
+<br/>
+To explore this question, we propose a model in which spontaneous and undirected manipulation of small objects trains perception to predict the resulting scene changes. We find that, from this task, a representation emerges that supports understanding numbers and quantity. Emergent properties include distinct categories for zero and the first few natural numbers, a notion of order, and a signal that correlates with numerical quantity. As a result, our model acquires the ability to estimate the number of objects in the scene, as well as subitization, i.e. the ability to recognize at a glance the exact number of objects in small scenes. We conclude that important aspects of a facility with numbers and quantities may be learned without explicit teacher supervision.
+<br/>
 <br/>
 Joint work with Neehar Kondapaneni
 <p/>
 <B>Bio:</B>  Pietro Perona received a Ph.D. in electrical engineering and computer science from the University of California, Berkeley, in 1990. In 1990, he was postdoctoral fellow at the International Computer Science Institute at Berkeley. From 1990 to 1991, he was a postdoctoral fellow at the Massachusetts Institute of Technology in the Laboratory for Information and Decision Systems. In the fall of 1991, Perona joined the California Institute of Technology as assistant professor. He became full professor in 1996 and the Allen E. Puckett Professor of Electrical Engineering and Computation and Neural Systems in 2006. From 1999 to 2005, Perona was the director of the National Science Foundation Center for Neuromorphic Systems Engineering. Since 2005, he has led the Computation and Neural Systems program at the California Institute of Technology.
 <br/>
+<br/>
 Perona’s research focuses on the computational aspects of vision and learning. He is known for the anisotropic diffusion equation, a partial differential equation that filters image noise while enhancing region boundaries. He is currently interested in visual recognition and in visual analysis of behavior. In the early 2000s, Perona pioneered the study of visual categorization. Currently, in collaboration with colleagues Michael Dickinson and David Anderson, he applies machine vision to measuring and analyzing the behavior of laboratory animals.
+<br/>
 <br/>
 Perona is the recipient of the 2013 Longuet-Higgins Prize and of the 2010 Koenderink Prize for fundamental contributions in computer vision. He is the recipient of the 2003 Institute of Electrical and Electronics Engineers–Conference on Computer Vision and Pattern Recognition best paper award. He is also the recipient of a 1996 NSF Presidential Young Investigator Award.
 
@@ -121,6 +125,7 @@ Yu Feng &mdash; Assistant Professor at UC Santa Barbara &mdash; will be talking 
 	
 As smart contracts gain adoption in financial transactions, it becomes increasingly important to ensure that they are free of bugs and security vulnerabilities. We present SolType, a refinement type system for Solidity that can be used to prevent arithmetic over- and under-flows in smart contracts. SolType allows developers to add refinement type annotations and uses them to prove the safety of arithmetic operations. Specifically, SolType incorporates a rich vocabulary of refinement terms that allow expressing relationships between integer values and aggregate properties of complex data structures. To reduce manual annotations, SolType also incorporates a type inference engine using CHC solvers and can automatically infer non-trivial contract invariants.
 <br/>
+<br/>
 Even with the type inference engine, there are still many cases in which we can not infer the invariants, which is a fundamental problem in smart contract verification. Inspired by how human experts construct contract invariants, we propose Venti, the first learning framework for contract invariants. We show how to formulate learning contract invariants as a Markov decision process (MDP) and use reinforcement learning to synthesize the invariants for the underlying MDP. By training with reinforcement learning, Venti captures rich program features and avoids the need for ground truth solutions as supervision. Compared to previous learning tasks for invariant generation, it addresses unique challenges, such as a compact graph representation that dramatically reduces the size of the smart contract while preserving its core semantics.
 <p/>
 <B>Bio:</B> Yu Feng is an assistant professor at UC Santa Barbara and his research areas include program analysis, verification, and synthesis.  He also conducts research at the intersection of security, data science, visualization, and formal methods. He is the recipient of several best paper awards at PLDI'18, ASE'20, and CHI'21, as well as a Google Faculty research award in 2021.
@@ -145,6 +150,7 @@ Xinyun Chen &mdash; Ph.D. candidate at UC Berkeley &mdash; will be talking about
 <h1>Neural Program Synthesis for Language Understanding in the Wild</h1>
 	
 Deep neural networks have achieved remarkable success in natural language processing, especially with the advancement of pre-training techniques. Moreover, recent works show that by training on a large-scale code corpus, sometimes these language models could even generate moderately complicated code from text descriptions, including Tabnine and Codex. In this talk, I will discuss my research on deep learning for program synthesis with two central goals: (1) developing program synthesizers that learn to infer the user intents for real-world deployment; and (2) improving the reasoning and generalization capabilities of existing language models via symbolic representations.
+<br/>
 <br/>
 First, I will discuss my SpreadsheetCoder work, where we aim to predict spreadsheet formulas only from the user-written tabular data, without the requirements of any explicit specifications. The SpreadsheetCoder model was recently integrated into Google Sheets, and could potentially benefit hundreds of millions of users. In the second part of my talk, I will go beyond program synthesis applications, and discuss my work on neural-symbolic techniques for language understanding. Despite the tremendous achievements of pre-trained language models, large-scale training does not automatically result in the capability of complex reasoning beyond text pattern matching. By integrating a symbolic reasoning module that synthesizes and executes programs for the task of interest, our neural-symbolic models demonstrate superior compositional reasoning ability, including numerical reasoning and compositional generalization.
 <p/>
@@ -171,10 +177,11 @@ Petar Veličković &mdash; Senior Research Scientist at DeepMind &mdash; will be
 
 Neural networks that are able to reliably execute algorithmic computation may hold transformative potential to both machine learning and theoretical computer science. On one hand, they could enable the kind of extrapolative generalisation scarcely seen with deep learning models. On another, they may allow for running classical algorithms on inputs previously considered inaccessible to them.
 <br/>
+<br/>
 Both of these promises are shepherded by the neural algorithmic reasoning blueprint, which I have recently proposed in a position paper alongside Charles Blundell. On paper, this is a remarkably elegant pipeline for reasoning on natural inputs which carefully leverages the tried-and-tested power of deep neural networks as feature extractors. In practice, how far did we actually take it?
 <br/>
-In this talk, I will present three concrete steps we've recently taken towards viably deploying the blueprint at scale:
 <br/>
+In this talk, I will present three concrete steps we've recently taken towards viably deploying the blueprint at scale:
 <br/>
     A dataset of algorithmic reasoning tasks, to be used as a bootstrapping basis; <br/>
     Using algorithmic reasoners to positively modulate self-supervised representations; <br/>
