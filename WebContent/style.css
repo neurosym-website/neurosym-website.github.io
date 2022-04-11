@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 
 
@@ -29,11 +29,12 @@ h2::before {
 
 
 table {
-    border-collapse: collapse;
+	border-collapse: collapse;
 	border: 1px solid black;
-	background:#A2A0D9
+	/*background:#A2A0D9;*/
 	text-align: left;
 }
+
 
 th, td {
     padding: 10px;
@@ -48,6 +49,33 @@ th, td {
 	}
 }
 
+
+.summerschedule {
+	display: flex;
+	text-align:center;
+}
+
+@media only screen and (max-width: 1100px) {
+	.summerschedule {
+		display: block;
+	}
+}
+
+
+.summerschedule table {	
+	width: 65%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+@media only screen and (max-width: 1100px) {
+	.summerschedule table {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 .schedule table{
 	margin:20px;
 	width:45%;
@@ -55,6 +83,26 @@ th, td {
   .schedule table{	
 	width:80%;
 }
+}
+
+ .summer{
+
+
+ }
+
+ .summer table{
+	 width:100%;
+ }
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+.summer tr:nth-child(even) {
+	background-color: #dddddd;
+}
+.summer tr:nth-child(odd) {
+	background-color: #FFFFFF;
 }
 
 .talk_box{
@@ -196,11 +244,6 @@ td, th {
 }
 
 
-
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
 
 .quote{
 	background-color: rgb(240,240,240);

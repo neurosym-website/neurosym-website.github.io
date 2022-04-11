@@ -1,10 +1,10 @@
-<html>
+﻿<html>
 
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Events</title>
+<title>Summer school on Neurosymbolic Programming 2022</title>
 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
@@ -54,247 +54,343 @@ loadNavBar();
 
 <div class="content">
 
-<h1>Neurosymbolic programming summer school 2022</h1>
- <p> The goal of the summer school is to bring together students and researchers from different backgrounds who are interested in doing research in neurosymbolic learning and give an opportunity to learn about the state of the art and open problems. </p>
+    <h1>Summer school on Neurosymbolic Programming 2022</h1>
+    <p> The goal of the summer school is to bring together students and researchers from different backgrounds who are interested in doing research in neurosymbolic learning and give an opportunity to learn about the state of the art and open problems. </p>
 
-<p>The summer school will take place  on July 11-13 at the California Institute of Technology in Pasadena, California USA. <a href="https://forms.gle/LMVo1KEiJxPLtLfu9">Apply here</a> to attend the summer school; the application deadline is <b>May 20</b> . Limited funds for travel grants are available.</p>
-	  
-<div class="schedule">
-  <table>
-   <tbody><tr>
-    <th colspan="2">Monday July 11 2022</th>    
-  </tr>
-  <tr>
-    <th>Time</th>
-    <th>Event</th>
-  </tr>
-  <tr>
-    <td>9am</td>
-    <td><p>Day 1 Introductory remarks&nbsp;</p>
-      <p>&nbsp;</p></td>        
-  </tr>
-	    <tr>
-    <td>9:15 to 10&nbsp;</td>
-    <td><p>Keynote 1</p>
-      <p>&nbsp;Jacob Andreas</p></td>        
-  </tr>
-  <tr>
-    <td>&nbsp;10:30 to 10:45</td>
-    <td>BREAK</td>        
-  </tr>
-  
-  <tr>
-    <td>10:45 to 12:00</td>
-    <td>&nbsp;Yisong Yue/Swarat Chaudhury -&nbsp; &nbsp; Tutorial 1
-    </td>        
-  </tr>
-  
-  <tr>
-    <td>12:00 to 13:00&nbsp;</td>
-    <td>Lunch</td>        
-  </tr>
-  
-  <tr>
-    <td>13:00 to 14:00</td>
-    <td>Guy Van Den Broeck talk&nbsp; 
-    </td>        
-  </tr>
-  
-  <tr>
-    <td>&nbsp;14:00 to 14:30</td>
-    <td>BREAK</td>        
-  </tr>
-  
-  <tr>
-    <td>14:30 to 15:30&nbsp;</td>
-    <td>Nadia Polikarpova/Armando Solar-Lezama program synthesis tutorial 1</td>        
-  </tr>
-  
-  <tr>
-    <td>15:30 to 15:45</td>
-    <td>Minbreak&nbsp;</td>        
-  </tr>
-  
-  <tr>
-    <td>&nbsp;15:45 to 16:45</td>
-    <td>&nbsp;Osbert Bastani talk</td>        
-  </tr>
-  
-  <tr>
-    <td>16:45 to 18:00</td>
-    <td>&nbsp;Isil Ding talk
-    </td>    
-  </tr>
-  <tr>
-    <td>18:00 to 20:00</td>
-    <td>Dinner</td>        
-  </tr>
-</tbody></table>
+    <p>The summer school will take place  on July 11-13 at the California Institute of Technology in Pasadena, California USA. <a href="https://forms.gle/LMVo1KEiJxPLtLfu9">Apply here</a> to attend the summer school; the application deadline is <b>May 20</b> . Limited funds for travel grants are available.</p>
+    <script>
+        function mon() {
+            let div = document.getElementById("monSchedule")
+            div.style.display = 'block';
+            div = document.getElementById("tuesSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("wedSchedule")
+            div.style.display = 'none';
 
-	
-</div>
+            div = document.getElementById("mondayTag");
+            div.style.backgroundColor = '#dddddd'
+            div = document.getElementById("tuesdayTag");
+            div.style.backgroundColor = '#FFFFFF'
+            div = document.getElementById("wednesdayTag");
+            div.style.backgroundColor = '#FFFFFF'
+        }
+        function tues() {
+            let div = document.getElementById("monSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("tuesSchedule")
+            div.style.display = 'block';
+            div = document.getElementById("wedSchedule")
+            div.style.display = 'none';
 
-<div class="schedule">
- <table>
-   <tbody><tr>
-    <th colspan="2">Tuesday July 12 2022</th>    
-  </tr>
-  <tr>
-    <th>Time</th>
-    <th>Event</th>
-  </tr>
-  <tr>
-    <td>9am</td>
-    <td><p>Day 2 Introductory remarks</p>
-      <p>&nbsp;</p></td>        
-  </tr>
-	    <tr>
-    <td>9:15 to 10&nbsp;</td>
-    <td><p>Keynote 2</p>
-      <p>&nbsp;Katie Bouman&nbsp;</p></td>        
-  </tr>
-  <tr>
-    <td>&nbsp;10:30 to 10:45</td>
-    <td>BREAK</td>        
-  </tr>
-  
-  <tr>
-    <td>10:45 to 12:00</td>
-    <td>&nbsp;Yisong Yue/Swarat Chaudhury&nbsp; Tutorial 2
-    </td>        
-  </tr>
-  
-  <tr>
-    <td>12:00 to 13:00&nbsp;</td>
-    <td>Lunch
-    </td>        
-  </tr>
-  
-  <tr>
-    <td>13:00 to 14:00</td>
-    <td>Charles Sutton talk
-    </td>        
-  </tr>
-  
-  <tr>
-    <td>&nbsp;14:00 to 14:15</td>
-    <td>BREAK</td>        
-  </tr>
-  
-  <tr>
-    <td>14:15 to 15:15&nbsp;</td>
-    <td>Vikash Mansinghka tutorial part 1</td>        
-  </tr>
-  
-  <tr>
-    <td>15:15 to 15:30</td>
-    <td>break</td>        
-  </tr>
-  
-  <tr>
-    <td>&nbsp;15:30 to 16:30</td>
-    <td>Talk TBA&nbsp;</td>        
-  </tr>
-  
-  <tr>
-    <td>16:30 to 18:00</td>
-    <td>&nbsp;Outing slot 2
-    </td>    
-  </tr>
-  <tr>
-    <td>18:00 to 20:00</td>
-    <td>Dinner</td>        
-  </tr>
-</tbody></table>
+            div = document.getElementById("mondayTag");
+            div.style.background = '#FFFFFF'
+            div = document.getElementById("tuesdayTag");
+            div.style.background = '#dddddd'
+            div = document.getElementById("wednesdayTag");
+            div.style.background = '#FFFFFF'
+        }
+        function wed() {
+            let div = document.getElementById("monSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("tuesSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("wedSchedule")
+            div.style.display = 'block';
 
-	
-</div>
+            div = document.getElementById("mondayTag");
+            div.style.background = '#FFFFFF'
+            div = document.getElementById("tuesdayTag");
+            div.style.background = '#FFFFFF'
+            div = document.getElementById("wednesdayTag");
+            div.style.background = '#dddddd'
 
-	<div class="schedule">
- <table>
-   <tbody><tr>
-    <th colspan="2">Wednesday July 13</th>    
-  </tr>
-  <tr>
-    <th>Time</th>
-    <th>Event</th>
-  </tr>
-  <tr>
-    <td>9am</td>
-    <td><p>Day 3 introductory remarks&nbsp;</p>
-      <p>&nbsp;</p></td>        
-  </tr>
-	    <tr>
-    <td>9:15 to 10&nbsp;</td>
-    <td><p>Keynote 3</p>
-      <p>Pushmeet Kohli</p></td>        
-  </tr>
-  <tr>
-    <td>&nbsp;10:30 to 10:45</td>
-    <td>BREAK</td>        
-  </tr>
-  
-  <tr>
-    <td>10:45 to 12:00</td>
-    <td>&nbsp;Yisong Yue/Swarat Chaudhuri tutorial 3
-    </td>        
-  </tr>
-  
-  <tr>
-    <td>12:00 to 13:00&nbsp;</td>
-    <td>Lunch
-    </td>        
-  </tr>
-  
-  <tr>
-    <td>13:00 to 14:00</td>
-    <td>Jiajun Wu&nbsp;
-    </td>        
-  </tr>
-  
-  <tr>
-    <td>&nbsp;14:00 to 14:30</td>
-    <td>BREAK</td>        
-  </tr>
-  
-  <tr>
-    <td>14:30 to 15:30&nbsp;</td>
-    <td>Nadia Polikarpova/Armando Solar-Lezama program synthesis tutorial 3</td>        
-  </tr>
-  
-  <tr>
-    <td>15:30 to 15:45</td>
-    <td>Minbreak&nbsp;</td>        
-  </tr>
-  
-  <tr>
-    <td>&nbsp;15:45 to 16:45</td>
-    <td>Zenna Tavares</td>        
-  </tr>
-  
-  <tr>
-    <td>16:45 to 18:00</td>
-    <td>&nbsp;Vikash Mansinghka tutorial part 2
-    </td>    
-  </tr>
-  <tr>
-    <td>18:00 to 20:00</td>
-    <td>Dinner</td>        
-  </tr>
-</tbody></table>
-
-	
-</div>
-
-<script>
-processDocument();
-</script>
-
-<div class="footnotes">
+        }
+    </script>
 
 
 
-</div>
+    <div class="summerschedule">
+
+        <table>
+            <tbody>
+                <tr>
+                    <th id="mondayTag" style="background-color:#dddddd;"><a href="javascript:mon()">Monday July 11 2022</a></th>
+                    <th id="tuesdayTag"><a href="javascript:tues()">Tuesday July 12 2022</a></th>
+                    <th id="wednesdayTag"><a href="javascript:wed()">Wednesday July 13 2022</a></th>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div class="summer">
+                            <div id="monSchedule" style="display:block">
+
+
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">Monday July 11 2022</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="width:110px">Time</th>
+                                            <th>Event</th>
+                                        </tr>
+                                        <tr>
+                                            <td>9:00 to 9:15</td>
+                                            <td>
+                                                Day 1 Introductory remarks
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9:15 to 10:00</td>
+                                            <td>
+                                                Keynote 1: <a href="https://www.mit.edu/~jda/">Jacob Andreas (MIT)</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10:30 to 10:45</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>10:45 to 12:00</td>
+                                            <td>
+                                                Tutorial 1a: <a href="http://www.yisongyue.com/">Yisong Yue (Caltech)</a>/ <a href="https://www.cs.utexas.edu/~swarat/">Swarat Chaudhuri (UT Austin)</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>12:00 to 13:00</td>
+                                            <td>Lunch</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13:00 to 14:00</td>
+                                            <td>
+                                                Talk: <a href="https://web.cs.ucla.edu/~guyvdb/">Guy Van Den Broeck (UCLA)</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14:00 to 14:30</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14:30 to 15:30</td>
+                                            <td>Tutorial 2a: <a href="https://cseweb.ucsd.edu/~npolikarpova/">Nadia Polikarpova (UCSD)</a>/<a href="https://people.csail.mit.edu/asolar/">Armando Solar-Lezama (MIT)</a>: Program Synthesis</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>15:30 to 15:45</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>15:45 to 16:45</td>
+                                            <td>Talk: <a href="https://obastani.github.io/">Osbert Bastani (UPenn)</a> </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>16:45 to 18:00</td>
+                                            <td>
+                                                &nbsp;TBA
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>18:00 to 20:00</td>
+                                            <td>Dinner</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                            <div id="tuesSchedule" style="display:none">
+
+
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">Tuesday July 12 2022</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="width:110px">Time</th>
+                                            <th>Event</th>
+                                        </tr>
+                                        <tr>
+                                            <td>9:00 to 9:15</td>
+                                            <td>
+                                                Day 2 Introductory remarks
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9:15 to 10:00</td>
+                                            <td>
+                                                Keynote 2: <a href="http://users.cms.caltech.edu/~klbouman/">Katie Bouman (Caltech)</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10:30 to 10:45</td>
+                                            <td>BREAK</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>10:45 to 12:00</td>
+                                            <td>
+                                                Tutorial 1b: <a href="http://www.yisongyue.com/">Yisong Yue (Caltech)</a>/ <a href="https://www.cs.utexas.edu/~swarat/">Swarat Chaudhuri (UT Austin)</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>12:00 to 13:00</td>
+                                            <td>
+                                                Lunch
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13:00 to 14:00</td>
+                                            <td>
+                                                Talk: <a href="https://research.google/people/CharlesSutton/">Charles Sutton</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14:00 to 14:15</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14:15 to 15:15</td>
+                                            <td>Tutorial 3a: <a href="http://probcomp.csail.mit.edu/principal-investigator/">Vikash Mansinghka</a></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>15:15 to 15:30</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>15:30 to 16:30</td>
+                                            <td>Talk TBA&nbsp;</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>16:30 to 18:00</td>
+                                            <td>
+                                                &nbsp;Outing
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>18:00 to 20:00</td>
+                                            <td>Dinner</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="wedSchedule" style="display:none">
+
+
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">Wednesday July 13</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="width:110px">Time</th>
+                                            <th>Event</th>
+                                        </tr>
+                                        <tr>
+                                            <td>9:00 to 9:15</td>
+                                            <td>
+                                                Day 3 introductory remarks                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9:15 to 10&nbsp;</td>
+                                            <td>
+                                                Keynote 3: <a href="https://research.google/people/105667/">Pushmeet Kohli</a>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10:30 to 10:45</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>10:45 to 12:00</td>
+                                            <td>
+                                                Tutorial 1c: <a href="http://www.yisongyue.com/">Yisong Yue (Caltech)</a>/ <a href="https://www.cs.utexas.edu/~swarat/">Swarat Chaudhuri (UT Austin)</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>12:00 to 13:00&nbsp;</td>
+                                            <td>
+                                                Lunch
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13:00 to 14:00</td>
+                                            <td>
+                                                Talk: <a href="https://jiajunwu.com/">Jiajun Wu (Stanford)</a>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;14:00 to 14:30</td>
+                                            <td>BREAK</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14:30 to 15:30</td>
+                                            
+                                            <td>Tutorial 2b: <a href="https://cseweb.ucsd.edu/~npolikarpova/">Nadia Polikarpova (UCSD)</a>/<a href="https://people.csail.mit.edu/asolar/">Armando Solar-Lezama (MIT)</a>: Program Synthesis</td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>15:30 to 15:45</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;15:45 to 16:45</td>
+                                            <td>Talk: <a href="http://www.zenna.org/">Zenna Tavares (Columbia)</a>  </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>16:45 to 18:00</td>
+                                            <td>Tutorial 3b: <a href="http://probcomp.csail.mit.edu/principal-investigator/">Vikash Mansinghka</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>18:00 to 20:00</td>
+                                            <td>Dinner</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script>
+        processDocument();
+    </script>
+
+    <div class="footnotes">
+
+
+
+    </div>
 </div>
 
 </body>
