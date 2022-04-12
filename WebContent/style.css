@@ -377,8 +377,13 @@ td, th {
 }
 
 
-.event{
-	padding:10pt;
+.event {	
+	border-radius: 10px;	
+	border: solid 1px rgb(50,50,50);
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 1px 1px 1px 1px darkgray;
+	background: rgb(249, 246, 246);
 }
 
 .event_title{
