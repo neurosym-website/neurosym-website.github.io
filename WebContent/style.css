@@ -385,7 +385,53 @@ td, th {
 	box-shadow: 1px 1px 1px 1px darkgray;
 	background: rgb(249, 246, 246);
 }
+@media only screen and (max-width: 464px) {
+	.event {
+		padding: 2px;
+		margin: 2px;
+	}
+}
 
 .event_title{
 	font-weight: bold;
+}
+
+
+.project {
+	border-radius: 10px;
+	border: solid 1px rgb(50,50,50);
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 1px 1px 1px 1px darkgray;
+	background: rgb(249, 246, 246);
+}
+
+.project h1 {
+	font-weight: bold;
+	font-size:110%;
+}
+
+.projectTable {
+	vertical-align: top;
+	border: solid 0px rgb(50,50,50);
+}
+
+.projectTable td {
+	vertical-align: top;
+	border: solid 0px rgb(50,50,50);
+}
+
+.paperThumb {
+	height : 150pt;
+}
+@media only screen and (max-width: 700px) {
+	.paperThumb {
+		height: 100pt;
+	}
+
+}
+@media only screen and (max-width: 464px) {
+	.paperThumb {
+		height: 50pt;
+	}
 }

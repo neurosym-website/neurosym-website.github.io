@@ -1,20 +1,22 @@
-<html>
+﻿<html>
 
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The title of the page</title>
+    <title>Cognitive Science Thrust</title>
 
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" src="http://sketch2.csail.mit.edu/SynthesisCourse/library.js"></script>
-<script type="text/javascript" src="overrides.js"></script>
-<link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
+
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" src="http://sketch2.csail.mit.edu/SynthesisCourse/library.js"></script>
+    <script type="text/javascript" src="overrides.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body onresize="resizing()">
@@ -52,47 +54,76 @@ loadNavBar();
 </script>
 
 <div class="content">
-<h1>Cognitive and Behavioral science</h1>
-Human conceptual representations have complex and abstract structure allowing us to 
-deal efficiently with extremely diverse situations. Concepts are often named by 
-single lexical items, providing a convenient window on mental life. For instance, 
-take the concepts of 'tree', 'forest', and 'friend'. These are everyday concepts, 
-yet they are hard to capture as (even deep) classifiers or other standard machine 
-learning approaches. Instead, they are fuzzy, inter-related systems grounded in our 
-knowledge of physical things, social agents, and so on.
-
-<h2>Modeling meaning through programming languages.</h2>
-Functions in a programming language are a good model of human concepts, because 
-they admit complex abstraction and model systems of related meanings. 
-In particular, programs provide a natural means to capture three key aspects of human concepts: compositional abstraction, graded reasoning under uncertainty, and causal relations. Human concept learning can then be viewed as (probabilistic)  program induction. Existing demonstrations of this approach have been hampered by lack of efficient and scalable techniques for program induction. We propose that this can be addressed by building high-level languages for common sense domains, and using new program learning tools to induce concepts within these domains. The first part of this task amounts to constructing a "standard library" for core knowledge and the second part to concept learning by probabilistic program induction.
-
-<h2>Understanding behavior.</h2> 
-Behavior is arguably the most complex phenotype one could analyze in life and 
-cognitive sciences. For instance, what is a concise theory that explains courtship in fruit
- flies?  Such questions are pervasive in the life sciences where fine-grained behavior 
- of model organisms (e.g., fruit flies or macaques) are being collected at an 
- unprecedented scale.  The study of dynamic behavior such as courtship is an ideal 
- testbed for our research agenda.  On the one hand, scientists want to discover 
- short programs that provide an interpretable explanation of courtship.  
- On the other hand, the raw data is high dimensional in both time and space, and it 
- also contains significant variability in the behavior of interest, thus requiring deep 
- learning to process raw data and instantiate modules within the program. 
+    <h1>Cognitive and Behavioral science</h1>
+    Human conceptual representations have complex and abstract structure allowing us to
+    deal efficiently with extremely diverse situations. Concepts are often named by
+    single lexical items, providing a convenient window on mental life. For instance,
+    take the concepts of 'tree', 'forest', and 'friend'. These are everyday concepts,
+    yet they are hard to capture as (even deep) classifiers or other standard machine
+    learning approaches. Instead, they are fuzzy, inter-related systems grounded in our
+    knowledge of physical things, social agents, and so on.
 
 
 
+    <h2>Modeling cognition through programming languages.</h2>
+    Functions in a programming language are a good model of human concepts, because
+    they admit complex abstraction and model systems of related meanings.
+    In particular, programs provide a natural means to capture three key aspects of human concepts: compositional abstraction, graded reasoning under uncertainty, and causal relations.
+    Human concept learning can then be viewed as (probabilistic)  program induction. Existing demonstrations of this approach have been hampered by lack of efficient and scalable techniques for program induction.
+
+    We are working to address this by building high-level languages for common sense domains, and using new program learning tools to induce concepts within these domains. The first part of this task amounts to constructing
+    a "standard library" for core knowledge and the second part to concept learning by probabilistic program induction. Below are some of our ongoing efforts as part of this thrust.
 
 
-<script>
-processDocument();
-</script>
 
-<div class="footnotes">
+    <div id="autumn" class="project">
+        <h1>
+            Understanding causal reasoning in Autumn.
+        </h1>
+        Humans are often able to learn detailed causal relationships in the environment from very limited interactions with it.  For example, children can figure out the causal mechanism underlying a new toy or
+        video game in just a few minutes, a feat woefully out of reach of modern AI systems.
+        As part of this effort, we are studying the construction of causal theories – explanations of which stimuli cause which changes in an environment – using program synthesis.
+        By representing a causal model as a program, we take advantage of two key features that standard ML models do not possess: programs' compact, interpretable form and data-efficient learning algorithms.
 
-<footnotes>
+        We have developed a simple domain to explore this hypothesis, consisting of Atari-style, time-varying grid worlds. We express causal mechanisms in these worlds using a functional reactive programming
+        language called <a href="https://github.com/riadas/Autumn.jl">Autumn</a>, which we designed to concisely capture these dynamics. Our objective is to synthesize the underlying Autumn program given a short sequence
+        of observed grid frames and user actions.
 
-</footnotes>
+        We are working on a full conference submission on this work, but an early version was presented at the
+        Advances in Programming Languages and Neurosymbolic Systems workshop in NeurIPS '21 and the Causal Inference & Machine Learning workshop, also at NeurIPS<cite>Ria21aiplans</cite>.
+        This project is beign led by graduate student <a href="https://riadas.github.io/">Ria Das</a> and former postdoc <a href="http://www.zenna.org/">Zenna Tavares</a>
+        in collaboration with Josh Tenenbaum and Armando Solar-Lezama.
 
-</div>
+    </div>
+
+
+    <h2>Understanding behavior.</h2>
+    Behavior is arguably the most complex phenotype one could analyze in life and
+    cognitive sciences. For instance, what is a concise theory that explains courtship in fruit
+    flies?  Such questions are pervasive in the life sciences where fine-grained behavior
+    of model organisms (e.g., fruit flies or macaques) are being collected at an
+    unprecedented scale.  The study of dynamic behavior such as courtship is an ideal
+    testbed for our research agenda.  On the one hand, scientists want to discover
+    short programs that provide an interpretable explanation of courtship.
+    On the other hand, the raw data is high dimensional in both time and space, and it
+    also contains significant variability in the behavior of interest, thus requiring deep
+    learning to process raw data and instantiate modules within the program.
+
+
+
+
+
+    <script>
+        processDocument();
+    </script>
+
+    <div class="footnotes">
+
+        <footnotes>
+
+        </footnotes>
+
+    </div>
 </div>
 
 </body>

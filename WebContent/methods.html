@@ -1,20 +1,22 @@
-<html>
+﻿<html>
 
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Machine learning meets programs synthesis</title>
+    <title>Machine learning meets programs synthesis</title>
 
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" src="http://sketch2.csail.mit.edu/SynthesisCourse/library.js"></script>
-<script type="text/javascript" src="overrides.js"></script>
-<link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" src="http://sketch2.csail.mit.edu/SynthesisCourse/library.js"></script>
+    <script type="text/javascript" src="overrides.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body onresize="resizing()">
@@ -93,11 +95,56 @@ Our proposed framework will serve as a platform for exploring these algorithms
 and deploying them in each of our problem domains.
 </p>
 
+<h1>Published papers and ongoing efforts.</h1>
+
+
+<div class="project">
+    <h1>A science of Neurosymbolic Programming</h1>
+
+    There is a growing body of work exploring different ways to combine the benefits of deep learning with the benefits of
+    hand-written programs. In a recent collaborative effort between co-PIs Swarat Chaudhuri, Yisong Yue and Armando Solar-Lezama with project
+    alumni Kevin Ellis and collaborators Oleksandr Polozov and Rishabh Singh, we have sought to organize existing work into a conceptual 
+    framework that can help us understand the different ways in which neural learning and program synthesis can come together to achieve a variety 
+    of goals ranging from interpretability, to sample efficiency to correctness and consistency with prior knowledge. 
+    The paper was published in 2021 as part of the Foundations and Trends in Programming Languages series<cite>ChaudhuriEPSSY21</cite>.
+</div>
+
+
+<div class="project">
+    <h1>Learning Domain Specific Languages</h1>
+    The goal of this effort is to use neurosymbolic techniques to automatically learn a domain specific language (DSL) from a corpus of problems from a given domain. This is an important problem because it 
+    addresses one of the fundamental limitations of neurosymbolic programming: the need to have an expert design a domain specific language to make program synthesis tractable. 
+
+    In a first paper published in PLDI 2020, we showed that it is possible to automatically discover DSLs for a variety of problems including the problem of automatically discovering physics equations. For example, 
+    in one experiment, our system (DreamCoder) is given data from equations describing 60 different physical laws and mathematical identities taken from AP and MCAT physics “cheat sheets”. The system is initialized 
+    with a small number of sequence manipulation primitives like map and fold and after 8 iterations of the algorithm it is able to discover 93% of the laws and identities in the dataset by first learning the building 
+    blocks of vector algebra and then learning constructs common to many of the formulas such as inverse square laws. The paper was published in PLDI 2020 <cite>EllisWNSMHCST21</cite>.
+    
+</div>
+
+
+<div class="project">
+    <h1>
+        Synthesis of Reactive Programs with Structured Latent State
+    </h1>
+    In the context of the <a href="cognitive.html#autumn">Autumn effort</a>,
+    we developed a new synthesis algorithm that combines automata based synthesis with functional synthesis.
+    This algorithm allows us to synthesize fairly large functional reactive programs from observations of sequences of frames in an Autumn game.
+    We are working on a full conference submission on this work, but an early version was presented at the 
+     Advances in Programming Languages and Neurosymbolic Systems workshop in NeurIPS '21 and the Causal Inference & Machine Learning workshop, also at NeurIPS<cite>Ria21aiplans</cite>.
+
+
+</div>
 
 
 
 <script>
-processDocument();
+    processDocument();
+
+    
+
+    
+
 </script>
 
 <div class="footnotes">
