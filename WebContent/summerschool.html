@@ -71,6 +71,20 @@ loadNavBar();
     <p>All summer school participants will be expected to abide by the <a href="summerschoolConduct.html">Summer School Code of Conduct</a></p>
 
     <script>
+        function showInfo(talk) {
+            let div = document.getElementById(talk + '.info');
+            div.style.display = 'block';
+            let link = document.getElementById(talk + '.link');
+            link.innerHTML = '(close)';
+            link.href = 'javascript:closeInfo("' + talk + '");';
+        }
+        function closeInfo(talk) {
+            let div = document.getElementById(talk + '.info');
+            div.style.display = 'none';
+            let link = document.getElementById(talk + '.link');
+            link.innerHTML = '(info)';
+            link.href = 'javascript:showInfo("' + talk + '");';
+        }
         function mon() {
             let div = document.getElementById("monSchedule")
             div.style.display = 'block';
@@ -142,7 +156,7 @@ loadNavBar();
                                             <th colspan="2">Monday July 11 2022</th>
                                         </tr>
                                         <tr>
-                                            <th style="width:110px">Time</th>
+                                            <th>Time</th>
                                             <th>Event</th>
                                         </tr>
                                         <tr>
@@ -155,6 +169,12 @@ loadNavBar();
                                             <td>9:15 to 10:00</td>
                                             <td>
                                                 Keynote 1: <a href="https://www.mit.edu/~jda/">Jacob Andreas (MIT)</a>
+                                                <a id="andreas.link" href="javascript:showInfo('andreas');">(info)</a>
+                                                <div id="andreas.info" class="talkInfo" style="display:none;">
+                                                    <h2>Learning to program by learning to read</h2>
+                                                    In the age of deep networks, "learning" almost invariably means "learning from examples". Image classifiers are trained with large datasets of (labeled or unlabeled) images, machine translation systems with corpora of translated sentences, and robot policies with demonstrations. But when human learners acquire new concepts and skills, we often do so with richer supervision, especially in the form of language---we learn new concepts from exemplars accompanied by descriptions or definitions, and new skills from demonstrations accompanied by instructions. In natural language processing, recent years have seen a number of successful approaches to learning from task definitions and other forms of auxiliary language-based supervision. But these successes have been largely confined to tasks that also involve language as an input and an output. What will it take to make language-based training useful for other learning problems? In this talk, I'll present some recent results on using natural language to guide both search and library learning in inductive program synthesis, and discuss connections to the role of language in human concept learning.
+                                                </div>
+
                                             </td>
                                         </tr>
                                         <tr>
@@ -166,6 +186,12 @@ loadNavBar();
                                             <td>10:45 to 12:00</td>
                                             <td>
                                                 Tutorial 1a: <a href="http://www.yisongyue.com/">Yisong Yue (Caltech)</a>/ <a href="https://www.cs.utexas.edu/~swarat/">Swarat Chaudhuri (UT Austin)</a>
+                                                <a id="yisonga.link" href="javascript:showInfo('yisonga');">(info)</a>
+                                                <div id="yisonga.info" class="talkInfo" style="display:none;">
+                                                    <h2>Neurosymbolic tutorial Part 1</h2>
+                                                    
+                                                </div>
+
                                             </td>
                                         </tr>
 
@@ -188,7 +214,15 @@ loadNavBar();
 
                                         <tr>
                                             <td>14:30 to 15:30</td>
-                                            <td>Tutorial 2a: <a href="https://cseweb.ucsd.edu/~npolikarpova/">Nadia Polikarpova (UCSD)</a>/<a href="https://people.csail.mit.edu/asolar/">Armando Solar-Lezama (MIT)</a>: Program Synthesis</td>
+                                            <td>
+                                                Tutorial 2a: <a href="https://cseweb.ucsd.edu/~npolikarpova/">Nadia Polikarpova (UCSD)</a>/<a href="https://www.cs.technion.ac.il/~shachari/">Shachar Itzhaky (Technion)</a>: Program Synthesis
+                                                <a id="nadiaa.link" href="javascript:showInfo('nadiaa');">(info)</a>
+                                                <div id="nadiaa.info" class="talkInfo" style="display:none;">
+                                                    <h2>Program Synthesis Tutorial Part 1</h2>
+                                                    In this first part of the tutorial, students will get an introduction to symbolic program synthesis and will gain
+                                                    some experience with existing synthesis tools.
+                                                </div>
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -225,7 +259,7 @@ loadNavBar();
                                             <th colspan="2">Tuesday July 12 2022</th>
                                         </tr>
                                         <tr>
-                                            <th style="width:110px">Time</th>
+                                            <th >Time</th>
                                             <th>Event</th>
                                         </tr>
                                         <tr>
@@ -250,6 +284,11 @@ loadNavBar();
                                             <td>10:45 to 12:00</td>
                                             <td>
                                                 Tutorial 1b: <a href="http://www.yisongyue.com/">Yisong Yue (Caltech)</a>/ <a href="https://www.cs.utexas.edu/~swarat/">Swarat Chaudhuri (UT Austin)</a>
+                                                <a id="yisongb.link" href="javascript:showInfo('yisongb');">(info)</a>
+                                                <div id="yisongb.info" class="talkInfo" style="display:none;">
+                                                    <h2>Neurosymbolic Tutorial Part 2</h2>
+                                                    
+                                                </div>
                                             </td>
                                         </tr>
 
@@ -274,7 +313,15 @@ loadNavBar();
 
                                         <tr>
                                             <td>14:15 to 15:15</td>
-                                            <td>Tutorial 3a: <a href="http://probcomp.csail.mit.edu/principal-investigator/">Vikash Mansinghka (MIT)</a></td>
+                                            <td>
+                                                Tutorial 3a: <a href="http://probcomp.csail.mit.edu/principal-investigator/">Vikash Mansinghka (MIT)</a>
+                                                <a id="vikasha.link" href="javascript:showInfo('vikasha');">(info)</a>
+                                                <div id="vikasha.info" class="talkInfo" style="display:none;">
+                                                    <h2>Probabilistic Programming Tutorial Part 1</h2>
+
+                                                </div>
+                                            </td>
+                                            
                                         </tr>
 
                                         <tr>
@@ -284,7 +331,14 @@ loadNavBar();
 
                                         <tr>
                                             <td>15:30 to 16:30</td>
-                                            <td>Talk TBA&nbsp;</td>
+                                            <td>Keynote 3: David Choi (DeepMind)
+                                                <a id="choi.link" href="javascript:showInfo('choi');">(info)</a>
+                                                <div id="choi.info" class="talkInfo" style="display:none;">
+                                                    <h2>Competitive Programming with AlphaCode</h2>
+                                                    Programming is a powerful problem-solving tool. Systems that can assist programmers or even generate programs themselves could make programming more productive and accessible. Recent large-scale language models have demonstrated impressive abilities to generate code, however they still perform poorly on more complex tasks that require problem-solving skills, such as competitive programming problems. In this talk we'll present AlphaCode, the motivations of the project and the design decisions we made. AlphaCode is a system for code generation that achieved an average ranking of top 54.3% in simulated evaluations on popular, recent programming competitions on the Codeforces platform. AlphaCode's success stemmed from: large transformer-based models, using a novel combination of architectural, training, and prompting modifications; extensive datasets; efficient large-scale sampling; and filtering and clustering-based sample selection. This marks the first time an artificial intelligence system has performed competitively in programming competitions.
+                                                </div>                                            
+                                            </td>
+                                            
                                         </tr>
 
                                         <tr>
@@ -309,7 +363,7 @@ loadNavBar();
                                             <th colspan="2">Wednesday July 13</th>
                                         </tr>
                                         <tr>
-                                            <th style="width:110px">Time</th>
+                                            <th>Time</th>
                                             <th>Event</th>
                                         </tr>
                                         <tr>
@@ -321,7 +375,12 @@ loadNavBar();
                                         <tr>
                                             <td>9:15 to 10&nbsp;</td>
                                             <td>
-                                                Keynote 3: <a href="https://research.google/people/105667/">Pushmeet Kohli (DeepMind)</a>                                                
+                                                Talk: <a href="https://people.csail.mit.edu/asolar/">Armando Solar-Lezama (MIT)</a>
+                                                <a id="asolar.link" href="javascript:showInfo('asolar');">(info)</a>
+                                                <div id="asolar.info" class="talkInfo" style="display:none;">
+                                                    <h2>Understanding the world with Code</h2>
+                                                    This talk will describe how neurosymbolic program synthesis can help understand the world.
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -333,6 +392,11 @@ loadNavBar();
                                             <td>10:45 to 12:00</td>
                                             <td>
                                                 Tutorial 1c: <a href="http://www.yisongyue.com/">Yisong Yue (Caltech)</a>/ <a href="https://www.cs.utexas.edu/~swarat/">Swarat Chaudhuri (UT Austin)</a>
+                                                <a id="yisongc.link" href="javascript:showInfo('yisongc');">(info)</a>
+                                                <div id="yisongc.info" class="talkInfo" style="display:none;">
+                                                    <h2>Neurosymbolic Tutorial Part 3</h2>
+
+                                                </div>
                                             </td>
                                         </tr>
 
@@ -347,6 +411,12 @@ loadNavBar();
                                             <td>13:00 to 14:00</td>
                                             <td>
                                                 Talk: <a href="https://jiajunwu.com/">Jiajun Wu (Stanford)</a>
+                                                <a id="wu.link" href="javascript:showInfo('wu');">(info)</a>
+                                                <div id="wu.info" class="talkInfo" style="display:none;">
+                                                    <h2>Understanding the Visual World Through Naturally Supervised Code</h2>
+                                                    Much of our visual world is inherently symbolic: scenes are made of objects; different objects may have the same color or material, with a grid layout; each object can be symmetric and have repetitive parts. How can we infer, represent, and use such symbolic structure from raw data, without hampering the expressiveness of neural networks? In this talk, I will demonstrate that symbolic structure, or code, can be learned from natural supervision.  Such supervision can be from pixels, where neuro-symbolic methods automatically discover repetitive parts and objects for scene synthesis. It can be from objects, where humans during fabrication introduce priors that can be leveraged by machines to infer regular intrinsics such as texture and material. It can also be from language, which humans develop for the need of referring to and talking about objects, and where machines may learn grounded visual concepts only by looking at images and reading captions. When solving these problems, symbolic programs and neural nets play complementary roles: symbolic programs are more data-efficient to train and generalize better to new scenarios, as they robustly capture high-level structure; deep nets effectively extract complex, low-level features from cluttered and noisy visual and language data.
+                                                </div>
+
                                             </td>
                                         </tr>
 
@@ -357,9 +427,16 @@ loadNavBar();
 
                                         <tr>
                                             <td>14:30 to 15:30</td>
-                                            
-                                            <td>Tutorial 2b: <a href="https://cseweb.ucsd.edu/~npolikarpova/">Nadia Polikarpova (UCSD)</a>/<a href="https://people.csail.mit.edu/asolar/">Armando Solar-Lezama (MIT)</a>: Program Synthesis</td>
 
+                                            <td>
+                                                Tutorial 2b: <a href="https://cseweb.ucsd.edu/~npolikarpova/">Nadia Polikarpova (UCSD)</a>/<a href="https://www.cs.technion.ac.il/~shachari/">Shachar Itzhaky (Technion)</a>: Program Synthesis
+                                                <a id="nadiab.link" href="javascript:showInfo('nadiab');">(info)</a>
+                                                <div id="nadiab.info" class="talkInfo" style="display:none;">
+                                                    <h2>Program Synthesis Tutorial Part 2</h2>
+                                                    In this first part of the tutorial, students will get an introduction to symbolic program synthesis and will gain
+                                                    some experience with existing synthesis tools.
+                                                </div>
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -374,7 +451,15 @@ loadNavBar();
 
                                         <tr>
                                             <td>16:45 to 18:00</td>
-                                            <td>Tutorial 3b: <a href="http://probcomp.csail.mit.edu/principal-investigator/">Vikash Mansinghka (MIT)</a></td>
+                                            <td>
+                                                Tutorial 3b: <a href="http://probcomp.csail.mit.edu/principal-investigator/">Vikash Mansinghka (MIT)</a>
+                                                <a id="vikashb.link" href="javascript:showInfo('vikashb');">(info)</a>
+                                                <div id="vikashb.info" class="talkInfo" style="display:none;">
+                                                    <h2>Probabilistic Programming Tutorial Part 2</h2>
+
+                                                </div>
+
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>18:00 to 20:00</td>
