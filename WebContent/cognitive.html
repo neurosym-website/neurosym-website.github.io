@@ -96,7 +96,6 @@ loadNavBar();
 
     </div>
 
-
     <h2>Understanding behavior.</h2>
     Behavior is arguably the most complex phenotype one could analyze in life and
     cognitive sciences. For instance, what is a concise theory that explains courtship in fruit
@@ -110,8 +109,35 @@ loadNavBar();
     learning to process raw data and instantiate modules within the program.
 
 
+    <div id="autumn" class="project">
+        <h1>
+            Task programming
+        </h1>
 
+Specialized domain knowledge is often necessary to accurately annotate training sets for in-depth analysis, but can be burdensome and time-consuming to acquire from domain experts. This issue arises prominently in automated behavior analysis, in which agent movements or actions of interest are detected from video tracking data.
 
+ To reduce annotation effort, we present TREBA: a method to learn annotation-sample efficient trajectory embedding for behavior analysis, based on multi-task self-supervised learning. The tasks in our method can be efficiently engineered by domain experts through a process we call “task programming” <cite>sun2021task</cite>, which uses programs to explicitly encode structured knowledge from domain experts. Total domain expert effort can be reduced by exchanging data annotation time for the construction of a small number of programmed tasks. 
+
+We evaluate this trade-off using data from behavioral neuroscience, in which specialized domain knowledge is used to identify behaviors. We present experimental results in three datasets across two domains: mice and fruit flies. Using embeddings from TREBA, we reduce annotation burden by up to a factor of 10 without compromising accuracy compared to state-of-the-art features. Our results thus suggest that task programming and self-supervision can be an effective way to reduce annotation effort for domain experts.
+    </div>
+	
+
+	    <h2>Neurosymbolic reasoning for mathematical domains.</h2>
+The goal of this project is to develop models that can perform mathematical reasoning in educational domains, as a foundational tool to both build educational tools and to seek insight into how humans think about and develop mathematics. 
+	
+    <div id="autumn" class="project">
+        <h1>
+            Contrastive policy learning
+        </h1>
+
+In a first project, we developed a machine learning agent (ConPoLe, published at NeurIPS 2021) <cite>poesia2021contrastive</cite> which learns to solve problems in several symbolic reasoning domains (e.g. solving simple equations, simplifying fractions, and solving the classical Rubik's Cube puzzle). The reinforcement learning agent progressively learned to apply basic rules (“axioms”) to reach the goal state (“solution”) from an arbitrary initial state (“problem”), by only receiving a binary reward once a problem is solved. As such, this paper was novel in formulating reinforcement learning as contrastive learning as a way to handle the sparse rewards. The agent worked in a general setting that made it easy to specify a range of educational mathematical domains inspired by the Common Core standard. Moreover, we found that the representations that ConPoLe learned for the problems captured the structure of sections from the Khan Academy exercises for equations, even though that curriculum was never present during training.
+
+Since ConPoLe learned to solve problems from low-level mathematical axioms, its solutions tend to be much longer than human solutions, which typically skip over many axiomatic steps. For example, whereas a human can arrive from 2x + 1 = 5 to 2x = 4 in one step, the agent has to apply 5 axioms in succession (subtraction on both sides, associativity, evaluation of 1 - 1, identity of addition, and another evaluation of 5 - 1). This observation brought us to a natural question: how can we have agents that produce succinct and readable solutions for humans? This question led to a paper that we'll be presenting in CogSci 2022 <cite>poesia2022left</cite>, where we developed a method for simplifying formal mathematical solutions. We used a skill discovery algorithm from the reinforcement learning literature to divide the axiom-level steps of ConPoLe into larger segments of latent high-level "skills". Then, we obtain a simplified solution by only keeping the last step after each skill is applied. The improvement in the readability of the resulting solutions was statistically significant in a human evaluation. Our comparison to other simpler simplification methods led to insights into what humans might consider most relevant in a mathematical solution, which is important for interacting with students in an educational setting.
+		
+We're actively working on two complementary fronts that go beyond these efforts. In recent months, in a collaboration across Stanford and MIT, we have been working on learning symbolic abstractions from mathematical solutions. The abstraction techniques employed in methods like DreamCoder <cite>EllisWNSMHCST21</cite> give us a way to automatically learn mathematical "lemmas" from ConPoLe solutions. Rewriting solutions with learned lemmas can make them shorter and more readable. Furthermore, using the lemmas during learning can enable the agent to solve harder problems, akin to how human mathematics develops from simpler to complex results. In a parallel effort, we're generalizing our learning methods to work on top of a universal language for mathematical reasoning, where we still aim to learn, just like in ConPoLe, in a completely unsupervised fashion.
+
+    </div>
+    </div>
 
     <script>
         processDocument();
