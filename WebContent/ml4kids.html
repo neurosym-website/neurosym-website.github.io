@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <script src="./node_modules/rapydscript/lib/rapydscript_web.js"></script>
+
+    <script src="ml4kids.js"></script>
+    <script src="https://code.playskript.com/js/AST.js"></script>
+    <script src="https://code.playskript.com/js/builtinDocs.js"></script>
+    <script src="https://code.playskript.com/js/parsing.js"></script>
+    <script src="https://code.playskript.com/js/processProgram.js"></script>
+    <script src="https://code.playskript.com/js/integrated.js"></script>
+    <script src="https://code.playskript.com/js/programState.js"></script>
+    <script src="https://code.playskript.com/js/errorCodes.js"></script>
+
+    <style type="text/css" media="screen">
+        .editorContainerStyle {
+            background: white;
+            width: 33%;
+        }
+
+        @media only screen and (max-width: 1165px) {
+            .editorContainerStyle {
+                width: 963px;
+            }
+        }
+
+        @media only screen and (max-width: 990px) {
+            .editorContainerStyle {
+                width: 771px;
+            }
+        }
+
+        .editorStyle {
+            font-size: 14px;
+            height: 600px;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1450px) {
+            .editorStyle {
+                font-size: 12px;
+                height: 480px;
+            }
+        }
+
+        @media only screen and (max-width: 1165px) {
+            .editorStyle {
+                height: 300px;
+            }
+        }
+
+        @media only screen and (max-width: 990px) {
+            .editorStyle {
+                font-size: 10px;
+            }
+        }
+
+        .canvasStyle {
+            width: 960px;
+            height: 600px;
+            border: 1px solid #000000;
+        }
+
+        @media only screen and (max-width: 1450px) {
+            .canvasStyle {
+                width: 768px;
+                height: 480px;
+            }
+        }
+
+        @media only screen and (max-width: 1165px) {
+            .canvasStyle {
+                width: 960px;
+                height: 600px;
+            }
+        }
+
+        @media only screen and (max-width: 990px) {
+            .canvasStyle {
+                width: 768px;
+                height: 480px;
+            }
+        }
+
+
+        .errmsg-base {
+            color: black;
+        }
+
+        .errmsg-wait {
+            color: lightsteelblue;
+        }
+
+        .errmsg-done {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="editorContainer" class="editorContainerStyle">
+        <div id="editor" class="editorStyle">
+track = track0()
+cc = newCar(track)
+displayTrack(track)
+
+def control(sd, pastsd):
+    speed = 10;
+    if(sd[1] < 12.5):
+        speed = 3
+    ang = 30
+    if(sd[2] < sd[0]):
+        ang = -30
+    return [ang, speed]
+
+print("Hello!")
+
+displayCar(cc);
+
+simout = simulate(cc, track, 750, control, true);
+print("Done!")
+
+displayResult(track, simout);   
+</div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.2/ace.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <a href="javascript:runsym()">play</a>
+    <a href="javascript:stopsym()">stop</a>
+
+
+    <div id="errMsg">
+        <div id="errMsgText"></div>
+    </div>
+
+    <div id="canvasContainer" style="background-color: white;">
+        <canvas id="myCanvas" width="1920" height="1200" class="canvasStyle"
+                tabindex="1"></canvas>
+    </div>
+
+
+
+    <script>
+
+
+        ace.config.set("basePath", "https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.2/");
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.getSession().setMode("ace/mode/python");
+
+        var programState = new ProgramState();
+        var session = { state: programState };
+
+ 
+
+        var slide = Slide("myCanvas", readEditor, session.state, undefined, "slide");
+
+        session.state.downloadImports({ cars: '92239360539f2ab8baad5b62f10fd5871614916b834060d498' }, () => {
+
+
+        });
+
+
+        function runsym() {
+            let msgs = document.getElementById("errMsgText");
+            msgs.innerHTML = '';
+            slide.play();
+        }
+        function stopsym() {
+            slide.stop();
+        }
+
+    </script>
+
+
+
+</body>
+</html>
