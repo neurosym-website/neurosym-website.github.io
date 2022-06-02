@@ -83,6 +83,12 @@ function readEditor() {
 
 function rapydToPsk(rapyd) {
     class CodeFixer extends PrettyPrinter {
+        constructor() {
+            super();
+            this.hassim = false;
+            this.haswhile = false;
+            this.timers = [];
+        }
         visitNum(expr) {
             if (expr.val >= 0) {
                 return '#' + expr.val;
@@ -90,6 +96,15 @@ function rapydToPsk(rapyd) {
                 return '-#' + Math.abs(expr.val);
             }
         }
+
+        visitProgram(prog) {
+            let rv = super.visitProgram(prog);
+            for (let i in this.timers) {
+                rv += this.timers[i];
+            }
+            return rv;
+        }
+
         visitVar(expr) {
             let renames = {
                 'track0': 'cars.track0', 
@@ -102,18 +117,66 @@ function rapydToPsk(rapyd) {
                 'displayTrack': 'cars.displayTrack',
                 'simulate': 'cars.simulate',
                 'displayResult': 'cars.displayResult',
-                'displayCar':'cars.displayCar'
+                'displayCar': 'cars.displayCar',
+                'random':'Math.random',
             };
             let nf = nameFilter(expr.name);
-
+            if (nf == 'simulate') {
+                this.hassim = true;
+            }
             if (nf in renames) {
                 return renames[nf];
             }
-
             return nf;
         }
-    }
 
+        visitWhile(stmt) {
+            let rv = super.visitWhile(stmt);
+            if (this.hassim) {
+                let body = stmt.body.accept(this);
+                let cond = stmt.cond.accept(this);
+                rv = `@timer 500 
+if(NEXT__==#${this.timers.length}){;
+if(${cond}){
+${body}
+}else{
+stopTimer();
+NEXT__ = ${this.timers.length + 1}
+}
+}
+`
+                this.timers.push(rv);
+                return 'NEXT__ = ' + (this.timers.length-1) + ';\n';
+            } else {
+                return rv;
+            }
+
+        }
+        visitBlock(stmt) {
+            var rv = "{\n";
+            for (let x = 0; x < stmt.stmts.length; ++x) {
+                let s = stmt.stmts[x];
+                let ts = s.accept(this); 
+                if (this.timers.length == 0) {
+                    rv += ts + ";\n";
+                } else {
+                    let ttm = `@timer 500
+if(NEXT__==#${this.timers.length}){`;
+                    for (let y = x+1; y < stmt.stmts.length; ++y) {
+                        let s = stmt.stmts[y];
+                        let ts = s.accept(this); 
+                        ttm += ts + ';\n';    
+                    }                    
+                    ttm += `stopTimer(); NEXT__ = ${this.timers.length + 1}; }`
+                    this.timers.push(ttm + '\n');
+                    rv += ts + ';\n';
+                    return rv + "}\n";
+                }                
+            }
+            return rv + "}\n";
+        }
+
+    }
 
 
     
@@ -126,7 +189,10 @@ function rapydToPsk(rapyd) {
     rapyd = rapyd.replace(/.._print/g, "alert");  
     rapyd = rapyd.replace(/true_./g, "true");  
     rapyd = rapyd.replace(/false_./g, "false");  
-
+    rapyd = rapyd.replace(/[^a-zA-Z0-9](\.\d+)/g, "0$1");
+    rapyd = rapyd.replace(/===/g, "==");
+    rapyd = 'function str(v){ return v; }\n' + rapyd;
+    console.log(rapyd);
     let ast = Parser().program(rapyd);
     let fixer = new CodeFixer();
 

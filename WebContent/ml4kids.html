@@ -18,45 +18,59 @@
     <style type="text/css" media="screen">
         .editorContainerStyle {
             background: white;
-            width: 33%;
+            width: 750px;            
         }
-
-        @media only screen and (max-width: 1165px) {
-            .editorContainerStyle {
-                width: 963px;
-            }
+        .errorbox {
+            background: rgb(39, 40, 34);
+            overflow-y: auto;
+            padding: 12px;
+            width: 500px;
+            height: 476px;
         }
-
-        @media only screen and (max-width: 990px) {
-            .editorContainerStyle {
-                width: 771px;
-            }
-        }
-
         .editorStyle {
             font-size: 14px;
-            height: 600px;
+            height: 500px;
             width: 100%;
         }
 
         @media only screen and (max-width: 1450px) {
+            .editorContainerStyle {
+                width: 550px;
+            }
             .editorStyle {
+                font-size: 12px;                
+            }
+            .errorbox {
                 font-size: 12px;
-                height: 480px;
+                width: 500px;
             }
         }
 
         @media only screen and (max-width: 1165px) {
+            .editorContainerStyle {
+                width: 550px;
+            }
             .editorStyle {
-                height: 300px;
+                
+            }
+            .errorbox {
+                width: 400px;
             }
         }
 
         @media only screen and (max-width: 990px) {
+            .editorContainerStyle {
+                width: 550px;
+            }
             .editorStyle {
                 font-size: 10px;
             }
+            .errorbox {
+                width: 300px;
+                font-size: 10px;
+            }
         }
+
 
         .canvasStyle {
             width: 960px;
@@ -87,22 +101,65 @@
 
 
         .errmsg-base {
-            color: black;
+            color: rgb(251, 87, 87);
         }
 
         .errmsg-wait {
-            color: lightsteelblue;
+            color: rgb(69, 80, 64);
         }
 
         .errmsg-done {
-            color: black;
+            color: rgb(239, 240, 34);
         }
+        
     </style>
 </head>
 <body>
-    <div id="editorContainer" class="editorContainerStyle">
-        <div id="editor" class="editorStyle">
-track = track0()
+   
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.2/ace.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <table>
+        <tr>
+            <td>
+                <div id="editorContainer" class="editorContainerStyle">
+                    <div id="editor" class="editorStyle"></div>
+                </div>
+
+            </td>
+            <td>
+                <div id="errMsg" class="errorbox">
+                    <div id="errMsgText"></div>
+                </div>
+
+            </td>
+        </tr>
+
+    </table>
+
+    <a href="javascript:runsym()">play</a>
+    <a href="javascript:stopsym()">stop</a>
+
+
+    
+
+    <div id="canvasContainer" style="background-color: white;">
+        <canvas id="myCanvas" width="1920" height="1200" class="canvasStyle"
+                tabindex="1"></canvas>
+    </div>
+
+
+
+    <script>
+
+
+        ace.config.set("basePath", "https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.2/");
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.getSession().setMode("ace/mode/python");
+
+        editor.insert(`track = track0()
 cc = newCar(track)
 displayTrack(track)
 
@@ -122,36 +179,7 @@ displayCar(cc);
 simout = simulate(cc, track, 750, control, true);
 print("Done!")
 
-displayResult(track, simout);   
-</div>
-    </div>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.2/ace.min.js" type="text/javascript" charset="utf-8"></script>
-
-
-    <a href="javascript:runsym()">play</a>
-    <a href="javascript:stopsym()">stop</a>
-
-
-    <div id="errMsg">
-        <div id="errMsgText"></div>
-    </div>
-
-    <div id="canvasContainer" style="background-color: white;">
-        <canvas id="myCanvas" width="1920" height="1200" class="canvasStyle"
-                tabindex="1"></canvas>
-    </div>
-
-
-
-    <script>
-
-
-        ace.config.set("basePath", "https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.2/");
-        var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/monokai");
-        editor.getSession().setMode("ace/mode/python");
+displayResult(track, simout);`)
 
         var programState = new ProgramState();
         var session = { state: programState };
