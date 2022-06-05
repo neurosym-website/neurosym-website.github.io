@@ -55,106 +55,137 @@ loadNavBar();
 
 <div class="content">
 
-<h1>Machine learning meets programs synthesis</h1>
+    <h1>Machine learning meets programs synthesis</h1>
 
-<p>
-<slide>
-Main:Slide25
-</slide>
-Our goal is to build a meta-framework that can be used to synthesize 
-programs to predict and understand data in a range of scientific domains. 
-In particular, this framework will synthesize <i>neurosymbolic</i> programs 
-that combine both neural and program-like logical components.
+    <p>
+        <slide>
+            Main:Slide25
+        </slide>
+        Our goal is to build a meta-framework that can be used to synthesize
+        programs to predict and understand data in a range of scientific domains.
+        In particular, this framework will synthesize <i>neurosymbolic</i> programs
+        that combine both neural and program-like logical components.
 
-For example, the figure illustrates a few examples of the kinds of compositions 
-of neural and logical components that our meta-framework will handle. 
-We plan to explore neurosymbolic models that go beyond these specific examples 
-and interleave neural and symbolic modules following complex hierarchical or 
-sequential architectures. Developing a <i>framework</i> that facilitates 
-the expression of such rich compositions --- an equivalent of Pytorch or Tensorflow 
-for neurosymbolic programming, if you will --- is a central goal of this project. 
-</p>
+        For example, the figure illustrates a few examples of the kinds of compositions
+        of neural and logical components that our meta-framework will handle.
+        We plan to explore neurosymbolic models that go beyond these specific examples
+        and interleave neural and symbolic modules following complex hierarchical or
+        sequential architectures. Developing a <i>framework</i> that facilitates
+        the expression of such rich compositions --- an equivalent of Pytorch or Tensorflow
+        for neurosymbolic programming, if you will --- is a central goal of this project.
+    </p>
 
-<p>
+    <p>
 
-More broadly, a major goal for the project is to develop a <i>science</i> of 
-neurosymbolic learning. 
-This will include developing new algorithms 
-that specifically address the challenges in the neurosymbolic setting---e.g. 
-how to design good domain specific languages (DSLs) to support the symbolic 
-part of a model, the presence of uncertainty, the need to perform continuous 
-optimization over the neural network parameters in conjunction with discrete 
-optimization over the program structure, and the need to actively design 
-experiments to disambiguate between candidate hypotheses/programs.
+        More broadly, a major goal for the project is to develop a <i>science</i> of
+        neurosymbolic learning.
+        This will include developing new algorithms
+        that specifically address the challenges in the neurosymbolic setting---e.g.
+        how to design good domain specific languages (DSLs) to support the symbolic
+        part of a model, the presence of uncertainty, the need to perform continuous
+        optimization over the neural network parameters in conjunction with discrete
+        optimization over the program structure, and the need to actively design
+        experiments to disambiguate between candidate hypotheses/programs.
 
-It will also include developing an understanding of when to deploy different 
-algorithms, as well as which combinations of neural and symbolic components work 
-better for which settings. 
+        It will also include developing an understanding of when to deploy different
+        algorithms, as well as which combinations of neural and symbolic components work
+        better for which settings.
 
-Our proposed framework will serve as a platform for exploring these algorithms 
-and deploying them in each of our problem domains.
-</p>
+        Our proposed framework will serve as a platform for exploring these algorithms
+        and deploying them in each of our problem domains.
+    </p>
 
-<h1>Published papers and ongoing efforts.</h1>
-
-
-<div class="project">
-    <h1>A science of Neurosymbolic Programming</h1>
-
-    There is a growing body of work exploring different ways to combine the benefits of deep learning with the benefits of
-    hand-written programs. In a recent collaborative effort between co-PIs Swarat Chaudhuri, Yisong Yue and Armando Solar-Lezama with project
-    alumni Kevin Ellis and collaborators Oleksandr Polozov and Rishabh Singh, we have sought to organize existing work into a conceptual 
-    framework that can help us understand the different ways in which neural learning and program synthesis can come together to achieve a variety 
-    of goals ranging from interpretability, to sample efficiency to correctness and consistency with prior knowledge. 
-    The paper was published in 2021 as part of the Foundations and Trends in Programming Languages series<cite>ChaudhuriEPSSY21</cite>.
-</div>
+    <h1>Published papers and ongoing efforts.</h1>
 
 
-<div class="project">
-    <h1>Learning Domain Specific Languages</h1>
-    The goal of this effort is to use neurosymbolic techniques to automatically learn a domain specific language (DSL) from a corpus of problems from a given domain. This is an important problem because it 
-    addresses one of the fundamental limitations of neurosymbolic programming: the need to have an expert design a domain specific language to make program synthesis tractable. 
+    <div class="project">
+        <h1>A science of Neurosymbolic Programming</h1>
 
-    In a first paper published in PLDI 2020, we showed that it is possible to automatically discover DSLs for a variety of problems including the problem of automatically discovering physics equations. For example, 
-    in one experiment, our system (DreamCoder) is given data from equations describing 60 different physical laws and mathematical identities taken from AP and MCAT physics “cheat sheets”. The system is initialized 
-    with a small number of sequence manipulation primitives like map and fold and after 8 iterations of the algorithm it is able to discover 93% of the laws and identities in the dataset by first learning the building 
-    blocks of vector algebra and then learning constructs common to many of the formulas such as inverse square laws. The paper was published in PLDI 2020 <cite>EllisWNSMHCST21</cite>.
-    
-</div>
-
-
-<div class="project">
-    <h1>
-        Synthesis of Reactive Programs with Structured Latent State
-    </h1>
-    In the context of the <a href="cognitive.html#autumn">Autumn effort</a>,
-    we developed a new synthesis algorithm that combines automata based synthesis with functional synthesis.
-    This algorithm allows us to synthesize fairly large functional reactive programs from observations of sequences of frames in an Autumn game.
-    We are working on a full conference submission on this work, but an early version was presented at the 
-     Advances in Programming Languages and Neurosymbolic Systems workshop in NeurIPS '21 and the Causal Inference & Machine Learning workshop, also at NeurIPS<cite>Ria21aiplans</cite>.
+        There is a growing body of work exploring different ways to combine the benefits of deep learning with the benefits of
+        hand-written programs. In a recent collaborative effort between co-PIs Swarat Chaudhuri, Yisong Yue and Armando Solar-Lezama with project
+        alumni Kevin Ellis and collaborators Oleksandr Polozov and Rishabh Singh, we have sought to organize existing work into a conceptual
+        framework that can help us understand the different ways in which neural learning and program synthesis can come together to achieve a variety
+        of goals ranging from interpretability, to sample efficiency to correctness and consistency with prior knowledge.
+        The paper was published in 2021 as part of the Foundations and Trends in Programming Languages series<cite>ChaudhuriEPSSY21</cite>.
+    </div>
 
 
-</div>
+    <div class="project">
+        <h1>Learning Domain Specific Languages</h1>
+        The goal of this effort is to use neurosymbolic techniques to automatically learn a domain specific language (DSL) from a corpus of problems from a given domain. This is an important problem because it
+        addresses one of the fundamental limitations of neurosymbolic programming: the need to have an expert design a domain specific language to make program synthesis tractable.
+
+        In a first paper published in PLDI 2020, we showed that it is possible to automatically discover DSLs for a variety of problems including the problem of automatically discovering physics equations. For example,
+        in one experiment, our system (DreamCoder) is given data from equations describing 60 different physical laws and mathematical identities taken from AP and MCAT physics “cheat sheets”. The system is initialized
+        with a small number of sequence manipulation primitives like map and fold and after 8 iterations of the algorithm it is able to discover 93% of the laws and identities in the dataset by first learning the building
+        blocks of vector algebra and then learning constructs common to many of the formulas such as inverse square laws. The paper was published in PLDI 2020 <cite>EllisWNSMHCST21</cite>.
+
+    </div>
+
+
+    <div class="project">
+        <h1>Model predictive program synthesis.</h1> 
+        
+        This effort is led by graduate students Yichen Yang and (now a former student) Jeevana Inala in collaboration with co-PIs 
+        Bastani, Rinard and Solar-Lezama. 
+        
+        The approach is based on a new idea of model predictive program synthesis, which trains a generative model to predict 
+        the unobserved portions of the world, and then synthesizes a program based on samples from this model in a way that is 
+        robust to its uncertainty. We evaluate our approach on a set of challenging benchmarks, including a 2D Minecraft-inspired
+        "craft" environment where the agent must perform a complex sequence of subtasks to achieve its goal, a box-world 
+        environment that requires abstract reasoning, and a variant of the craft environment where the agent is a MuJoCo Ant. 
+        This work was published as a spotlight in NeurIPS 21 <cite>YangInala2022</cite>.
+    </div>
+
+    <div class="project">
+        <h1>Metric program synthesis.</h1>
+        <p>
+            In this project, led by graduate student Jack Feser in a new collaboration with co-PIs Dillig and Solar-Lezama,
+            we have developed a new algorithm for <i>metric program synthesis</i>. The algorithm is based on the observation that in
+            many domains, once you have a program that is close to the desired program, it is possible to rely on greedy search to
+            hone in on the correct program. Metric synthesis leverages this observation by pruning from the search space programs that
+            are similar to each other with respect to a given metric. This allows the synthesizer to search deeper in the search space.
+            For example, in the figure below, the synthesis algorithm can use a metric to determine that the result in (a)
+            is  close enough to the desired solution that it can be transformed through a greedy search using both discrete
+            transformations (b) and continuous parameter adjustments (c).
+        </p>
+        <div style="text-align: center;"><img src="./images/feser-key-localsearch.png" / height="150px"></div>        
+    </div>
 
 
 
-<script>
-    processDocument();
+        <div class="project">
+            <h1>
+                Synthesis of Reactive Programs with Structured Latent State
+            </h1>
+            In the context of the <a href="cognitive.html#autumn">Autumn effort</a>,
+            we developed a new synthesis algorithm that combines automata based synthesis with functional synthesis.
+            This algorithm allows us to synthesize fairly large functional reactive programs from observations of sequences of frames in an Autumn game.
+            We are working on a full conference submission on this work, but an early version was presented at the
+            Advances in Programming Languages and Neurosymbolic Systems workshop in NeurIPS '21 and the Causal Inference & Machine Learning workshop, also at NeurIPS<cite>Ria21aiplans</cite>.
 
-    
 
-    
+        </div>
 
-</script>
 
-<div class="footnotes">
 
-<footnotes>
+        <script>
+            processDocument();
 
-</footnotes>
 
-</div>
-</div>
+
+
+
+        </script>
+
+        <div class="footnotes">
+
+            <footnotes>
+
+            </footnotes>
+
+        </div>
+    </div>
 
 </body>
 

@@ -96,7 +96,11 @@ loadAllFootnotes = function (filename, rest) {
 					drawPaperThumbnail('papers/' + footnoteindex[i] + '.pdf', document.getElementById(`paperpics.${x}`));
 
 				}
-			} 
+			} else {
+				let tv = `<table class="projectTable"> <tr> <td>${proj.innerHTML}</td> </tr>  </table>`
+
+				proj.innerHTML = tv;
+            } 
 			nextFootnote = nf;
 			//footnotes = localfn;
 			footnoteindex = localfi;

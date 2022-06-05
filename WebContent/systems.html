@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 
 <head>
 <meta charset="utf-8"/>
@@ -66,6 +66,48 @@ For example, consider software security: As new attacks and exploits are discove
 almost on a daily basis and existing software is patched to address these exploits, 
 it becomes increasingly important to construct models that explain what constitutes 
 a security vulnerability or malicious behavior. 
+
+
+<h2>Working with code</h2>
+    Software engineering applications were one of the original driving forces behind the development of some of the 
+    neurosymbolic techniques leveraged by our project. We are continuing to explore applications ranging from program manipulation 
+    to bug finding and vulnerability detection. Below are some of our ongoing efforts in this space. 
+
+
+<div class="project">
+    <h1>  Neural-guided Program Synthesis for Code Transpilation </h1>
+    <p>
+        Due to the rapidly evolving nature of modern programming, many code bases need to be modernized by either re-writing them in
+        an entirely different language or updating them to use different APIs. Motivated by this problem, our project aims to automate
+        code transpilation using neural-guided program synthesis. We address this problem using a synthesis-based approach because the
+        modernized version of the code is often written in a higher level of abstraction than the original version, making techniques
+        like syntax-directed translation unsuitable in this setting. To address the challenging nature of the synthesis problem, we
+        take a neural-guided approach, meaning that the search performed by the synthesizer is guided by a neural network that has
+        been trained off-line. Our approach uses a new neural architecture called a cognate grammar network suitable for the
+        transpilation task and leverages a novel pruning technique to rule out incorrect translations. A publication summarizing these
+        results will appear at OOPSLA’22, with extensions and applications to other problems (e.g., de-obfuscation) being underway.
+    </p>
+</div>
+
+
+<h2>Working with data</h2>
+    Another early and promising application of neurosymbolic techniques is working with data, whether for the purpose of manipulation 
+    and visualization, or for the efficient storage and querying of it.
+
+<div class="project">
+    <h1>  Querying and Visualizing Scientific Data using Program Synthesis </h1>
+    <p>
+        Data querying and visualization play a key role in many scientific disciplines, ranging from biology to physics. The goal of this project is to make it easier for scientists to query and  visualize data using (neuro-symbolic) program synthesis.
+    </p>
+    
+    <p>
+        One aspect of this project focuses on querying data that is comprised of  a combination of structured formats (e.g., table or XML document) and unstructured information (e.g., text). Such hybrid formats are very common in scientific applications, but they are not very amenable to data querying. In particular, purely neural approaches (e.g., developed for natural language processing) fail to adequately handle the structured representation, while purely programmatic querying techniques (e.g., based on SQL-like languages) fail to handle unstructured text. Our research addresses this problem by developing neuro-symbolic query DSLs and corresponding learning/synthesis techniques for making it easier to query data in such hybrid formats. A publication summarizing our initial findings in this context appeared at PLDI’21.
+    </p>
+    <p>
+        Another aspect of this project focuses on generating visualizations from (tabular) data using program synthesis. We consider two ways to simplify visualization authoring. In one thread of work, we consider a user interaction scenario where the user generates a partial visualization with the aid of graphical user interface, and our method completes the visualization by synthesizing a suitable visualization script that is consistent with the user-provided partial visualization. In another thread of work, we consider a natural language interface (NLI) for visualizations wherein a visualization program is synthesized based on the user’s natural language description. Initial results from this work appeared at POPL and CHI, with newer results involving NLIs currently under peer-review.
+    </p> 
+</div>
+
 
 <h2>Understanding software vulnerabilities.</h2>
 
