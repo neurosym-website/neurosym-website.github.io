@@ -1,4 +1,4 @@
-
+﻿
 
 var module = {};
 
@@ -131,7 +131,10 @@ function rapydToPsk(rapyd) {
         }
 
         visitWhile(stmt) {
+            let oldhs = this.hassim;
+            this.hassim = false;
             let rv = super.visitWhile(stmt);
+
             if (this.hassim) {
                 let body = stmt.body.accept(this);
                 let cond = stmt.cond.accept(this);
@@ -146,31 +149,101 @@ NEXT__ = ${this.timers.length + 1}
 }
 `
                 this.timers.push(rv);
+                this.hassim = oldhs || this.hassim;
                 return 'NEXT__ = ' + (this.timers.length-1) + ';\n';
             } else {
+                this.hassim = oldhs || this.hassim;
                 return rv;
             }
 
         }
+
+        visitFor(stmt) {
+            let oldhs = this.hassim;
+            this.hassim = false;
+            let rv = super.visitFor(stmt);
+            if (this.hassim) {
+                this.forhead = true;
+                let tv = '';
+                
+                if (stmt.decl instanceof AssignN) {
+                    var vname = nameFilter(stmt.decl.lhs.name);
+                    tv += vname + "=" + stmt.decl.rhs.accept(this) + ';\n' ;
+                } else {
+                    throw "This type of for loop is not supported.";
+                }
+                let cond;
+                let incr;
+                if (stmt.incr != undefined) {
+                    cond = stmt.comp.accept(this);
+                    incr = stmt.incr.accept(this);                    
+                } else {
+                    throw "This type of for loop is not supported.";
+                }
+                
+                this.forhead = false;
+                let body = stmt.body.accept(this);
+                rv = `@timer 500 
+if(NEXT__==#${this.timers.length}){;
+if(${cond}){
+${body};
+${incr}
+}else{
+stopTimer();
+NEXT__ = ${this.timers.length + 1}
+}
+}
+`
+                this.timers.push(rv);   
+                this.hassim = oldhs || this.hassim;
+                return tv + 'NEXT__ = ' + (this.timers.length - 1) + ';\n';
+            } else {
+                this.hassim = oldhs || this.hassim;
+                return rv;
+            }
+        }
+
         visitBlock(stmt) {
+            let _this = this;
             var rv = "{\n";
+            let startlen = this.timers.length;
             for (let x = 0; x < stmt.stmts.length; ++x) {
                 let s = stmt.stmts[x];
                 let ts = s.accept(this); 
-                if (this.timers.length == 0) {
+                if (this.timers.length == startlen) {
                     rv += ts + ";\n";
-                } else {
-                    let ttm = `@timer 500
-if(NEXT__==#${this.timers.length}){`;
-                    for (let y = x+1; y < stmt.stmts.length; ++y) {
-                        let s = stmt.stmts[y];
-                        let ts = s.accept(this); 
-                        ttm += ts + ';\n';    
-                    }                    
-                    ttm += `stopTimer(); NEXT__ = ${this.timers.length + 1}; }`
-                    this.timers.push(ttm + '\n');
-                    rv += ts + ';\n';
-                    return rv + "}\n";
+                } else {                    
+                    function timersFromHere(x) {
+                        
+                        let timerid = _this.timers.length;
+                        _this.timers.push('');
+                        let ttm = `@timer 500
+                    
+if(NEXT__==#${timerid}){`;
+                        for (let y = x + 1; y < stmt.stmts.length; ++y) {
+                            let s = stmt.stmts[y];
+                            let ts = s.accept(_this);
+
+                            if (_this.timers.length > timerid + 1) {
+                                ttm += ts + ';\n';
+                                ttm += `stopTimer(); }`
+                                _this.timers[timerid] = (ttm + '\n');  
+                                if (y + 1 < stmt.stmts.length) {
+                                    timersFromHere(y);
+                                }                                
+                                return;
+                            }
+
+                            ttm += ts + ';\n';
+
+                        }
+                        ttm += `stopTimer(); NEXT__ = ${timerid + 1}; }`
+                        _this.timers[timerid] = (ttm + '\n');
+                        
+                        return;
+                    }
+                    timersFromHere(x);
+                    return rv + ts + "; \n } \n"; 
                 }                
             }
             return rv + "}\n";
@@ -186,12 +259,15 @@ if(NEXT__==#${this.timers.length}){`;
         rapyd = rapyd.replace(/^\s*\(function\(\)\{/g, "");
         rapyd = rapyd.replace(/\}\)\(\);\s*$/g, "");
     }
+    rapyd = rapyd.replace(/ՐՏ/g, "rs");  
     rapyd = rapyd.replace(/.._print/g, "alert");  
     rapyd = rapyd.replace(/true_./g, "true");  
     rapyd = rapyd.replace(/false_./g, "false");  
     rapyd = rapyd.replace(/[^a-zA-Z0-9](\.\d+)/g, "0$1");
     rapyd = rapyd.replace(/===/g, "==");
     rapyd = 'function str(v){ return v; }\n' + rapyd;
+    rapyd = 'function xrange(n){ rv = []; for(i=0; i<n; ++i){ rv.push(i); } return rv; } \n' + rapyd;
+    rapyd = 'function rs_Iterable(rv){ return rv; } \n' + rapyd;
     console.log(rapyd);
     let ast = Parser().program(rapyd);
     let fixer = new CodeFixer();
