@@ -476,35 +476,54 @@ th, td {
 		}
 
 .paperThumb {
-	height: 150pt;
+	width: 70pt;
 	padding-top: 10pt;
 }
 
 	@media only screen and (max-width: 700px) {
 		.paperThumb {
-			height: 100pt;
+			width: 50pt;
 		}
 	}
 
 	@media only screen and (max-width: 464px) {
 		.paperThumb {
-			height: 50pt;
+			width: 30pt;
+		}
+	}
+
+.projectFig{
+	width:380pt;
+}
+
+@media only screen and (max-width: 1100px) {
+	.projectFig {
+		width: 290pt;
+	}
+}
+
+	@media only screen and (max-width: 700px) {
+		.projectFig {
+			width: 250pt;
+		}
+	}
+
+	@media only screen and (max-width: 464px) {
+		.projectFig {
+			width: 150pt;
 		}
 	}
 
 
-
-	.talkInfo {		
+	.talkInfo {
 		padding: 5pt;
 		/* border: 1px solid black; */
 		text-align: justify;
 		margin-left: 0px;
 	}
 
-.talkInfo h2{
-	
-	/* border: 1px solid black; */
-	text-align: left;
-	font-size:100%;
-	
-}
+		.talkInfo h2 {
+			/* border: 1px solid black; */
+			text-align: left;
+			font-size: 100%;
+		}
