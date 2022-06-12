@@ -262,6 +262,7 @@ for step in range(N):
     result = simulate(...)
     if(result is better than bestResult): 
         bestResult = result
+        bestParams = ...
     else:
         <span style="color:lightblue"># the randomly modified parameters were not better, </span>
         <span style="color:lightblue"># so revert back to the old parameters</span>
@@ -276,9 +277,10 @@ Here are a few pieces of advice.
         <li>
             It is often helpful to reduce the amount of noise over time. 
         </li>
-        <li> The function <span class="inlinecode">simulate</span> runs much faster if you don't display 
-        the results, but it's fun to see how the controller improves over time. One possibility is to use an 
-        expression such as (step % K) == 0 to have it display only every K steps. 
+        <li>
+            The function <span class="inlinecode">simulate</span> runs much faster if you don't display
+            the results, but it's fun to see how the controller improves over time. One possibility is to use an
+            expression such as  <span class="inlinecode">(step % K) == 0</span> to have it display only every K steps.
         </li>
 
     </ul>
