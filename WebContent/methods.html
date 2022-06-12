@@ -167,6 +167,52 @@ loadNavBar();
 
         </div>
 
+                <div class="project">
+            <h1>
+                Improving analysis of large language models for code generation
+            </h1>
+            Modern neural language models such as GPT-3 can do an amazing job of automatically writing programs in a high-level language such as Python or Java.  However, when one examines the produced code closely (or sends it through a compiler) errors are commonly found: variables are used out of scope, methods are called that do not exist, and assignments are made across variable types that are not compatible.
+
+            The problem with using a purely neural model such as GPT-3 is that programs have a well-defined semantics, and a neural language model that has been trained on billions of lines of code but has never been exposed to these semantics will often make errors.  It is a very difficult task for a neural language model to read a lot of code and figure out scoping rules, or the complex type hierarchy used in an API-heavy language such as Java, without the model being given any information beyond billions of lines of code.
+
+            In this expeditions project <cite>neurostatistic</cite>, our idea is simple. We use a static-semantic analysis of the program code to produce a summary of the program written so far: which variables are in scope, what the types of those variables are, whether a variable has been initialized, etc.  This analysis is then provided to the neural language model as it is asked to write code.  We find the providing the results of such a symbolic analysis to the language model can greatly decrease the prevalence of many types of simple errors in the code that is produced, and the hints provided by the analysis can even increase how well the produced code matches a prompt compared to a purely neural model, according to several different metrics.
+            
+        </div>
+
+                <div class="project">
+            <h1>
+            Safe Neurosymbolic Learning with Differentiable Symbolic Execution
+            </h1>
+            This effort is led by graduate student Chenxi Yang with co-PI Swarat Chaudhuri. The goal of this effort is to learn worst-case-safe parameters for programs that use neural networks as well as symbolic, human-written code. Such neurosymbolic programs arise in many safety-critical domains. The approach in this work, Differentiable Symbolic Execution (DSE), samples control flow paths in a program, symbolically constructs worst-case "safety losses" along these paths, and backpropagates the gradients of these losses through program operations using a generalization of the REINFORCE estimator. This method is evaluated on a mix of synthetic tasks and real-world benchmarks. The experiments show that DSE significantly outperforms the state-of-the-art method on these tasks. The paper was published in ICLR 2022 <cite>safe</cite>.
+                        
+        </div>
+
+
+                <div class="project">
+            <h1>
+            Safe Neurosymbolic Learning with Differentiable Symbolic Execution
+            </h1>
+            This effort is led by graduate student Chenxi Yang with co-PI Swarat Chaudhuri. The goal of this effort is to learn worst-case-safe parameters for programs that use neural networks as well as symbolic, human-written code. Such neurosymbolic programs arise in many safety-critical domains. The approach in this work, Differentiable Symbolic Execution (DSE), samples control flow paths in a program, symbolically constructs worst-case "safety losses" along these paths, and backpropagates the gradients of these losses through program operations using a generalization of the REINFORCE estimator. This method is evaluated on a mix of synthetic tasks and real-world benchmarks. The experiments show that DSE significantly outperforms the state-of-the-art method on these tasks. The paper was published in ICLR 2022 <cite>safe</cite>.
+                        
+        </div>
+
+                <div class="project">
+            <h1>
+            Synthesizing Programs by Exploiting Differentiability             
+            </h1>
+In order to more efficiently learn programs from data, a recent effort led by graduate student Ameesh Shah and former student Eric Zhan and PIs  Yisong  Yue and Swarat Chaudhuri opened up a new line of attack that exploits the differentiability of programming languages <cite>near</cite>. More specifically, differentiable languages allow for the evaluation of partially complete programs by inserting type-correct neural networks into the program's "holes", where the missing expressions are not yet synthesized. With the ability to evaluate partial programs, we can use this "neural relaxation" as a heuristic to guide classical search algorithms, such as A* search, by framing the program learning problem as a top-down inductive search through a language's derivation tree. We dubbed this heuristic "NEAR" and showed that we can use NEAR to learn accurate programmatic representations of data (i.e. classifiers) much more efficiently than existing general-purpose synthesis methods. This work was originally presented at NeurIPS 2020.                        
+        </div>
+
+                <div class="project">
+            <h1>
+Web Question Answering with Neurosymbolic Program Synthesis
+            </h1>
+This effort is led by graduate student Jocelyn Chen in a collaboration with co-PIs Isil Dillig and Osbert Bastani. We have developed a new technique based on program synthesis for extracting information from webpages <cite>webq</cite>. To handle websites with diverse structure, we design a new neurosymbolic domain specific language that incorporates both neural NLP models as well as standard constructs for tree navigation and string manipulation. We also propose an optimal synthesis algorithm that generates all programs in the DSL that achieve optimal F! score on the training examples. We evaluated our language and algorithm on 25 different tasks across multiple domains and showed that our approach outperforms existing tools. This paper was published in PLDI 2021. 
+        </div>
+
+
+
+
 
 
         <script>
