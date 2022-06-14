@@ -49,6 +49,26 @@ function sanitize(msg) {
 }
 
 
+function baseImgLoader(src, fname, rest) {
+    const img = new Image;
+    var name = stripName(fname);
+
+
+    img.onload = () => {
+        if (img.naturalWidth > 2 * img.naturalHeight) {
+            img.width = "160";
+        } else {
+            img.height = "80";
+        }
+    };
+
+    img.src = src;
+    img.id = name;
+
+    return rest(img, name);
+}
+
+
 function errorMsg(msg) {
     //msg = sanitize(msg);
     if (document.getElementById('errMsg')) {
@@ -61,6 +81,22 @@ function errorMsg(msg) {
     }
 }
 
+function imgFromFile(src, fname, noclose) {
+    return baseImgLoader('https://code.playskript.com'+src, fname, (img, name) => {
+        return img;
+    });
+}
+
+
+function loadImportedPictures(extraPictures) {
+    var picdiv = document.getElementById("scratchpad");
+    
+    for (var name in extraPictures) {
+        var imgurl = extraPictures[name];
+        var img = imgFromFile(imgurl, name, true);
+        picdiv.appendChild(img);
+    }
+}
 
 
 function readEditor() {
@@ -118,7 +154,8 @@ function rapydToPsk(rapyd) {
                 'simulate': 'cars.simulate',
                 'displayResult': 'cars.displayResult',
                 'displayCar': 'cars.displayCar',
-                'random':'Math.random',
+                'random': 'Math.random',
+                'startDisplay':'cars.startDisplay',
             };
             let nf = nameFilter(expr.name);
             if (nf == 'simulate') {

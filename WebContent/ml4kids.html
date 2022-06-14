@@ -73,14 +73,14 @@
 
 
         .canvasStyle {
-            width: 960px;
+            width: 1440px;
             height: 600px;
             border: 1px solid #000000;
         }
 
         @media only screen and (max-width: 1450px) {
             .canvasStyle {
-                width: 768px;
+                width: 1152px;
                 height: 480px;
             }
         }
@@ -88,14 +88,14 @@
         @media only screen and (max-width: 1165px) {
             .canvasStyle {
                 width: 960px;
-                height: 600px;
+                height: 400px;
             }
         }
 
         @media only screen and (max-width: 990px) {
             .canvasStyle {
-                width: 768px;
-                height: 480px;
+                width: 720px;
+                height: 300px;
             }
         }
 
@@ -135,6 +135,12 @@
             border: 1pt lightgray solid;
             font-size: 120%;
         }
+        #codingbox{
+            text-align:center;
+        }
+        #instructions{
+            padding:20px;
+        }
     </style>
 </head>
 <body>
@@ -144,8 +150,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.2/ace.min.js" type="text/javascript" charset="utf-8"></script>
 
 
-    <div>
-        <table>
+    <div id="instructions">
+        <table style="margin:auto">
             <tr>
                 <td>
                     <div id="controlingTheCar">
@@ -176,13 +182,10 @@
                                     and produces a new car positioned at the starting point of the track.
                                 </li>
                                 <li>
-                                    <span class="inlinecode">displayTrack(track)</span>.
-                                    Displays the generated track in the screen.
+                                    <span class="inlinecode">startDisplay(track, car)</span>.
+                                    Initializes the display with the given track and car.
                                 </li>
-                                <li>
-                                    <span class="inlinecode">displayCar(cc);</span>.
-                                    Displays the car in the screen.
-                                </li>
+                                
                                 <li>
                                     <span class="inlinecode">simulate(car, track, timesteps, controler, display)</span>.
                                     This function runs the simulator with the given car and the given track for a fixed number
@@ -303,24 +306,26 @@ Here are a few pieces of advice.
 
     </div>
 
+    <div id="codingbox">
+        <table style="margin:auto">
+            <tr>
+                <td>
+                    <div id="editorContainer" class="editorContainerStyle">
+                        <div id="editor" class="editorStyle"></div>
+                    </div>
 
-    <table>
-        <tr>
-            <td>
-                <div id="editorContainer" class="editorContainerStyle">
-                    <div id="editor" class="editorStyle"></div>
-                </div>
+                </td>
+                <td>
+                    <div id="errMsg" class="errorbox">
+                        <div id="errMsgText"></div>
+                    </div>
 
-            </td>
-            <td>
-                <div id="errMsg" class="errorbox">
-                    <div id="errMsgText"></div>
-                </div>
+                </td>
+            </tr>
 
-            </td>
-        </tr>
-
-    </table>
+        </table>
+    </div>
+   
 
     <a href="javascript:runsym()">Run</a>
     <a href="javascript:stopsym()">Stop</a>
@@ -329,11 +334,11 @@ Here are a few pieces of advice.
     
 
     <div id="canvasContainer" style="background-color: white; text-align:center">
-        <canvas id="myCanvas" width="1920" height="1200" class="canvasStyle"
+        <canvas id="myCanvas" width="2880" height="1200" class="canvasStyle"
                 tabindex="1"></canvas>
     </div>
 
-
+    <div id="scratchpad" style="display:none;"></div>
 
     <script>
 
@@ -360,7 +365,7 @@ Here are a few pieces of advice.
 
         editor.insert(`track = track0()
 car = newCar(track)
-displayTrack(track)
+startDisplay(track, car)
 
 def control(sd, pastsd):
     speed = 5;
@@ -369,7 +374,7 @@ def control(sd, pastsd):
 
 print("Ready to simulate.")
 
-displayCar(car);
+
 
 simout = simulate(car, track, 750, control, true);
 print("Done!")
@@ -383,7 +388,10 @@ displayResult(track, simout);`)
 
         var slide = Slide("myCanvas", readEditor, session.state, undefined, "slide");
 
-        session.state.downloadImports({ cars: '92239360539f2ab8baad5b62f10fd5871614916b834060d498' }, () => {
+        
+        session.state.setRefreshFun(loadImportedPictures);
+
+        session.state.downloadImports({ cars: '1b383b4af862477df9df5ae197d0282e261430b937c0a39f94' }, () => {
 
 
         });
