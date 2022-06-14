@@ -140,6 +140,14 @@
         }
         #instructions{
             padding:20px;
+            text-align:center;
+        }
+        h1{
+            font-family:sans-serif;
+            text-align:center;
+        }
+        h2{
+            font-family:sans-serif
         }
     </style>
 </head>
@@ -149,13 +157,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.2/ace.min.js" type="text/javascript" charset="utf-8"></script>
 
-
+    <h1>Teaching a computer to drive</h1>
     <div id="instructions">
-        <table style="margin:auto">
+        <table style="margin:auto; text-align:left; width:90%">
             <tr>
                 <td>
                     <div id="controlingTheCar">
-                        <h1>Controling a car part 1.</h1>
+                        <h2>Controling a car part 1.</h2>
                         <p>
                             Your goal for this exercise is to write a function that steers the car through a track
                             without crashing. The car is illustrated in the figure on the right. The car has three
@@ -248,7 +256,7 @@
                         <a href="javascript:displayLearning()">Continue with part 2</a>
                     </div>
                     <div id="learningTheController" style="display:none">
-                        <h1>Learning the controller</h1>
+                        <h2>Learning the controller</h2>
                         For this part of the exercise, we are going to show how to learn a controller using a very simple 
                         optimization algorithm. The basic setup of the algorithm is as follows. 
 <div class="fullcode">
