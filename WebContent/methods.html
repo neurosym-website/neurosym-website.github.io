@@ -179,16 +179,7 @@ loadNavBar();
             
         </div>
 
-                <div class="project">
-            <h1>
-            Safe Neurosymbolic Learning with Differentiable Symbolic Execution
-            </h1>
-            This effort is led by graduate student Chenxi Yang with co-PI Swarat Chaudhuri. The goal of this effort is to learn worst-case-safe parameters for programs that use neural networks as well as symbolic, human-written code. Such neurosymbolic programs arise in many safety-critical domains. The approach in this work, Differentiable Symbolic Execution (DSE), samples control flow paths in a program, symbolically constructs worst-case "safety losses" along these paths, and backpropagates the gradients of these losses through program operations using a generalization of the REINFORCE estimator. This method is evaluated on a mix of synthetic tasks and real-world benchmarks. The experiments show that DSE significantly outperforms the state-of-the-art method on these tasks. The paper was published in ICLR 2022 <cite>safe</cite>.
-                        
-        </div>
-
-
-                <div class="project">
+            <div class="project">
             <h1>
             Safe Neurosymbolic Learning with Differentiable Symbolic Execution
             </h1>
@@ -203,12 +194,23 @@ loadNavBar();
 In order to more efficiently learn programs from data, a recent effort led by graduate student Ameesh Shah and former student Eric Zhan and PIs  Yisong  Yue and Swarat Chaudhuri opened up a new line of attack that exploits the differentiability of programming languages <cite>near</cite>. More specifically, differentiable languages allow for the evaluation of partially complete programs by inserting type-correct neural networks into the program's "holes", where the missing expressions are not yet synthesized. With the ability to evaluate partial programs, we can use this "neural relaxation" as a heuristic to guide classical search algorithms, such as A* search, by framing the program learning problem as a top-down inductive search through a language's derivation tree. We dubbed this heuristic "NEAR" and showed that we can use NEAR to learn accurate programmatic representations of data (i.e. classifiers) much more efficiently than existing general-purpose synthesis methods. This work was originally presented at NeurIPS 2020.                        
         </div>
 
+
                 <div class="project">
             <h1>
 Web Question Answering with Neurosymbolic Program Synthesis
             </h1>
 This effort is led by graduate student Jocelyn Chen in a collaboration with co-PIs Isil Dillig and Osbert Bastani. We have developed a new technique based on program synthesis for extracting information from webpages <cite>webq</cite>. To handle websites with diverse structure, we design a new neurosymbolic domain specific language that incorporates both neural NLP models as well as standard constructs for tree navigation and string manipulation. We also propose an optimal synthesis algorithm that generates all programs in the DSL that achieve optimal F! score on the training examples. We evaluated our language and algorithm on 25 different tasks across multiple domains and showed that our approach outperforms existing tools. This paper was published in PLDI 2021. 
         </div>
+
+                <div class="project">
+            <h1>
+Neurosymbolic Reinforcement Learning with Formally Verified Exploration
+            </h1>
+As deep reinforcement learning is incorporated into safety-critical systems (e.g., autonomous vehicles), it becomes more and more important to ensure that these systems behave safely. At the same time, we want to keep the performance benefits of deep-learning techniques over more traditional control theoretic algorithms. In this project, we are developing neurosymbolic approaches to system control which combine the optimal behavior of deep learning algorithms with the safety verification of traditional symbolic techniques <cite> anderson2020neurosymbolic </cite>. The first paper in this project, published at NeurIPS 2020, presents REVEL, a learning algorithm which combines traditional program synthesis with off-the-shelf deep reinforcement learning algorithms. On a suite of tasks drawn from robotics and classic control, we show that REVEL is able to achieve comparable performance to existing algorithms while maintaining verifiable safety at all times during training.
+        </div>
+        </div>
+
+
 
 
 
