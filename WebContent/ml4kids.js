@@ -180,7 +180,7 @@ function rapydToPsk(rapyd) {
             if (this.hassim) {
                 let body = stmt.body.accept(this);
                 let cond = stmt.cond.accept(this);
-                rv = `@timer 500 
+                rv = `@timer 250 
 if(NEXT__==#${this.timers.length}){;
 if(${cond}){
 ${body}
@@ -225,7 +225,7 @@ NEXT__ = ${this.timers.length + 1}
                 
                 this.forhead = false;
                 let body = stmt.body.accept(this);
-                rv = `@timer 500 
+                rv = `@timer 250 
 if(NEXT__==#${this.timers.length}){;
 if(${cond}){
 ${body};
@@ -259,7 +259,7 @@ NEXT__ = ${this.timers.length + 1}
                         
                         let timerid = _this.timers.length;
                         _this.timers.push('');
-                        let ttm = `@timer 500
+                        let ttm = `@timer 250
                     
 if(NEXT__==#${timerid}){`;
                         for (let y = x + 1; y < stmt.stmts.length; ++y) {
