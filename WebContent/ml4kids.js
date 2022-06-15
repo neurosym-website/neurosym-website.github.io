@@ -103,8 +103,13 @@ function readEditor() {
     var program;
     var editor = ace.edit("editor");
     program = editor.getValue();
-
-    js = rapydscript.compile(program, { omit_baselib: true, beautify: true })
+    try {
+        js = rapydscript.compile(program, { omit_baselib: true, beautify: true })
+    } catch (e) {
+        errorMsg(e.message + '(line:' + e.line + ', col:' + e.col + ')');
+        return { code: 'alert("Parsing failed");', version: 1, minor: 1 };
+    }
+    
     js = rapydToPsk(js)
 
     console.log(js);

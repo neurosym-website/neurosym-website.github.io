@@ -357,7 +357,7 @@ Here are a few pieces of advice.
         and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views
         of the National Science Foundation.
 
-        <a href="https://code.playskript.com/info.html?id=1b383b4af862477df9df5ae197d0282e261430b937c0a39f94" target="_blank">The simulation and visualizations</a>  were developed using the <a href="https://code.playskript.com" target="_blank">PlaySkript&reg; visualization platform</a>. 
+        <a href="https://code.playskript.com/view.html?id=2fccc0e15131e885422ddc4166b2dce467b34dc92463a4bed7" target="_blank">The simulation and visualizations</a>  were developed using the <a href="https://code.playskript.com" target="_blank">PlaySkript&reg; visualization platform</a>. 
     </p>
     <br />
     <div id="scratchpad" style="display:none;"></div>
@@ -432,7 +432,7 @@ displayResult(track, simout);`)
         
         session.state.setRefreshFun(loadImportedPictures);
 
-        session.state.downloadImports({ cars: '1b383b4af862477df9df5ae197d0282e261430b937c0a39f94' }, () => {
+        session.state.downloadImports({ cars: '2fccc0e15131e885422ddc4166b2dce467b34dc92463a4bed7' }, () => {
 
 
         });
@@ -441,7 +441,12 @@ displayResult(track, simout);`)
         function runsym() {
             let msgs = document.getElementById("errMsgText");
             msgs.innerHTML = '';
-            slide.play();
+            try {
+                slide.play();
+            } catch (e) {
+                errorMsg(e);
+            }
+            
         }
         function stopsym() {
             slide.stop();
