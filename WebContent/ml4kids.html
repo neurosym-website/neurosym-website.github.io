@@ -34,7 +34,7 @@
             width: 100%;
         }
 
-        @media only screen and (max-width: 1450px) {
+        @media only screen and (max-width: 1480px) {
             .editorContainerStyle {
                 width: 550px;
             }
@@ -47,7 +47,7 @@
             }
         }
 
-        @media only screen and (max-width: 1165px) {
+        @media only screen and (max-width: 1195px) {
             .editorContainerStyle {
                 width: 550px;
             }
@@ -79,14 +79,14 @@
             border: 1px solid #000000;
         }
 
-        @media only screen and (max-width: 1450px) {
+        @media only screen and (max-width: 1480px) {
             .canvasStyle {
                 width: 1152px;
                 height: 480px;
             }
         }
 
-        @media only screen and (max-width: 1165px) {
+        @media only screen and (max-width: 1195px) {
             .canvasStyle {
                 width: 960px;
                 height: 400px;
@@ -116,8 +116,11 @@
             height:300pt;
             margin-right:10pt;
         }
+        body{
+            font-size:18px;
+        }
         .inlinecode{
-            font:bold 12px consolas;
+            font:bold 14px consolas;
         }
         html{
             padding-left:12pt;
@@ -134,7 +137,7 @@
             background: rgb(40,40,40);
             color: rgb(221, 203, 106);
             border: 1pt lightgray solid;
-            font-size: 120%;
+            font-size: 100%;
         }
         #codingbox{
             text-align:center;
@@ -239,7 +242,7 @@
                             of its wheels. In terms of speed, the car can only accelerate at up to 10 m/s<sup>2</sup>. So if
                             the controller requests a speed that is more than 1 m/s higher than the speed from the previous timestep,
                             the speed will only increase by 1 m/s (remember a timestep is 0.1 second).
-                            Similarly, the wheels can only turn by at most 100 degrees per second, so if the requested angle is more than
+                            Similarly, the steering angle can only change by at most 100 degrees per second, so if the requested angle is more than
                             10 degrees above the previous angle, the angle will only change by 10 degrees.
                         </p>
                         <p>
@@ -302,7 +305,7 @@ Here are a few pieces of advice.
                     </div>
 
                 </td>
-                <td>
+                <td style="vertical-align:top; padding-top:20px">
                     <img id="carinfo" src="images/carinfo.png" />
 
                 </td>
@@ -335,10 +338,12 @@ Here are a few pieces of advice.
         </table>
     </div>
    
+    <div style="text-align:center">
+        <a href="javascript:runsym()"><img src="images/run.png" style="height:30pt" /></a>
+        <a href="javascript:stopsym()"><img src="images/stop.png" style="height:30pt" /></a>
 
-    <a href="javascript:runsym()">Run</a>
-    <a href="javascript:stopsym()">Stop</a>
-
+    </div>
+    
 
     
 
@@ -347,9 +352,36 @@ Here are a few pieces of advice.
                 tabindex="1"></canvas>
     </div>
 
+    <p>
+        The creation of this material was supported by the National Science Foundation under Grant No. 1918839. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views
+        of the National Science Foundation.
+
+        <a href="https://code.playskript.com/info.html?id=1b383b4af862477df9df5ae197d0282e261430b937c0a39f94" target="_blank">The simulation and visualizations</a>  were developed using the <a href="https://code.playskript.com" target="_blank">PlaySkript&reg; visualization platform</a>. 
+    </p>
+    <br />
     <div id="scratchpad" style="display:none;"></div>
 
     <script>
+
+        let carinfo = document.getElementById("carinfo");
+        let initPadding = 0;
+
+        document.addEventListener('scroll', () => {
+            let sy = window.scrollY;
+            if (sy < 100) {
+                carinfo.style.marginTop = '0px';
+            } else {
+                if (sy < 600) {
+                    carinfo.style.marginTop = (sy - 100) + 'px';
+                } else {
+                    carinfo.style.marginTop = '500px';
+                }
+            }
+
+        });
+
+
 
         function displayLearning() {
             let div = document.getElementById("learningTheController");
