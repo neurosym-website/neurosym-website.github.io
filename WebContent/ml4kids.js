@@ -160,7 +160,8 @@ function rapydToPsk(rapyd) {
                 'displayResult': 'cars.displayResult',
                 'displayCar': 'cars.displayCar',
                 'random': 'Math.random',
-                'startDisplay':'cars.startDisplay',
+                'startDisplay': 'cars.startDisplay',
+                'choice' :'cars.choice',
             };
             let nf = nameFilter(expr.name);
             if (nf == 'simulate') {
