@@ -309,6 +309,7 @@ if(NEXT__==#${timerid}){`;
     rapyd = rapyd.replace(/[^a-zA-Z0-9](\.\d+)/g, "0$1");
     rapyd = rapyd.replace(/===/g, "==");
     rapyd = 'function str(v){ return v; }\n' + rapyd;
+    rapyd = 'function abs(v){ return Math.abs(v); }\n' + rapyd;
     rapyd = 'function xrange(n){ rv = []; for(i=0; i<n; ++i){ rv.push(i); } return rv; } \n' + rapyd;
     rapyd = 'function rs_Iterable(rv){ if(isArray(rv)){ return rv;}else{ res=[]; for(x in rv){ res.push(x); }  return res;  } } \n' + rapyd;
     console.log(rapyd);
