@@ -11,6 +11,7 @@
     <script src="https://code.playskript.com/js/builtinDocs.js"></script>
     <script src="https://code.playskript.com/js/parsing.js"></script>
     <script src="https://code.playskript.com/js/processProgram.js"></script>
+    <script src="https://code.playskript.com/js/parseTex.js"></script>
     <script src="https://code.playskript.com/js/integrated.js"></script>
     <script src="https://code.playskript.com/js/programState.js"></script>
     <script src="https://code.playskript.com/js/errorCodes.js"></script>
@@ -18,16 +19,18 @@
     <style type="text/css" media="screen">
         .editorContainerStyle {
             background: white;
-            width: 750px;            
+            width: 750px;
         }
+
         .errorbox {
             background: rgb(39, 40, 34);
             overflow-y: auto;
             padding: 12px;
             width: 500px;
             height: 476px;
-            text-align:left;
+            text-align: left;
         }
+
         .editorStyle {
             font-size: 14px;
             height: 500px;
@@ -38,9 +41,11 @@
             .editorContainerStyle {
                 width: 550px;
             }
+
             .editorStyle {
-                font-size: 12px;                
+                font-size: 12px;
             }
+
             .errorbox {
                 font-size: 12px;
                 width: 500px;
@@ -51,9 +56,10 @@
             .editorContainerStyle {
                 width: 550px;
             }
+
             .editorStyle {
-                
             }
+
             .errorbox {
                 width: 400px;
             }
@@ -63,9 +69,11 @@
             .editorContainerStyle {
                 width: 550px;
             }
+
             .editorStyle {
                 font-size: 10px;
             }
+
             .errorbox {
                 width: 300px;
                 font-size: 10px;
@@ -112,20 +120,25 @@
         .errmsg-done {
             color: rgb(239, 240, 34);
         }
-        #carinfo{
-            height:300pt;
-            margin-right:10pt;
+
+        #carinfo {
+            height: 300pt;
+            margin-right: 10pt;
         }
-        body{
-            font-size:18px;
+
+        body {
+            font-size: 18px;
         }
-        .inlinecode{
-            font:bold 14px consolas;
+
+        .inlinecode {
+            font: bold 14px consolas;
         }
-        html{
-            padding-left:12pt;
-            padding-right:12pt;
+
+        html {
+            padding-left: 12pt;
+            padding-right: 12pt;
         }
+
         .fullcode {
             white-space: pre-wrap;
             padding-top: 5px;
@@ -139,19 +152,23 @@
             border: 1pt lightgray solid;
             font-size: 100%;
         }
-        #codingbox{
-            text-align:center;
+
+        #codingbox {
+            text-align: center;
         }
-        #instructions{
-            padding:20px;
-            text-align:center;
+
+        #instructions {
+            padding: 20px;
+            text-align: center;
         }
-        h1{
-            font-family:sans-serif;
-            text-align:center;
+
+        h1 {
+            font-family: sans-serif;
+            text-align: center;
         }
-        h2{
-            font-family:sans-serif
+
+        h2 {
+            font-family: sans-serif
         }
     </style>
 </head>
