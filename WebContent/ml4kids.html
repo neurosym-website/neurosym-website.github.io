@@ -288,8 +288,7 @@ def control(sd, pastsd):
 
 bestResult = 0
 bestParams = ...
-for step in range(N):
-    oldParams = ...
+for step in range(N):    
     <span style="color:lightblue"># randomly modify the parameters</span>
     result = simulate(...)
     if(result is better than bestResult): 
@@ -297,7 +296,7 @@ for step in range(N):
         bestParams = ...
     else:
         <span style="color:lightblue"># the randomly modified parameters were not better, </span>
-        <span style="color:lightblue"># so revert back to the old parameters</span>
+        <span style="color:lightblue"># so change back to the old best parameters</span>
 </div>
 Here are a few pieces of advice. 
 
@@ -306,6 +305,8 @@ Here are a few pieces of advice.
         An easy way to randomly modify the parameters is to add a small amount of random noise.
         In your environment, we have defined a function <span class="inlinecode">random()</span> that
         returns a random value between 0 and 1 that you can use to add random noise to a parameter.
+        You can also call <span class="inlinecode">random(a,b)</span> to get a random number between 
+        <span class="inlinecode">a</span> and <span class="inlinecode">b</span>.
     </li>
 
     <li>
