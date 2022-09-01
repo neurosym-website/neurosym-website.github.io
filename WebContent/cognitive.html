@@ -34,7 +34,7 @@
 <img title='stanford' src='images/stanford.png' height='100%'/>
 </div>
 <div id='navicon.div' class='navicon'>
-<img id = 'navicon' src="images/burger.rest.png" 
+<img id = 'navicon' src="images/burger.rest.png"
 onmouseenter="iconEnter(this, 'burger')"
 onmouseleave="iconLeave(this, 'burger')"
 onclick = 'toggleNav()'
@@ -44,9 +44,9 @@ title="Navigation" width="34pt"></img>
 
 
 <div id="navigator" class="sidenav">
-<a href="#about">Lecture 1</a> 
-<a href="#services">Lecture 2</a> 
-<a href="#clients">Lecture 3</a> 
+<a href="#about">Lecture 1</a>
+<a href="#services">Lecture 2</a>
+<a href="#clients">Lecture 3</a>
 <a href="#contact">Lecture 4</a>
 </div>
 <script type="text/javascript">
@@ -96,6 +96,23 @@ loadNavBar();
 
     </div>
 
+<div id="linguistics" class="project">
+  <h1>
+    Understanding language morpho-phonology with neurosymbolic methods.
+  </h1>
+  In a paper published in Nature Communications<cite>Ellis22Linguistics</cite>, we explore how a combination of
+ Bayesian inference with program synthesis is able to learn models of
+ language morpho-phonology from relatively small sets of words in a language. The approach
+ builds on representations inspired by linguistic theory and cognitive models of learning and
+discovery. Across 70 datasets from 58 diverse languages, our system synthesizes
+human-interpretable models for core aspects of each language’s
+morpho-phonology, sometimes approaching models posited by human linguists.
+You can read more about this work in a recent <a href="https://news.mit.edu/2022/ai-learn-patterns-language-0830">MIT news article</a>.
+
+</div>
+
+
+
     <h2>Understanding behavior.</h2>
     Behavior is arguably the most complex phenotype one could analyze in life and
     cognitive sciences. For instance, what is a concise theory that explains courtship in fruit
@@ -126,11 +143,11 @@ loadNavBar();
     We evaluated this trade-off using data from behavioral neuroscience, in which specialized domain knowledge is used to identify behaviors. We present experimental results in three datasets across two domains: mice and fruit flies. Using embeddings from TREBA, we reduce annotation burden by up to a factor of 10 without compromising accuracy compared to state-of-the-art features. Our results thus suggest that task programming and self-supervision can be an effective way to reduce annotation effort for domain experts.
 </p>
         </div>
-	
+
 
 	    <h2>Neurosymbolic reasoning for mathematical domains.</h2>
-The goal of this project is to develop models that can perform mathematical reasoning in educational domains, as a foundational tool to both build educational tools and to seek insight into how humans think about and develop mathematics. 
-	
+The goal of this project is to develop models that can perform mathematical reasoning in educational domains, as a foundational tool to both build educational tools and to seek insight into how humans think about and develop mathematics.
+
     <div class="project">
         <h1>
             Contrastive policy learning
@@ -145,7 +162,7 @@ The goal of this project is to develop models that can perform mathematical reas
         <p>
             We're actively working on two complementary fronts that go beyond these efforts. In recent months, in a collaboration across Stanford and MIT, we have been working on learning symbolic abstractions from mathematical solutions. The abstraction techniques employed in methods like DreamCoder <cite>EllisWNSMHCST21</cite> give us a way to automatically learn mathematical "lemmas" from ConPoLe solutions. Rewriting solutions with learned lemmas can make them shorter and more readable. Furthermore, using the lemmas during learning can enable the agent to solve harder problems, akin to how human mathematics develops from simpler to complex results. In a parallel effort, we're generalizing our learning methods to work on top of a universal language for mathematical reasoning, where we still aim to learn, just like in ConPoLe, in a completely unsupervised fashion.
         </p>
-		
+
     </div>
 
     <div class="project">
@@ -153,7 +170,7 @@ The goal of this project is to develop models that can perform mathematical reas
             Interpreting Expert Annotation Differences in Animal Behavior
         </h1>
 In this project, we propose a new method that uses program synthesis to generate interpretable models of expert annotations of animal behavior <cite> annotation </cite>. This is an important problem because in behavioral neuroscience, hand-annotated data is needed to make sense of neural recordings, yet behavior labels can vary among annotators due to factors such as subjective differences, intra-rater variability, and differing levels of expertise. For a given set of behavior annotations, our model learns both the relevant trajectory features and their corresponding temporal filters. We evaluate our method on a dataset from behavioral neuroscience and demonstrate that compared to baseline classifiers, our method is more accurate at capturing behavior annotations. Furthermore, the shape of a program’s temporal filters can be interpreted as how an annotator attends to a given feature over time. This work was presented at the CVPR 2021 CV4Animals workshop.
-        
+
     </div>
     </div>
 
