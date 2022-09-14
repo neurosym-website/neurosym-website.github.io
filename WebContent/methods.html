@@ -208,6 +208,17 @@ Neurosymbolic Reinforcement Learning with Formally Verified Exploration
             </h1>
 As deep reinforcement learning is incorporated into safety-critical systems (e.g., autonomous vehicles), it becomes more and more important to ensure that these systems behave safely. At the same time, we want to keep the performance benefits of deep-learning techniques over more traditional control theoretic algorithms. In this project, we are developing neurosymbolic approaches to system control which combine the optimal behavior of deep learning algorithms with the safety verification of traditional symbolic techniques <cite> anderson2020neurosymbolic </cite>. The first paper in this project, published at NeurIPS 2020, presents REVEL, a learning algorithm which combines traditional program synthesis with off-the-shelf deep reinforcement learning algorithms. On a suite of tasks drawn from robotics and classic control, we show that REVEL is able to achieve comparable performance to existing algorithms while maintaining verifiable safety at all times during training.
         </div>
+
+	                <div class="project">
+            <h1>
+Few-shot Image Classification: Just Use a Library of Pre-trained Feature Extractors and a Simple Classifier            </h1>
+This effort to tackle few-shot image classification is led by graduate students Arkabandhu Chowdhury and Mingchao Jiang and PIs Chris Jermaine and Swarat Chaudhuri. The approach shows that a library of pre-trained feature extractors combined with a simple feed-forward network learned with an L2-regularizer is extremely effective in the few-shot learning domain. The method is particularly useful in more practical cross-domain few-shot image classification settings. Extensive experimental results on a diverse set of data-sets suggests that this simple approach far outperforms several well established meta-learning algorithms. This work was accepted and presented at ICCV 2021.
+	</div>
+		                <div class="project">
+            <h1> Unsupervised Learning of Neurosymbolic Encoders </h1>
+We present a framework for the unsupervised learning of neurosymbolic encoders, which are encoders obtained by composing neural networks with symbolic programs from a domain-specific language. Our framework naturally incorporates symbolic expert knowledge into the learning process, which leads to more interpretable and factorized latent representations compared to fully neural encoders. We integrate modern program synthesis techniques with the variational autoencoding (VAE) framework to learn a neurosymbolic encoder in conjunction with a standard decoder. The programmatic descriptions from our encoders can benefit many analysis workflows, such as in behavior modeling where interpreting agent actions and movements is important. We evaluate our method on learning latent representations for real-world trajectory data from animal biology and sports analytics, and show that our approach offers significantly better separation than standard VAEs and leads to practical gains on downstream analysis tasks such as for behavior classification.	</div>
+	
+	
         </div>
 
 

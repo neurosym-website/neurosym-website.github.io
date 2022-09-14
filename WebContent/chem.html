@@ -55,24 +55,16 @@ loadNavBar();
 
 <h1>Organic Chemistry</h1>
 
-One of the seminal problems in organic chemistry is to be able to engineer 
-molecules with particularly desirable properties, or at the very least to 
-predict the properties that a particular molecule is going to have. 
-
-In recent years, deep learning has been making tremendous strides in both
-of these problems. Modern techniques developed by the team of co-PIs 
-Barzilay and Jaakkola have demonstrated remarkable abilities in both property 
-prediction and molecular optimization. However, deep learning approaches also 
-have some important limitations: First, they are extremely data intensive, limiting
-their application to domains where very large amounts of data are available. 
-Second, they operate as a black box; from a scientific standpoint, we would like 
-to abstract specific substructures or functional group descriptions that caused a particular molecule to screen high
-on the desired property. 
-
-The promise of neurosymbolic models is that they will be able to 
-better incorporate expert knowledge. Models that are better able to incorporate
-expert knowledge would be useful in settings where data is difficult to gather. 
-
+Many functions of small molecules and proteins depend on their 3D structure. Deep learning techniques to predict these 3D structures, such as AlphaFold, are revolutionizing the field of structural biology. Meanwhile, the prediction of binding structures has seen less progress than protein folding due to the limited data and the enormous space of combinatorial binding structure possibilities. To provide effective solutions for these problems it is, therefore, crucial to use scientific insights to build the right degrees of freedom and symmetries into the models. With this in mind, we have developed a novel SE(3)-equivariant approach to detect binding pockets and superimpose them using deep learning and the Kabsch algorithm, with which binding structures can be predicted very fast. The application of this technique to the problems of protein-protein and protein-small molecule binding has led to the development of EquiDock [1] and EquiBind [2]. These two methods have shown competitive performances with established physics-based methods while being orders of magnitude faster. These results promise great potential for large-scale screening applications.
+However, most biological structures are not rigid but present a level of flexibility. Modeling the whole distribution of possible molecular poses and, therefore, molecular flexibility is a very challenging task that the scientific community has tried to solve for decades due to its critical applications in understanding many biological mechanisms and developing new drugs. With this goal in mind, we started by modeling the structural flexibility of small molecules and developed torsional diffusion [3], a deep generative model that can generate conformations by iteratively refining its position over this torsional manifold. Intuitively, our model incorporates chemical and physical knowledge by reasoning about the structure in 3D space where forces operate, while restricting the diffusion to torsion angles where most of the molecule’s flexibility lies. Empirically, torsional diffusion generates superior conformer ensembles compared to previous machine learning methods and is the first ML framework to outperform state-of-the-art cheminformatics methods. We are now extending this work to model larger and more complex molecular systems.
+Finally, we have also designed novel deep generative models to directly design new materials [4] and proteins [5]. Protein design relies on building techniques that learn mechanisms of protein function through the chemistry and physics of binding and folding then building new proteins for novel functions. We will evaluate our ability to design proteins with structures and functions never seen before in nature with experimental validation from our collaborations.
+	
+	
+[1] Independent SE(3)-Equivariant Models for End-to-End Rigid Protein Docking; OE Ganea*, X Huang*, C Bunne, Y Bian, R Barzilay, T Jaakkola, A Krause; 2021, ICLR 2022 (International Conference on Learning Representations); https://arxiv.org/pdf/2111.07786
+[2] EquiBind: Geometric Deep Learning for Drug Binding Structure Prediction. H. Stark*, O. Ganea*, L. Pattanaik, R. Barzilay, T. S. Jaakkola; ICML 2022 (International Conference on Machine Learning); https://arxiv.org/pdf/2202.05146
+[3] Torsional Diffusion for Molecular Conformer Generation. Jing, B.*, Corso, G.*, Chang, J., Barzilay, R., & Jaakkola, T. Preprint; https://arxiv.org/pdf/2206.01729
+[4] Crystal diffusion variational autoencoder for periodic material generation. Xie, T.*, Fu, X.*, Ganea, O. E.*, Barzilay, R., & Jaakkola, T. ICLR 2022 (International Conference on Learning Representations); https://arxiv.org/pdf/2110.06197
+[5] Diffusion probabilistic modeling of protein backbones in 3D for the motif-scaffolding problem. Trippe, B. L.*, Yim, J.*, Tischer, D., Broderick, T., Baker, D., Barzilay, R., & Jaakkola, T. Preprint; https://arxiv.org/pdf/2206.04119
 
 
 
