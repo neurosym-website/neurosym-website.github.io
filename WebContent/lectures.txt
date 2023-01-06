@@ -2,6 +2,7 @@ Home, index.html, Home page;
 Site map, toc.html, Table of Contents;
 People, people.html, Project participants;
 Events, events.html, Events;
+Software, software.html, Software;
 Summer School, summerschool.html, Summer School 2022;
 Research:;
 Neurosymbolic Learning, methods.html, Machine learning meets program synthesis; 

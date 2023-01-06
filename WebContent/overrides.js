@@ -14,6 +14,46 @@ function resizing(){
 	}
 }
 
+
+function displaySoftware(rest) {
+    let div = document.getElementById('software');
+	
+	function display(content) {
+		let entries = JSON.parse(content);
+		for (let i in entries) {
+			let entry = entries[i];
+			let html = `
+    
+        <b>${entry.name}:</b>
+            ${entry.blurb}.        
+        <p>${entry.authors}</p>
+        <p>
+            Available on GitHub <a href="${entry.link}"><img style="height:15pt;" src="icons/github.png" /></a>
+        </p>            
+			`;
+			let local = document.createElement('div');
+			local.innerHTML = html;
+            div.appendChild(local);            
+        }
+    }
+    
+
+
+	var request = new XMLHttpRequest();
+	request.open('GET', 'software.json', true);
+	request.send(null);
+	request.onreadystatechange = function () {
+		if (request.readyState === 4 && request.status === 200) {
+			var kind = request.getResponseHeader('Content-Type');
+			if (kind.indexOf("text") !== 1) {
+				display(request.responseText);
+				rest();
+			}
+		}
+	}
+    
+}
+
 function toggleNav(){
 	var nav = document.getElementById('navigator');
 	var navicon = document.getElementById('navicon');
