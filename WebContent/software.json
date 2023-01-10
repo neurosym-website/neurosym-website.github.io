@@ -71,7 +71,7 @@
 
   {
     "name": "Learning Differentiable Programs with Admissible Neural Heuristics",
-    "blurb":"We study the problem of learning differentiable functions expressed as programs in a domain-specific language. Such programmatic models can offer benefits such as composability and interpretability; however, learning them requires optimizing over a combinatorial space of program "architectures". We frame this optimization problem as a search in a weighted graph whose paths encode top-down derivations of program syntax. <cite>near</cite>",
+    "blurb":"We study the problem of learning differentiable functions expressed as programs in a domain-specific language. Such programmatic models can offer benefits such as composability and interpretability; however, learning them requires optimizing over a combinatorial space of program architectures. We frame this optimization problem as a search in a weighted graph whose paths encode top-down derivations of program syntax. <cite>near</cite>",
     "authors": "Ameesh Shah, Eric Zhan, Jennifer Sun, Abhinav Verma, Yisong Yue, Swarat Chaudhuri",
     "link": "https://github.com/trishullab/near",
   },
