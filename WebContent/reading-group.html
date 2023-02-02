@@ -1,0 +1,114 @@
+﻿<html>
+
+<!--
+    To add a paper:
+
+    1. Add its bibtex entry to the file `biblio.bib`
+    2. Go to the notion notes for the paper and export as html. Unzip the exported directory to the folder `reading-group-notes`.
+    2. Add a <project> frame by copying one of the others. Update the description, citation, and local notion link.
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neurosymbolic Reading Group</title>
+
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" src="http://sketch2.csail.mit.edu/SynthesisCourse/library.js"></script>
+    <script type="text/javascript" src="overrides.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onresize="resizing()">
+
+
+    <div class="header">
+        <h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
+        <h2 style="color: 'black';">Funded through the NSF Expeditions in Computing Program</h2>
+        <div class="logos">
+            <img title='mit' src='images/mit.png' height='100%' />
+            <img title='ut' src='images/ut.png' height='100%' />
+            <img title='caltech' src='images/caltech.png' height='100%' />
+            <img title='rice' src='images/rice.png' height='100%' />
+            <img title='penn' src='images/penn.png' height='100%' />
+            <img title='stanford' src='images/stanford.png' height='100%' />
+        </div>
+        <div id='navicon.div' class='navicon'>
+            <img id='navicon' src="images/burger.rest.png" onmouseenter="iconEnter(this, 'burger')"
+                onmouseleave="iconLeave(this, 'burger')" onclick='toggleNav()' title="Navigation" width="34pt"></img>
+        </div>
+    </div>
+
+
+    <div id="navigator" class="sidenav">
+    </div>
+    <script type="text/javascript">
+        loadNavBar();
+    </script>
+
+    <div class="content">
+
+        <h1>Neurosymbolic Reading Group</h1>
+
+        <p>
+            We are organizing a reading group to discuss papers related to the project. The goal of the reading group is
+            to help us understand the state of the art in the field.
+
+            Currently, we plan to meet on Mondays at 5-6PM EST, but we prioritize meeting authors, so this sometimes can
+                change the meeting time. Specifically, we have confirmed the following dates:
+            
+                <ul>
+                    <li>2023-02-06: 5:30-6:30 PM EST</li>
+                    <li>2023-02-13: 5:00-6:00 PM EST</li>
+                </ul>
+
+            Please contact Alex Gu (gua+nrg@mit.edu) for information on how to join the reading group.
+        </p>
+
+        <h1>Previously Covered Papers and Notes.</h1>
+
+
+        <div class="project">
+            <h1>Parsel: A Unified Natural Language Framework for Algorithmic Reasoning</h1>
+            
+            We discussed Parsel<cite>zelikman2022parsel</cite> with the authors. This paper proposes a framework enabling automatic
+            implementation and validation of complex algorithms with code LLMs, taking hierarchical function descriptions in
+            natural language as input. It is able to outperform Codex and AlphaCode on the AAPS dataset. Our notes can be found
+            <a href="reading-group-notes/Binding Language Models in Symbolic Languages a63033a5fe754b09bed7437917d06601.html">here</a>.
+        </div>
+
+    </div>
+
+
+
+    <script>
+        processDocument();
+
+
+
+
+
+    </script>
+
+    <div class="footnotes">
+
+        <footnotes>
+
+        </footnotes>
+
+    </div>
+    </div>
+
+</body>
+
+
+
+</html>

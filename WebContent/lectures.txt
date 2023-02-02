@@ -4,6 +4,7 @@ People, people.html, Project participants;
 Events, events.html, Events;
 Software, software.html, Software;
 Summer School, summerschool.html, Summer School 2022;
+Reading Group, reading-group.html, Reading Group;
 Research:;
 Neurosymbolic Learning, methods.html, Machine learning meets program synthesis; 
 Chemistry Application, chem.html, Organic Chemistry;
