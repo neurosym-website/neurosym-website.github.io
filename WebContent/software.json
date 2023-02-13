@@ -14,7 +14,7 @@
   },
 
   {
-    "title": "Dreamcoder: Bootstrapping inductive program synthesis with wake-sleep library learning",
+    "name": "Dreamcoder: Bootstrapping inductive program synthesis with wake-sleep library learning",
     "blurb":" We present a system for inductive program synthesis called DreamCoder, which inputs a corpus of synthesis problems each specified by one or a few examples, and automatically derives a library of program components and a neural search policy that can be used to efficiently solve other similar synthesis problems <cite>EllisWNSMHCST21</cite>",
     "authors": "Ellis, Kevin, Catherine Wong, Maxwell Nye, Mathias Sablé-Meyer, Lucas Morales, Luke Hewitt, Luc Cary, Armando Solar-Lezama, and Joshua B. Tenenbaum",
     "link": "https://github.com/ellisk42/ec"
