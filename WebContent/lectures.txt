@@ -9,7 +9,7 @@ Research Papers, papersla.html, Research Papers;
 
 Reading Group, reading-group.html, Reading Group;
 
-Research:
+Research:;
 Neurosymbolic Learning, methods.html, Machine learning meets program synthesis; 
 Chemistry Application, chem.html, Organic Chemistry;
 Biology Application, bio.html, RNA Splicing;
