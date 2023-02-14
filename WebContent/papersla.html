@@ -55,10 +55,10 @@ loadNavBar();
 
 <h1>Project papers</h1>
 
-	
-<h1>Project papers</h1>
 
-<div style="white-space: pre-wrap;">
+<div id="citations"></div>
+
+<div style="white-space: pre-wrap;display:none">
 
 Feng, Yu, Osbert Bastani, Ruben Martins, Isil Dillig, and Saswat Anand. <strong>‘Automated Synthesis of Semantic Malware Signatures Using Maximum Satisfiability’</strong>. In NDSS, 2017.
 
@@ -150,7 +150,23 @@ Mariano, Benjamin, Yanju Chen, Yu Feng, Greg Durrett, and Işil Dillig. <strong>
 
 
 <script>
-processDocument();
+	loadAllFootnotes('biblio.bib', function () {
+
+		let citations = document.getElementById('citations');
+
+		function getYear(entry) { if ('year' in entry) { return parseInt(entry.year.match(/[0-9]{4}/)[0]); } else { return 0 } }
+
+		let entries = Object.keys(allPapers).filter((name) => getYear(allPapers[name]) > 2020).sort((a, b) => getYear(allPapers[b]) - getYear(allPapers[a]));
+
+        let text = entries.map((name) => cite(allPapers[name]) + '<a href="javascript:showbib(\'' + name + '\')" style="font-size:80%;" >(bibtex)</a></p>')
+		let out = "<ul>"
+		for (i in text) {
+			 out += "<li>" + text[i] + "</li>";
+		}
+		out += "</ul>"
+		citations.innerHTML = out;
+
+	});
 </script>
 
 <div class="footnotes">
