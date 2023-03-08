@@ -156,7 +156,10 @@ Mariano, Benjamin, Yanju Chen, Yu Feng, Greg Durrett, and Işil Dillig. <strong>
 
 		function getYear(entry) { if ('year' in entry) { return parseInt(entry.year.match(/[0-9]{4}/)[0]); } else { return 0 } }
 
-		let entries = Object.keys(allPapers).filter((name) => getYear(allPapers[name]) > 2020).sort((a, b) => getYear(allPapers[b]) - getYear(allPapers[a]));
+		let entries = Object.keys(allPapers)
+			.filter((name) => getYear(allPapers[name]) > 2020)
+			.sort((a, b) => getYear(allPapers[b]) - getYear(allPapers[a]))
+			.filter((name) => name.endsWith("-ours"));
 
         let text = entries.map((name) => cite(allPapers[name], true) + '<a href="javascript:showbib(\'' + name + '\')" style="font-size:80%;" >(bibtex)</a></p>')
 		let out = "<ul>"

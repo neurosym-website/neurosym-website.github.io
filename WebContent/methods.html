@@ -106,7 +106,7 @@ loadNavBar();
         alumni Kevin Ellis and collaborators Oleksandr Polozov and Rishabh Singh, we have sought to organize existing work into a conceptual
         framework that can help us understand the different ways in which neural learning and program synthesis can come together to achieve a variety
         of goals ranging from interpretability, to sample efficiency to correctness and consistency with prior knowledge.
-        The paper was published in 2021 as part of the Foundations and Trends in Programming Languages series<cite>ChaudhuriEPSSY21</cite>.
+        The paper was published in 2021 as part of the Foundations and Trends in Programming Languages series<cite>ChaudhuriEPSSY21-ours</cite>.
     </div>
 
 
@@ -118,7 +118,7 @@ loadNavBar();
         In a first paper published in PLDI 2020, we showed that it is possible to automatically discover DSLs for a variety of problems including the problem of automatically discovering physics equations. For example,
         in one experiment, our system (DreamCoder) is given data from equations describing 60 different physical laws and mathematical identities taken from AP and MCAT physics “cheat sheets”. The system is initialized
         with a small number of sequence manipulation primitives like map and fold and after 8 iterations of the algorithm it is able to discover 93% of the laws and identities in the dataset by first learning the building
-        blocks of vector algebra and then learning constructs common to many of the formulas such as inverse square laws. The paper was published in PLDI 2020 <cite>EllisWNSMHCST21</cite>.
+        blocks of vector algebra and then learning constructs common to many of the formulas such as inverse square laws. The paper was published in PLDI 2020 <cite>EllisWNSMHCST21-ours</cite>.
 
     </div>
 
@@ -134,7 +134,7 @@ loadNavBar();
         robust to its uncertainty. We evaluate our approach on a set of challenging benchmarks, including a 2D Minecraft-inspired
         "craft" environment where the agent must perform a complex sequence of subtasks to achieve its goal, a box-world 
         environment that requires abstract reasoning, and a variant of the craft environment where the agent is a MuJoCo Ant. 
-        This work was published as a spotlight in NeurIPS 21 <cite>yang2021program</cite>.
+        This work was published as a spotlight in NeurIPS 21 <cite>yang2021program-ours</cite>.
     </div>
 
     <div class="project">
@@ -147,7 +147,7 @@ loadNavBar();
             are similar to each other with respect to a given metric. This allows the synthesizer to search deeper in the search space.
             For example, in the figure below, the synthesis algorithm can use a metric to determine that the result in (a)
             is  close enough to the desired solution that it can be transformed through a greedy search using both discrete
-            transformations (b) and continuous parameter adjustments (c). The work is under submission to OOPSLA 2022 <cite>FeserDS22metric</cite>.
+            transformations (b) and continuous parameter adjustments (c). The work is under submission to OOPSLA 2022 <cite>FeserDS22metric-ours</cite>.
         </p>
         <div style="text-align: center;"><img class="projectFig" src="./images/feser-key-localsearch.png" ></div>        
     </div>
@@ -162,7 +162,7 @@ loadNavBar();
             we developed a new synthesis algorithm that combines automata based synthesis with functional synthesis.
             This algorithm allows us to synthesize fairly large functional reactive programs from observations of sequences of frames in an Autumn game.
             We are working on a full conference submission on this work, but an early version was presented at the
-            Advances in Programming Languages and Neurosymbolic Systems workshop in NeurIPS '21 and the Causal Inference & Machine Learning workshop, also at NeurIPS<cite>Ria21aiplans</cite>.
+            Advances in Programming Languages and Neurosymbolic Systems workshop in NeurIPS '21 and the Causal Inference & Machine Learning workshop, also at NeurIPS<cite>Ria21aiplans-ours</cite>.
 
 
         </div>
@@ -175,7 +175,7 @@ loadNavBar();
 
             The problem with using a purely neural model such as GPT-3 is that programs have a well-defined semantics, and a neural language model that has been trained on billions of lines of code but has never been exposed to these semantics will often make errors.  It is a very difficult task for a neural language model to read a lot of code and figure out scoping rules, or the complex type hierarchy used in an API-heavy language such as Java, without the model being given any information beyond billions of lines of code.
 
-            In this expeditions project <cite>neurostatistic</cite>, our idea is simple. We use a static-semantic analysis of the program code to produce a summary of the program written so far: which variables are in scope, what the types of those variables are, whether a variable has been initialized, etc.  This analysis is then provided to the neural language model as it is asked to write code.  We find the providing the results of such a symbolic analysis to the language model can greatly decrease the prevalence of many types of simple errors in the code that is produced, and the hints provided by the analysis can even increase how well the produced code matches a prompt compared to a purely neural model, according to several different metrics.
+            In this expeditions project <cite>neurostatistic-ours</cite>, our idea is simple. We use a static-semantic analysis of the program code to produce a summary of the program written so far: which variables are in scope, what the types of those variables are, whether a variable has been initialized, etc.  This analysis is then provided to the neural language model as it is asked to write code.  We find the providing the results of such a symbolic analysis to the language model can greatly decrease the prevalence of many types of simple errors in the code that is produced, and the hints provided by the analysis can even increase how well the produced code matches a prompt compared to a purely neural model, according to several different metrics.
             
         </div>
 
@@ -183,7 +183,7 @@ loadNavBar();
             <h1>
             Safe Neurosymbolic Learning with Differentiable Symbolic Execution
             </h1>
-            This effort is led by graduate student Chenxi Yang with co-PI Swarat Chaudhuri. The goal of this effort is to learn worst-case-safe parameters for programs that use neural networks as well as symbolic, human-written code. Such neurosymbolic programs arise in many safety-critical domains. The approach in this work, Differentiable Symbolic Execution (DSE), samples control flow paths in a program, symbolically constructs worst-case "safety losses" along these paths, and backpropagates the gradients of these losses through program operations using a generalization of the REINFORCE estimator. This method is evaluated on a mix of synthetic tasks and real-world benchmarks. The experiments show that DSE significantly outperforms the state-of-the-art method on these tasks. The paper was published in ICLR 2022 <cite>safe</cite>.
+            This effort is led by graduate student Chenxi Yang with co-PI Swarat Chaudhuri. The goal of this effort is to learn worst-case-safe parameters for programs that use neural networks as well as symbolic, human-written code. Such neurosymbolic programs arise in many safety-critical domains. The approach in this work, Differentiable Symbolic Execution (DSE), samples control flow paths in a program, symbolically constructs worst-case "safety losses" along these paths, and backpropagates the gradients of these losses through program operations using a generalization of the REINFORCE estimator. This method is evaluated on a mix of synthetic tasks and real-world benchmarks. The experiments show that DSE significantly outperforms the state-of-the-art method on these tasks. The paper was published in ICLR 2022 <cite>safe-ours</cite>.
                         
         </div>
 
@@ -199,7 +199,7 @@ In order to more efficiently learn programs from data, a recent effort led by gr
             <h1>
 Web Question Answering with Neurosymbolic Program Synthesis
             </h1>
-This effort is led by graduate student Jocelyn Chen in a collaboration with co-PIs Isil Dillig and Osbert Bastani. We have developed a new technique based on program synthesis for extracting information from webpages <cite>webq</cite>. To handle websites with diverse structure, we design a new neurosymbolic domain specific language that incorporates both neural NLP models as well as standard constructs for tree navigation and string manipulation. We also propose an optimal synthesis algorithm that generates all programs in the DSL that achieve optimal F! score on the training examples. We evaluated our language and algorithm on 25 different tasks across multiple domains and showed that our approach outperforms existing tools. This paper was published in PLDI 2021. 
+This effort is led by graduate student Jocelyn Chen in a collaboration with co-PIs Isil Dillig and Osbert Bastani. We have developed a new technique based on program synthesis for extracting information from webpages <cite>webq-ours</cite>. To handle websites with diverse structure, we design a new neurosymbolic domain specific language that incorporates both neural NLP models as well as standard constructs for tree navigation and string manipulation. We also propose an optimal synthesis algorithm that generates all programs in the DSL that achieve optimal F! score on the training examples. We evaluated our language and algorithm on 25 different tasks across multiple domains and showed that our approach outperforms existing tools. This paper was published in PLDI 2021. 
         </div>
 
                 <div class="project">
@@ -212,11 +212,11 @@ As deep reinforcement learning is incorporated into safety-critical systems (e.g
 	                <div class="project">
             <h1>
 Few-shot Image Classification: Just Use a Library of Pre-trained Feature Extractors and a Simple Classifier            </h1>
-This effort to tackle few-shot image classification is led by graduate students Arkabandhu Chowdhury and Mingchao Jiang and PIs Chris Jermaine and Swarat Chaudhuri. The approach <cite> Chowdhury_2021_ICCV </cite> shows that a library of pre-trained feature extractors combined with a simple feed-forward network learned with an L2-regularizer is extremely effective in the few-shot learning domain. The method is particularly useful in more practical cross-domain few-shot image classification settings. Extensive experimental results on a diverse set of data-sets suggests that this simple approach far outperforms several well established meta-learning algorithms. This work was accepted and presented at ICCV 2021.
+This effort to tackle few-shot image classification is led by graduate students Arkabandhu Chowdhury and Mingchao Jiang and PIs Chris Jermaine and Swarat Chaudhuri. The approach <cite> Chowdhury_2021_ICCV-ours </cite> shows that a library of pre-trained feature extractors combined with a simple feed-forward network learned with an L2-regularizer is extremely effective in the few-shot learning domain. The method is particularly useful in more practical cross-domain few-shot image classification settings. Extensive experimental results on a diverse set of data-sets suggests that this simple approach far outperforms several well established meta-learning algorithms. This work was accepted and presented at ICCV 2021.
 	</div>
 		                <div class="project">
             <h1> Unsupervised Learning of Neurosymbolic Encoders </h1>
-We present a framework <cite> zhan2021unsupervised </cite> for the unsupervised learning of neurosymbolic encoders, which are encoders obtained by composing neural networks with symbolic programs from a domain-specific language. Our framework naturally incorporates symbolic expert knowledge into the learning process, which leads to more interpretable and factorized latent representations compared to fully neural encoders. We integrate modern program synthesis techniques with the variational autoencoding (VAE) framework to learn a neurosymbolic encoder in conjunction with a standard decoder. The programmatic descriptions from our encoders can benefit many analysis workflows, such as in behavior modeling where interpreting agent actions and movements is important. We evaluate our method on learning latent representations for real-world trajectory data from animal biology and sports analytics, and show that our approach offers significantly better separation than standard VAEs and leads to practical gains on downstream analysis tasks such as for behavior classification.	</div>
+We present a framework <cite> zhan2021unsupervised-ours </cite> for the unsupervised learning of neurosymbolic encoders, which are encoders obtained by composing neural networks with symbolic programs from a domain-specific language. Our framework naturally incorporates symbolic expert knowledge into the learning process, which leads to more interpretable and factorized latent representations compared to fully neural encoders. We integrate modern program synthesis techniques with the variational autoencoding (VAE) framework to learn a neurosymbolic encoder in conjunction with a standard decoder. The programmatic descriptions from our encoders can benefit many analysis workflows, such as in behavior modeling where interpreting agent actions and movements is important. We evaluate our method on learning latent representations for real-world trajectory data from animal biology and sports analytics, and show that our approach offers significantly better separation than standard VAEs and leads to practical gains on downstream analysis tasks such as for behavior classification.	</div>
 	
 	
         </div>
