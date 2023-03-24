@@ -8,6 +8,8 @@ Education, education.html, Education;
 Research Papers, papersla.html, Research Papers;
 
 Reading Group, reading-group.html, Reading Group;
+AI for code and science, aiscience.html, Reading Group;
+
 
 Research:;
 Neurosymbolic Learning, methods.html, Machine learning meets program synthesis; 

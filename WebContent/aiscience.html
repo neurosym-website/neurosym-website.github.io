@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT AI for Code and Science Workshop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    .jumbotron {
+        background-color: #337ab7;
+        color: white;
+    }
+
+    .speaker-info {
+        margin-bottom: 30px;
+    }
+
+    .video-link {
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+        <h1>MIT AI for Code and Science Workshop - IAP 2023</h1>
+    <p>
+        AI for code and science presents a very active area of current research that bridges multiple areas, including machine learning, programming languages, and software engineering. A substantial portion of recent work in this domain has found success by blending symbolic and neural techniques.
+    </p>
+    <p>
+        In this 2-day tutorial session, students will get practical experience in artificial intelligence tools to develop code targeted for science applications. Students will learn to combine neural network methods and program synthesis (symbolic) and how to apply these techniques in science. Students wishing to take part should have some programming experience.
+    </p>
+    <p>
+        As part of the session, we will provide a practical overview of systems/tools to get started in interesting AI for code and science applications. Students will also hear talks from researchers in the space. Hands-on activities may include using popular transformer-based models such as CodeBERT, CodeT5, and Codex. We will touch on recent ideas that can be applied to improve/adapt each of these models to computer science problems such as program repair. This tutorial will be hands-on, with time for participants to play and experiment with working code, try to solve real benchmark cases and get feedback on ideas they may want to pursue in the future.
+    </p>
+ <h2>Workshops</h2>
+    <div class="row speaker-info">
+        <div class="col-md-4">
+            <h3>Background and Introductory Remarks</h3>
+            <p><span class="video-link">Video link:</span> <a href="https://youtu.be/QsYmu5eYXpE" target="_blank">https://youtu.be/QsYmu5eYXpE</a></p>
+            <p><strong>Speaker:</strong> Omar Costilla-Reyes</p>
+            <p><a href="http://omarcostilla.mit.edu/" target="_blank">Personal Webpage</a></p>
+        </div>
+        <div class="col-md-8">
+            <h3>Neurosymbolic Programming for Science</h3>
+			 <p>
+                Neurosymbolic Programming (NP) techniques have the potential to accelerate scientific discovery. These models combine neural and symbolic components to learn complex patterns and representations from data, using high-level concepts or known constraints. NP techniques can interface with symbolic domain knowledge from scientists, such as prior knowledge and experimental context, to produce interpretable outputs. We identify opportunities and challenges between current NP models and scientific workflows, with real-world examples from across the natural and social sciences.
+</p>
+</div>
+</div>
+
+    <div class="row speaker-info">
+        <div class="col-md-4">
+            <h3>Workshop 1</h3>
+            <p><span class="video-link">Video link:</span> <a href="https://youtu.be/SGLRsnv9-E0" target="_blank">https://youtu.be/SGLRsnv9-E0</a></p>
+            <p><strong>Speaker:</strong> Minghao Guo, MIT CSAIL</p>
+            <p><a href="https://www.minghaoguo.com/" target="_blank">Personal Webpage</a></p>
+        </div>
+        <div class="col-md-8">
+            <h3>Data-Efficient Graph Grammar Learning for Molecular Generation</h3>
+            <p>
+                The problem of molecular generation has received significant attention recently. Existing methods are typically based on deep neural networks and require training on large datasets with tens of thousands of samples. In practice, however, the size of class-specific chemical datasets is usually limited (e.g., dozens of samples) due to labor-intensive experimentation and data collection. Another major challenge is to generate only physically synthesizable molecules. This is a non-trivial task for neural network-based generative models since the relevant chemical knowledge can only be extracted and generalized from the limited training data. In this tutorial, we explore a data-efficient neurosymbolic generative model that can be learned from datasets with orders of magnitude smaller sizes than common benchmarks. At the heart of this method is a learnable graph grammar that generates molecules from a sequence of production rules. Additional chemical knowledge can be incorporated in the model by further grammar optimization.
+            </p>
+        </div>
+    </div> <div class="row speaker-info">
+        <div class="col-md-4">
+            <h3>Workshop 2</h3>
+            <p><span class="video-link">Video link:</span> <a href="https://youtu.be/q6tjKXmhiMs" target="_blank">https://youtu.be/q6tjKXmhiMs</a></p>
+            <p><strong>Speaker:</strong> Miles Cranmer, Princeton</p>
+            <p><a href="https://astroautomata.com/" target="_blank">Personal Webpage</a></p>
+        </div>
+        <div class="col-md-8">
+            <h3>An Introduction to Symbolic Regression with PySR and SymbolicRegression.jl</h3>
+            <p>
+                PySR is an open-source library for practical symbolic regression, a type of machine learning that discovers human-interpretable symbolic models in the form of simple mathematical expressions. PySR is built on a high-performance distributed backend, SymbolicRegression.jl, which offers a flexible search algorithm, and interfaces with several deep learning packages. In this tutorial I will describe the nuts and bolts of the search algorithm and how PySR may be used in machine learning and scientific workflows. I will review existing applications of the software to science (https://astroautomata.com/PySR/papers/), and then present an interactive coding tutorial where we will go through several example symbolic regression problems with different levels of customization. Following this, we will look at using PySR as a distillation tool for translating deep neural networks into an interpretable scientific language, and go through additional examples.
+            </p>
+        </div>
+    </div> <div class="row speaker-info">
+        <div class="col-md-4">
+<h3>Workshop 3</h3>
+<p><span class="video-link">Video link:</span> <a href="https://youtu.be/odyylffr290" target="_blank">https://youtu.be/odyylffr290</a></p>
+<p><strong>Speaker:</strong> Jose Cambronero, Microsoft</p>
+<p><a href="https://www.josecambronero.com/" target="_blank">Personal Website</a></p>
+</div>
+<div class="col-md-8">
+<h3>Learning to Automatically Fix Compiler Errors in C</h3>
+<p>
+In this tutorial, we will introduce participants to the automated repair of compiler errors. We will focus our efforts on a collection of C programs written by students in an introductory programming class. We will explore different neural approaches to fixing such compiler errors, including large pre-trained language models and smaller fine-tuned models. By the end of this tutorial, participants will have practical experience with multiple repair approaches, pointers towards extensions/improvements of the approaches surveyed, and a foundation to explore automatically repairing such errors in their own research.
+</p>
+</div>
+</div>
+
+	    <div class="row speaker-info">
+        <div class="col-md-4">
+            <h3>Workshop 4</h3>
+            <p><span class="video-link">Video link:</span> <a href="https://youtu.be/dxZr-I2rCgQ" target="_blank">https://youtu.be/dxZr-I2rCgQ</a></p>
+            <p><strong>Speaker:</strong> Shashank Srikant, MIT CSAIL</p>
+            <p><a href="https://shashank-srikant.github.io/" target="_blank">Personal Webpage</a></p>
+        </div>
+        <div class="col-md-8">
+            <h3>Generating Code that Activates Our Brains</h3>
+            <p>
+                In this tutorial, we will introduce how our brains respond to code comprehension. Further, we will explore how a program can be automatically modified, such that the modified program predicts high responses in specific regions of our brains. The system we will build to achieve this will introduce and utilize backpropagation and the Gumbel softmax trick. We will hack through some popular code models available on Huggingface to build this system.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+	
