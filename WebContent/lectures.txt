@@ -8,7 +8,7 @@ Education, education.html, Education;
 Research Papers, papersla.html, Research Papers;
 
 Reading Group, reading-group.html, Reading Group;
-AI for code and science, aiscience.html, Reading Group;
+AI for Code and Science, aiscience.html, AI for Code and Science;
 
 
 Research:;
