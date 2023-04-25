@@ -1,0 +1,170 @@
+<html>
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>People</title>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="/scripts/library.js"></script>
+<script type="text/javascript" src="overrides.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onresize="resizing()">
+
+
+<div class="header">
+<h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
+<h2 style="color: 'black';">Funded through the NSF Expeditions in Computing Program</h2>
+<div class="logos">
+<img title='mit' src='images/mit.png' height='100%' />
+<img title='ut' src='images/ut.png' height='100%'/>
+<img title='caltech' src='images/caltech.png' height='100%'/>
+<img title='rice' src='images/rice.png' height='100%'/>
+<img title='penn' src='images/penn.png' height='100%'/>
+<img title='stanford' src='images/stanford.png' height='100%'/>
+</div>
+<div id='navicon.div' class='navicon'>
+<img id = 'navicon' src="images/burger.rest.png" 
+onmouseenter="iconEnter(this, 'burger')"
+onmouseleave="iconLeave(this, 'burger')"
+onclick = 'toggleNav()'
+title="Navigation" width="34pt"></img>
+</div>
+</div>
+
+
+<div id="navigator" class="sidenav">
+<a href="#about">Lecture 1</a> 
+<a href="#services">Lecture 2</a> 
+<a href="#clients">Lecture 3</a> 
+<a href="#contact">Lecture 4</a>
+</div>
+<script type="text/javascript">
+loadNavBar();
+
+function loadPeople(name){
+	var div = document.getElementById(name);
+	var list = div.innerHTML.split(';');
+	var html = "";
+	list.forEach((line)=>{
+			var linelist = line.split(',');
+			if(linelist.length < 3){return;}
+			var name = linelist[0];
+			if(linelist.length >5 ){
+				name = `<a href='${linelist[4]}'>${name}</a>`
+			}
+			var school = linelist[2];
+			var title = linelist[1];
+			html += `
+			<div style="width:200pt">
+			<img height="150" src='images/${linelist[3].trim()}'><BR>${name}<BR>
+			${title}, ${school}
+			</div>`;		
+	});
+	div.innerHTML = html;
+}
+
+</script>
+
+<div class="content">
+
+<h1>People</h1>
+
+
+<h2>PIs</h2>
+<div id="pi" style="flex-flow: row wrap; display: flex;">
+Armando Solar-Lezama, Associate Professor, MIT, asolar.jpg, http://people.csail.mit.edu/asolar/;
+Swarat Chaudhuri, Associate Professor, UT Austin, chaudhuri.jpg;
+Yisong Yue, Professor, Caltech, yue.jpg;
+Regina Barzilay, Professor, MIT, barzilay.jpg;
+Isil Dillig, Associate Professor, UT Austin, dillig.jpg;
+Osbert Bastani, Research Assistant Professor, University of Pennsylvania, bastani.jpg;
+Michael Carbin, Assistant Professor, MIT, carbin.jpg;
+Martin Rinard, Professor, MIT, rinard.jpg;
+Phillip Sharp, Institute Professor and Professor of Biology, MIT, sharp.jpg;
+Tommi Jaakkola, Professor, MIT, jaakkola.jpg;
+Noah Goodman, Associate Professor, Stanford, goodman.jpg;
+Chris Jermaine, Professor, Rice, jermaine.jpg;
+</div>
+
+
+<h2>Advisory Board</h2>
+<div id="advisory" style="flex-flow: row wrap; display: flex;">
+Josh Tenenbaum, Professor, MIT, tenenbaum.jpg;
+Pushmeet Kohli,  Principal scientist and research team leader, Deep Mind, kohli.jpg;
+Rishabh Singh, Research scientist, Google Brain, singh.jpg;
+Justin Gottschlich,Head of Machine Programming Research, Intel, gottschlich.jpg; 
+Satish Chandra, Engineering Manager, Facebook, satish.png;
+Susmit Jha, Principal Computer Scientist, SRI International, jha.jpg; 
+</div>
+
+<h2>Research scientist and Project Manager</h2>
+<div id="scientist" style="flex-flow: row wrap; display: flex;">
+Omar Costilla-Reyes, CSAIL MIT
+</div>
+
+<h2>Students</h2>
+<div id="students">
+<pre>
+
+Jason Yim, MIT
+Hannes Stärk, MIT
+Gabriele Corso, MIT
+Stephen Mell,	University of Pennsylvania
+Jennifer Sun,	Caltech
+Jocelyn Chen,	University of Texas at Austin
+Ria Das,	Stanford University
+Chenxi Yang,	The University of Texas at Austin
+Atharva Sehgal,	University of Texas at Austin
+Gabriel Poesia,	Stanford University
+Greg Anderson,	The University of Texas at Austin
+Mingchao Jiang,	Rice University
+Yi Ding,	MIT
+Alex Renda,	MIT 
+Charles Yuan,	MIT
+Logan Weber,	MIT
+Ellie Cheng,	MIT
+Kavi Gupta,	MIT
+Alex Gu,	MIT
+Matt Bowers,	MIT
+Theo Olausson,	MIT
+Chima Adiole,	Rice University
+Abhinav Jain,	Rice University
+
+
+
+</pre>
+</div>
+
+
+
+<script>
+
+loadPeople("pi");
+loadPeople("advisory");
+
+processDocument();
+</script>
+
+<div class="footnotes">
+
+<footnotes>
+
+</footnotes>
+
+</div>
+</div>
+
+</body>
+
+
+
+</html>

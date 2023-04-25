@@ -1,0 +1,529 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+html{
+	font-size: 18px;
+} @media only screen and (max-width: 700px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+h1{
+	font-size: 150%;
+}
+
+h2{
+	font-size: 120%;
+}
+
+h2::before {
+  display: block;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+table {
+	border-collapse: collapse;
+	border: 1px solid black;
+	/*background:#A2A0D9;*/
+	text-align: left;
+}
+
+
+th, td {
+    padding: 10px;
+}
+
+
+.schedule{
+	display:flex;
+}@media only screen and (max-width: 1100px) {
+  .schedule{
+	display:block;
+	}
+}
+
+
+.summerschedule {
+	display: flex;
+	text-align:center;
+}
+
+@media only screen and (max-width: 1100px) {
+	.summerschedule {
+		display: block;
+	}
+}
+
+
+.summerschedule table {	
+	width: 65%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+@media only screen and (max-width: 1100px) {
+	.summerschedule table {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.summerschedule table {
+		width: 95%;		
+	}
+}
+
+
+.schedule table{
+	margin:20px;
+	width:45%;
+}@media only screen and (max-width: 1100px) {
+  .schedule table{	
+	width:80%;
+}
+}
+
+ .summer{
+
+
+ }
+
+ .summer table{
+	 width:100%;
+ }
+
+	.summer td:nth-child(1) {
+		width: 110px
+	}
+@media only screen and (max-width: 1100px) {
+	.summer td:nth-child(1) {
+		width: 55px
+	}
+}
+
+	tr:nth-child(even) {
+		background-color: #dddddd;
+	}
+
+	.summer tr:nth-child(even) {
+		background-color: #dddddd;
+	}
+
+	.summer tr:nth-child(odd) {
+		background-color: #FFFFFF;
+	}
+
+	.talk_box {
+		border: 1px solid lavender;
+		background-color: white;
+		padding: 10px;
+		padding-left: 30px;
+		padding-right: 30px;
+		width: 80%;
+		margin-left: 20px;
+	}
+
+		.talk_box h1 {
+			font-size: 100%;
+		}
+
+	.whenwhere {
+	}
+
+
+
+	li, ul {
+	}
+
+	@media only screen and (max-width: 700px) {
+		li, ul {
+			margin: 4px;
+			padding: 0px;
+		}
+	}
+
+	.codeblock {
+		background-color: rgb(240,240,240);
+		color: rgb(60,60,60);
+		margin-left: 60px;
+		margin-right: 60px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 10px;
+		white-space: pre-wrap;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.codeblock {
+			margin-left: 0px;
+			font-size: 80%;
+			width: 550px;
+		}
+	}
+
+	.navicon {
+		display: none;
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+		padding-left: 7px;
+		padding-top: 5px;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.navicon {
+			right: 10%;
+			display: inline
+		}
+	}
+
+	@media only screen and (max-width: 465px) {
+		.navicon {
+			top: 50px;
+			right: 10%;
+			display: inline
+		}
+	}
+
+
+	.aside, .popup {
+		background-color: rgb(220,220,220);
+		padding: 15px;
+		float: right;
+		width: 30%;
+		margin-left: 10px;
+	}
+
+	.popup {
+		border: 3px solid #800000;
+		position: fixed;
+		left: 200px;
+		top: 150px;
+		width: 60%;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.popup {
+			left: 70px;
+		}
+
+			.popup .codeblock {
+				width: 90%;
+			}
+	}
+
+
+	.content {
+		margin-left: 60px;
+		margin-top: 140px;
+		margin-right: 190px;
+		line-height: 1.5;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.content {
+			margin-left: 5px;
+			margin-right: 55px;
+			margin-top: 95px;
+		}
+	}
+
+
+	td, th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+	}
+
+	.alwaysbig {
+		float: none;
+		width: 100%;
+	}
+
+	.slideview {
+		padding: 0 15px;
+		float: right;
+		width: 45%;
+	}
+
+	@media only screen and (max-width: 1000px) {
+		.slideview {
+			float: none;
+			width: 90%;
+			height: auto;
+		}
+	}
+
+	.expandslide {
+		position: relative;
+		top: 4px;
+		left: 0px;
+		z-index: 1;
+	}
+
+	@media only screen and (max-width: 1000px) {
+		.expandslide {
+			visibility: hidden;
+		}
+	}
+
+
+
+	.quote {
+		background-color: rgb(240,240,240);
+		color: rgb(60,60,60);
+		margin-left: 60px;
+		margin-right: 60px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding: 10px;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.quote {
+			margin-left: 0px;
+			width: 550px;
+		}
+	}
+
+	.footnotes {
+		font-size: 70%;
+		padding-top: 30px;
+	}
+
+
+
+	.header {
+		height: 130px;
+		width: 90%;
+		position: fixed;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		background-color: #FFFFFF;
+		overflow-x: hidden;
+		padding-top: 2px;
+		padding-left: 16px;
+		font-size: 80%;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.header {
+			height: 90px;
+			padding-top: 0px;
+		}
+	}
+
+	.header h1 {
+		padding: 2px 6px 0px 0px;
+		text-decoration: none;
+		font-size: 180%;
+		color: rgb(165, 42, 42);
+		margin-bottom: 1px;
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.header h1 {
+			text-align: left;
+			padding: 0px 6px 0px 0px;
+		}
+	}
+
+	@media only screen and (max-width: 464px) {
+		.header h1 {
+			text-align: left;
+			font-size: 150%;
+			padding: 0px 6px 0px 0px;
+		}
+	}
+
+	.logos {
+		text-align: center;
+		height: 28pt;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.logos {
+			height: 15pt;
+			text-align: left;
+		}
+	}
+
+	.header h2 {
+		margin-top: 1px;
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.header h2 {
+			text-align: left;
+		}
+	}
+
+	@media only screen and (max-width: 464px) {
+		.header h2 {
+			text-align: left;
+			font-size: 100%;
+		}
+	}
+
+	.sidenav {
+		height: 86%;
+		width: 180px;
+		position: fixed;
+		z-index: 1;
+		top: 130px;
+		right: 0;
+		background-color: #FFFFFF;
+		overflow-x: hidden;
+		padding-top: 0px;
+		display: inline;
+	}
+
+	@media only screen and (max-width: 700px) {
+		.sidenav {
+			top: 90px;
+			display: none;
+		}
+	}
+
+	.sidenav {
+		font-size: 100%;
+	}
+
+		.sidenav div {
+			margin-top: 6pt;
+			margin-bottom: 3pt;
+			margin-left: -3pt;
+		}
+
+		.sidenav a, .sidelink {
+			padding: 3px 8px 3px 16px;
+			text-decoration: none;
+			font-size: 100%;
+			color: rgb(165, 42, 42);
+			;
+			display: block;
+		}
+
+	@media only screen and (max-width: 700px) {
+		.sidenav a, .sidelink {
+			padding: 3px 8px 3px 10px;
+		}
+	}
+
+	.sidenav a:hover {
+		color: rgb(80, 21, 21);
+		;
+	}
+
+
+	.event {
+		border-radius: 10px;
+		border: solid 1px rgb(50,50,50);
+		padding: 10px;
+		margin: 10px;
+		box-shadow: 1px 1px 1px 1px darkgray;
+		background: rgb(249, 246, 246);
+	}
+
+	@media only screen and (max-width: 464px) {
+		.event {
+			padding: 2px;
+			margin: 2px;
+		}
+	}
+
+	.event_title {
+		font-weight: bold;
+	}
+
+
+	.project {
+		border-radius: 10px;
+		border: solid 1px rgb(50,50,50);
+		padding: 10px;
+		margin: 10px;
+		box-shadow: 1px 1px 1px 1px darkgray;
+		background: rgb(249, 246, 246);
+	}
+
+		.project h1 {
+			font-weight: bold;
+			font-size: 110%;
+		}
+
+	.projectTable {
+		vertical-align: top;
+		border: solid 0px rgb(50,50,50);
+	}
+
+		.projectTable td {
+			vertical-align: top;
+			border: solid 0px rgb(50,50,50);
+		}
+
+.paperThumb {
+	width: 70pt;
+	padding-top: 10pt;
+}
+
+	@media only screen and (max-width: 700px) {
+		.paperThumb {
+			width: 50pt;
+		}
+	}
+
+	@media only screen and (max-width: 464px) {
+		.paperThumb {
+			width: 30pt;
+		}
+	}
+
+.projectFig{
+	width:380pt;
+}
+
+@media only screen and (max-width: 1100px) {
+	.projectFig {
+		width: 290pt;
+	}
+}
+
+	@media only screen and (max-width: 700px) {
+		.projectFig {
+			width: 250pt;
+		}
+	}
+
+	@media only screen and (max-width: 464px) {
+		.projectFig {
+			width: 150pt;
+		}
+	}
+
+
+	.talkInfo {
+		padding: 5pt;
+		/* border: 1px solid black; */
+		text-align: justify;
+		margin-left: 0px;
+	}
+
+		.talkInfo h2 {
+			/* border: 1px solid black; */
+			text-align: left;
+			font-size: 100%;
+		}

@@ -1,0 +1,537 @@
+﻿<html>
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Summer school on Neurosymbolic Programming 2022</title>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="/scripts/library.js"></script>
+<script type="text/javascript" src="overrides.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onresize="resizing()">
+
+
+<div class="header">
+<h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
+<h2 style="color: 'black';">Funded through the NSF Expeditions in Computing Program</h2>
+<div class="logos">
+<img title='mit' src='images/mit.png' height='100%' />
+<img title='ut' src='images/ut.png' height='100%'/>
+<img title='caltech' src='images/caltech.png' height='100%'/>
+<img title='rice' src='images/rice.png' height='100%'/>
+<img title='penn' src='images/penn.png' height='100%'/>
+<img title='stanford' src='images/stanford.png' height='100%'/>
+</div>
+<div id='navicon.div' class='navicon'>
+<img id = 'navicon' src="images/burger.rest.png"
+onmouseenter="iconEnter(this, 'burger')"
+onmouseleave="iconLeave(this, 'burger')"
+onclick = 'toggleNav()'
+title="Navigation" width="34pt"></img>
+</div>
+</div>
+
+
+<div id="navigator" class="sidenav">
+<a href="#about">Lecture 1</a>
+<a href="#services">Lecture 2</a>
+<a href="#clients">Lecture 3</a>
+<a href="#contact">Lecture 4</a>
+</div>
+<script type="text/javascript">
+loadNavBar();
+</script>
+
+
+<div class="content">
+
+    <h1>Summer school on Neurosymbolic Programming July 11-13 2022</h1>
+    <p style="text-align:center;">
+        <img src="summer2022.jpg" style="width:80%" />
+    </p>
+    
+
+    <p>
+        Neurosymbolic programming is an exciting new area at the intersection of Program Synthesis and Machine Learning that aims to
+        learn models that incorporate program-like structure.
+        For this first summer school in Neurosymbolic Programming we brought together students and researchers from different backgrounds interested
+        in learning about the state of the art, applications and open problems in the field.
+    </p>
+
+    <p>The summer school included lectures and hands-on tutorials from leading researchers in the area.
+    It took place  on July 11-13 at the California Institute of Technology in Pasadena, California, USA.
+    
+    Participation in the summer school was free of charge for accepted participants, but participants were expected to cover their travel and lodging costs.
+    Limited funds for travel grants were available with priority given to graduate students.</p>
+
+    <p>All summer school participants were expected to abide by the <a href="summerschoolConduct.html">Summer School Code of Conduct</a></p>
+
+    <script>
+        function showInfo(talk) {
+            let div = document.getElementById(talk + '.info');
+            div.style.display = 'block';
+            let link = document.getElementById(talk + '.link');
+            link.innerHTML = '(close)';
+            link.href = 'javascript:closeInfo("' + talk + '");';
+        }
+        function closeInfo(talk) {
+            let div = document.getElementById(talk + '.info');
+            div.style.display = 'none';
+            let link = document.getElementById(talk + '.link');
+            link.innerHTML = '(info)';
+            link.href = 'javascript:showInfo("' + talk + '");';
+        }
+        function mon() {
+            let div = document.getElementById("monSchedule")
+            div.style.display = 'block';
+            div = document.getElementById("tuesSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("wedSchedule")
+            div.style.display = 'none';
+
+            div = document.getElementById("mondayTag");
+            div.style.backgroundColor = '#dddddd'
+            div = document.getElementById("tuesdayTag");
+            div.style.backgroundColor = '#FFFFFF'
+            div = document.getElementById("wednesdayTag");
+            div.style.backgroundColor = '#FFFFFF'
+        }
+        function tues() {
+            let div = document.getElementById("monSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("tuesSchedule")
+            div.style.display = 'block';
+            div = document.getElementById("wedSchedule")
+            div.style.display = 'none';
+
+            div = document.getElementById("mondayTag");
+            div.style.background = '#FFFFFF'
+            div = document.getElementById("tuesdayTag");
+            div.style.background = '#dddddd'
+            div = document.getElementById("wednesdayTag");
+            div.style.background = '#FFFFFF'
+        }
+        function wed() {
+            let div = document.getElementById("monSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("tuesSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("wedSchedule")
+            div.style.display = 'block';
+
+            div = document.getElementById("mondayTag");
+            div.style.background = '#FFFFFF'
+            div = document.getElementById("tuesdayTag");
+            div.style.background = '#FFFFFF'
+            div = document.getElementById("wednesdayTag");
+            div.style.background = '#dddddd'
+
+        }
+    </script>
+
+
+
+    <div class="summerschedule">
+
+        <table>
+            <tbody>
+                <tr>
+                    <th id="mondayTag" style="background-color:#dddddd;"><a href="javascript:mon()">Monday July 11 2022</a></th>
+                    <th id="tuesdayTag"><a href="javascript:tues()">Tuesday July 12 2022</a></th>
+                    <th id="wednesdayTag"><a href="javascript:wed()">Wednesday July 13 2022</a></th>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div class="summer">
+                            <div id="monSchedule" style="display:block">
+
+
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">Monday July 11 2022</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Time</th>
+                                            <th>Event</th>
+                                        </tr>
+                                        <tr>
+                                            <td>9:00 to 9:15</td>
+                                            <td>
+                                                Day 1 Introductory remarks.
+                                                <a href="https://youtu.be/As8Gy_fG9VQ">[Video]</a>                                    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9:15 to 10:00</td>
+                                            <td>
+                                                Keynote 1: <a href="https://www.mit.edu/~jda/">Jacob Andreas (MIT)</a>
+                                                <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/SQP0uqCGVxM">[Video]</a>
+                                                <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1NF_dXLXuA7_6NXlwPW6YMIigH_ncnQpr/view?usp=sharing">[Slides]</a>
+                                                <a id="andreas.link" href="javascript:showInfo('andreas');">(info)</a>
+                                                <div id="andreas.info" class="talkInfo" style="display:none;">
+                                                    <h2>Learning to program by learning to read</h2>
+                                                    In the age of deep networks, "learning" almost invariably means "learning from examples". Image classifiers are trained with large datasets of (labeled or unlabeled) images, machine translation systems with corpora of translated sentences, and robot policies with demonstrations. But when human learners acquire new concepts and skills, we often do so with richer supervision, especially in the form of language---we learn new concepts from exemplars accompanied by descriptions or definitions, and new skills from demonstrations accompanied by instructions. In natural language processing, recent years have seen a number of successful approaches to learning from task definitions and other forms of auxiliary language-based supervision. But these successes have been largely confined to tasks that also involve language as an input and an output. What will it take to make language-based training useful for other learning problems? In this talk, I'll present some recent results on using natural language to guide both search and library learning in inductive program synthesis, and discuss connections to the role of language in human concept learning.
+                                                </div>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10:00 to 10:45</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>10:45 to 12:00</td>
+                                            <td>
+                                                Tutorial 1a: <a href="http://www.yisongyue.com/">Yisong Yue (Caltech)</a>/ <a href="https://www.cs.utexas.edu/~swarat/">Swarat Chaudhuri (UT Austin)</a> / <a href="http://jenjsun.com/">Jennifer Sun (Caltech)</a>
+                                                <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/qCli4M38AKk">[Video]</a>
+                                                <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/17Jj5zxHic5pLgpxNsoGINSqi_PuydMeE/view?usp=sharing">[Slides]</a>
+                                                <a id="yisonga.link" href="javascript:showInfo('yisonga');">(info)</a>
+                                                <div id="yisonga.info" class="talkInfo" style="display:none;">
+                                                    <h2>Basics of Neurosymbolic Architectures</h2>
+                                                    This part overviews the design of neurosymbolic architectures and their training.  We will begin with an overview of conventional deep learning (i.e., purely neural architectures).  Afterwards, we will introduce the concept of a domain specific language (DSL), which can include both symbolic and neural primitives.  Any program or architecture can be designed using primitives from this DSL.  We will then construct a few explicit neurosymbolic architectures and train their continuous parameters using gradient-based learning.
+                                                </div>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>12:00 to 13:00</td>
+                                            <td>Lunch</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13:00 to 14:00</td>
+                                            <td>
+                                                Talk: <a href="https://web.cs.ucla.edu/~guyvdb/">Guy Van Den Broeck (UCLA)</a>
+                                                <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1ohpNtfshVJA2KtgIJCAE6uZZ6KsLc46C/view?usp=sharing">[Slides]</a>
+												
+                                                <a id="guy.link" href="javascript:showInfo('guy');">(info)</a>
+                                                <div id="guy.info" class="talkInfo" style="display:none;">
+                                                    <h2>Bridging Data and Knowledge in Neuro-Symbolic Learning</h2>
+                                                    The key challenge in neuro-symbolic machine learning is to bridge between perception from data and reasoning about symbolic knowledge. In this talk, I will present recent work that finds novel ways to unify these two worlds, by using logical and probabilistic reasoning tools (circuits and SAT solvers) to improve the learning capabilities of deep neural networks. In particular, I will discuss semantic loss functions to enforce constraints in structured output prediction, and counterexample-guided learning of monotonic neural networks.
+
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14:00 to 14:30</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14:30 to 15:30</td>
+                                            <td>
+                                                Tutorial 2a: <a href="https://cseweb.ucsd.edu/~npolikarpova/">Nadia Polikarpova (UCSD)</a>/<a href="https://www.cs.technion.ac.il/~shachari/">Shachar Itzhaky (Technion)</a>: Program Synthesis
+												
+                                                <a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/KebEhQ9ios0">[Video]</a>
+                                                <a target="_blank" rel="noopener noreferrer"  href="https://drive.google.com/file/d/19-19pJQg6btXTOuTRmx-ZGiP_hs-yEys/view?usp=sharing">[Slides]</a>
+												
+                                                <a id="nadiaa.link" href="javascript:showInfo('nadiaa');">(info)</a>
+                                                <div id="nadiaa.info" class="talkInfo" style="display:none;">
+                                                    <h2>Tutorial on Deductive Program Synthesis Part 1</h2>
+                                                    <p>This tutorial is an introduction to deductive program synthesis, using as an example synthesis of provably correct pointer-manipulating programs with the SuSLik system.</p>
+                                                    <p>
+                                                        In the first part of the tutorial, we will introduce the motivation and main ideas behind deductive synthesis and practice specifying programs using formal logic.
+                                                    </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>15:30 to 15:45</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>15:45 to 16:45</td>
+                                            <td>Talk: <a href="https://obastani.github.io/">Osbert Bastani (UPenn): Neurosymbolic Algorithms for Trustworthy Machine Learning </a>                                                 <a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/1qPmDshxZIo">[Video]</a>
+                                                <a target="_blank" rel="noopener noreferrer"  href="https://drive.google.com/file/d/13FdDOcrUZUxMvv4ZS69cFwXN2jpPmdbp/view?usp=sharing">[Slides]</a>
+											
+											</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>16:45 to 18:00</td>
+                                            <td>
+                                                Work time
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                            <div id="tuesSchedule" style="display:none">
+
+
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">Tuesday July 12 2022</th>
+                                        </tr>
+                                        <tr>
+                                            <th >Time</th>
+                                            <th>Event</th>
+                                        </tr>
+                                        <tr>
+                                            <td>9:00 to 9:15</td>
+                                            <td>
+                                                Day 2 Introductory remarks
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9:15 to 10:00</td>
+                                            <td>
+                                                Talk: <a href="https://people.csail.mit.edu/asolar/">Armando Solar-Lezama (MIT)</a></a>                                                 <a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/N11Y3Gm0aWs">[Video]</a>
+                                                <a target="_blank" rel="noopener noreferrer"  href="https://code.playskript.com/view.html?id=ee8fe679836b94cf14c7a128d1e525e5f4249dc6abd56b572e">[Slides]</a>
+										
+                                                <a id="asolar.link" href="javascript:showInfo('asolar');">(info)</a>
+                                                <div id="asolar.info" class="talkInfo" style="display:none;">
+                                                    <h2>Better learning through
+                                                        Programming Languages
+                                                    </h2>
+                                                    This talk will describe the evolution of program synthesis into a tool for learning.
+                                                    The talk will describe the early work on synthesizing models from data and will then
+                                                    show how ideas in program synthesis can form the basis for new neurosymbolic learning algorithms.
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10:00 to 10:45</td>
+                                            <td>BREAK</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>10:45 to 12:00</td>
+                                            <td>
+                                                Tutorial 1b: <a href="http://www.yisongyue.com/">Yisong Yue (Caltech)</a>/ <a href="https://www.cs.utexas.edu/~swarat/">Swarat Chaudhuri (UT Austin)</a> / <a href="http://jenjsun.com/">Jennifer Sun (Caltech)</a>                                                 <a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/3YFyJA9tplo">[Video]</a>
+                                                <a target="_blank" rel="noopener noreferrer"  href="https://drive.google.com/file/d/1U7ynNKrUB4wVtVCuGq4CW5AmTeaQljBL/view?usp=sharing">[Slides]</a>
+                                                <a id="yisongb.link" href="javascript:showInfo('yisongb');">(info)</a>
+                                                <div id="yisongb.info" class="talkInfo" style="display:none;">
+                                                    <h2>Neurosymbolic Program Architecture Search</h2>
+                                                    This part introduces two methods for automatically searching for the best program architecture within a DSL.  The first method is a
+                                                    basic enumerative (or exhaustive) search.  The second is <a href="https://arxiv.org/abs/1703.07469">RobustFill</a>.  For both methods, we will
+                                                    have hands-on exercises so that students can get a feel for how these methods work in practice.  This part will conclude with a brief survey of other methods.
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>12:00 to 13:00</td>
+                                            <td>
+                                                Lunch
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13:00 to 14:00</td>
+                                            <td>
+                                                Talk: <a href="https://research.google/people/CharlesSutton/">Charles Sutton (Google): Program Synthesis, Program Semantics, and Large Language Models </a>                                                 <a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/AqIhJebYbaE">[Video]</a>                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14:00 to 14:15</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14:15 to 15:15</td>
+                                            <td>
+                                                Tutorial 3a: <a href="http://probcomp.csail.mit.edu/principal-investigator/">Vikash Mansinghka (MIT) </a><a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/n08kGjReS74">[Video]</a>  
+                                                <a id="vikasha.link" href="javascript:showInfo('vikasha');">(info)</a>
+                                                <div id="vikasha.info" class="talkInfo" style="display:none;">
+                                                    <h2>Probabilistic Programming Tutorial Part 1</h2>    
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>15:15 to 15:30</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>15:30 to 16:30</td>
+                                            <td>Keynote 2: David Choi (DeepMind)     <a target="_blank" rel="noopener noreferrer"  href="https://drive.google.com/file/d/1u_k0n03EaWPQyPHOGRkg94Ef8UcJMT7h/view?usp=sharing">[Slides] </a>  <a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/X7sCRcaE8OQ">[Video]</a>
+                                                <a id="choi.link" href="javascript:showInfo('choi');">(info)</a>
+                                                <div id="choi.info" class="talkInfo" style="display:none;">
+                                                    <h2>Competitive Programming with AlphaCode</h2>
+                                                    Programming is a powerful problem-solving tool. Systems that can assist programmers or even generate programs themselves could make programming more productive and accessible. Recent large-scale language models have demonstrated impressive abilities to generate code, however they still perform poorly on more complex tasks that require problem-solving skills, such as competitive programming problems. In this talk we'll present AlphaCode, the motivations of the project and the design decisions we made. AlphaCode is a system for code generation that achieved an average ranking of top 54.3% in simulated evaluations on popular, recent programming competitions on the Codeforces platform. AlphaCode's success stemmed from: large transformer-based models, using a novel combination of architectural, training, and prompting modifications; extensive datasets; efficient large-scale sampling; and filtering and clustering-based sample selection. This marks the first time an artificial intelligence system has performed competitively in programming competitions.
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>16:30 to 18:00</td>
+                                            <td>
+                                                &nbsp;Poster Session
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="wedSchedule" style="display:none">
+
+
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th colspan="2">Wednesday July 13</th>
+                                        </tr>
+                                        <tr>
+                                            <th>Time</th>
+                                            <th>Event</th>
+                                        </tr>
+                                        <tr>
+                                            <td>9:00 to 9:15</td>
+                                            <td>
+                                                Day 3 introductory remarks
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9:15 to 10&nbsp;</td>
+                                            <td>
+                                                Keynote 3: <a href="http://users.cms.caltech.edu/~klbouman/">Katie Bouman (Caltech) </a><a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/kt3L50AngAE">[Video] </a>
+                                                <a target="_blank" rel="noopener noreferrer"  href="https://drive.google.com/file/d/1FtT6425rxy775BytiZE4icc_8mQsQF6f/view?usp=sharing">[Slides]</a>
+                                                <a id="katie.link" href="javascript:showInfo('katie');">(info)</a>
+                                                <div id="katie.info" class="talkInfo" style="display:none;">
+                                                    <h2>Moving Beyond the First Portrait of Our Milky Way’s Black Hole by Leveraging Underlying Structure</h2>
+                                                    As imaging requirements become more demanding, we must rely on increasingly sparse and/or noisy measurements that fail to paint a complete picture. Computational imaging pipelines, which replace optics with computation, have enabled image formation in situations that are impossible for conventional optical imaging. For instance, the first black hole image -- published in 2019 of the black hole in the M87 galaxy -- and the recent second portrait of our Milky Way's supermassive black hole published in 2022, were only made possible through the development of computational imaging pipelines that worked alongside an Earth-sized distributed telescope. However, remaining scientific questions motivate us to improve this computational telescope to see black hole phenomena still invisible to us. This talk will describe how the first images of a black hole were computationally captured, and discuss how we are leveraging underlying structure in the data to both recover images without imposing human-designed image statistics, as well as extract the evolving structure of our own Milky Way's black hole over the course of a night in the future. These problems open up new challenges in neurosymbolic programming that could one day help to elucidate new astrophysics. 
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10:00 to 10:45</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>10:45 to 12:00</td>
+                                            <td>
+                                                Tutorial 1c: <a href="http://www.yisongyue.com/">Yisong Yue (Caltech)</a>/ <a href="https://www.cs.utexas.edu/~swarat/">Swarat Chaudhuri (UT Austin)</a> / <a href="http://jenjsun.com/">Jennifer Sun (Caltech)</a><a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/AnmrPpX8BGA">[Video] </a>
+                                                <a target="_blank" rel="noopener noreferrer"  href="https://drive.google.com/file/d/1dzYpWcl2kH_7bloUGZuN4MuRCQ2XTP7Q/view?usp=sharing">[Slides]</a>
+                                                <a id="yisongc.link" href="javascript:showInfo('yisongc');">(info)</a>
+                                                <div id="yisongc.info" class="talkInfo" style="display:none;">
+                                                    <h2>Neurosymbolic Program Architecture Search (continued)</h2>
+                                                    This part introduces two methods for program architecture search.  The first method is on using Admissible Neural Heuristics
+                                                    (<a href="https://arxiv.org/abs/2007.12101">NEAR</a>) which treats program architecture search as an informed graph search problem.
+                                                    The second method is <a href="https://arxiv.org/abs/2006.08381">DreamCoder</a>, which aims to learn extensions of the DSL
+                                                    (i.e., library learning).  This part will conclude with a practical example of neurosymbolic learning for behavior analysis,
+                                                    grounded in real-world applications for behavioral neuroscience.
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>12:00 to 13:00&nbsp;</td>
+                                            <td>
+                                                Lunch
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>13:00 to 14:00</td>
+                                            <td>
+                                                Talk: <a href="https://jiajunwu.com/">Jiajun Wu (Stanford)</a>
+												<a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/73ZgwLVP99c">[Video] </a>
+                                                <a target="_blank" rel="noopener noreferrer"  href="https://drive.google.com/file/d/1NrKkoOnTwOHZjQClDEqaFNbfSr1rWuhu/view?usp=sharing">[Slides]</a>
+                                                <a id="wu.link" href="javascript:showInfo('wu');">(info)</a>
+                                                <div id="wu.info" class="talkInfo" style="display:none;">
+                                                    <h2>Understanding the Visual World Through Naturally Supervised Code</h2>
+                                                    Much of our visual world is inherently symbolic: scenes are made of objects; different objects may have the same color or material, with a grid layout; each object can be symmetric and have repetitive parts. How can we infer, represent, and use such symbolic structure from raw data, without hampering the expressiveness of neural networks? In this talk, I will demonstrate that symbolic structure, or code, can be learned from natural supervision.  Such supervision can be from pixels, where neuro-symbolic methods automatically discover repetitive parts and objects for scene synthesis. It can be from objects, where humans during fabrication introduce priors that can be leveraged by machines to infer regular intrinsics such as texture and material. It can also be from language, which humans develop for the need of referring to and talking about objects, and where machines may learn grounded visual concepts only by looking at images and reading captions. When solving these problems, symbolic programs and neural nets play complementary roles: symbolic programs are more data-efficient to train and generalize better to new scenarios, as they robustly capture high-level structure; deep nets effectively extract complex, low-level features from cluttered and noisy visual and language data.
+                                                </div>
+
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;14:00 to 14:30</td>
+                                            <td>BREAK</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>14:30 to 15:30</td>
+
+                                            <td>
+                                                Tutorial 2b: <a href="https://cseweb.ucsd.edu/~npolikarpova/">Nadia Polikarpova (UCSD)</a>/<a href="https://www.cs.technion.ac.il/~shachari/">Shachar Itzhaky (Technion)</a>: Program Synthesis <a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/Wq5UWCfTVYQ">[Video] </a>
+                                                <a target="_blank" rel="noopener noreferrer"  href="https://drive.google.com/file/d/19-19pJQg6btXTOuTRmx-ZGiP_hs-yEys/view?usp=sharing">[Slides]</a>
+                                                <a id="nadiab.link" href="javascript:showInfo('nadiab');">(info)</a>
+                                                <div id="nadiab.info" class="talkInfo" style="display:none;">
+                                                    <h2>Tutorial on Deductive Program Synthesis Part 2</h2>
+                                                    <p>This tutorial is an introduction to deductive program synthesis, using as an example synthesis of provably correct pointer-manipulating programs with the SuSLik system.</p>
+                                                    <p>In the second part of the tutorial, we will see how deductive synthesis works under the hood. We will get hands-on experience deriving programs from specifications step-by-step using deductive rules and explore how deductive synthesis handles recursion. </p>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>15:30 to 15:45</td>
+                                            <td>Break</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>&nbsp;15:45 to 16:45</td>
+                                            <td>Talk: <a href="http://www.zenna.org/">Zenna Tavares (Columbia): Model Based Reasoning </a> <a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/9tGre88G07A">[Video] </a> </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>16:45 to 18:00</td>
+                                            <td>
+                                                Tutorial 3b: <a href="http://probcomp.csail.mit.edu/principal-investigator/">Vikash Mansinghka (MIT)</a> <a target="_blank" rel="noopener noreferrer"  href="https://youtu.be/O9kBeXn1MbU">[Video] </a>
+                                                <a id="vikashb.link" href="javascript:showInfo('vikashb');">(info)</a>
+                                                <div id="vikashb.info" class="talkInfo" style="display:none;">
+                                                    <h2>Probabilistic Programming Tutorial Part 2</h2>
+
+                                                </div>
+
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script>
+        processDocument();
+    </script>
+
+    <div class="footnotes">
+
+
+
+    </div>
+</div>
+
+</body>
+
+
+
+</html>

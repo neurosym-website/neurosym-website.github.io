@@ -1,0 +1,488 @@
+﻿<!doctype html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <script src="./node_modules/rapydscript/lib/rapydscript_web.js"></script>
+
+    <script src="ml4kids.js"></script>
+    <script src="https://code.playskript.com/js/AST.js"></script>
+    <script src="https://code.playskript.com/js/builtinDocs.js"></script>
+    <script src="https://code.playskript.com/js/parsing.js"></script>
+    <script src="https://code.playskript.com/js/processProgram.js"></script>
+    <script src="https://code.playskript.com/js/parseTex.js"></script>
+    <script src="https://code.playskript.com/js/integrated.js"></script>
+    <script src="https://code.playskript.com/js/programState.js"></script>
+    <script src="https://code.playskript.com/js/errorCodes.js"></script>
+
+    <style type="text/css" media="screen">
+        .editorContainerStyle {
+            background: white;
+            width: 750px;
+        }
+
+        .errorbox {
+            background: rgb(39, 40, 34);
+            overflow-y: auto;
+            padding: 12px;
+            width: 500px;
+            height: 476px;
+            text-align: left;
+        }
+
+        .editorStyle {
+            font-size: 14px;
+            height: 500px;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1480px) {
+            .editorContainerStyle {
+                width: 550px;
+            }
+
+            .editorStyle {
+                font-size: 12px;
+            }
+
+            .errorbox {
+                font-size: 12px;
+                width: 500px;
+            }
+        }
+
+        @media only screen and (max-width: 1195px) {
+            .editorContainerStyle {
+                width: 550px;
+            }
+
+            .editorStyle {
+            }
+
+            .errorbox {
+                width: 400px;
+            }
+        }
+
+        @media only screen and (max-width: 990px) {
+            .editorContainerStyle {
+                width: 550px;
+            }
+
+            .editorStyle {
+                font-size: 10px;
+            }
+
+            .errorbox {
+                width: 300px;
+                font-size: 10px;
+            }
+        }
+
+
+        .canvasStyle {
+            width: 1440px;
+            height: 600px;
+            border: 1px solid #000000;
+        }
+
+        @media only screen and (max-width: 1480px) {
+            .canvasStyle {
+                width: 1152px;
+                height: 480px;
+            }
+        }
+
+        @media only screen and (max-width: 1195px) {
+            .canvasStyle {
+                width: 960px;
+                height: 400px;
+            }
+        }
+
+        @media only screen and (max-width: 990px) {
+            .canvasStyle {
+                width: 720px;
+                height: 300px;
+            }
+        }
+
+
+        .errmsg-base {
+            color: rgb(251, 87, 87);
+        }
+
+        .errmsg-wait {
+            color: rgb(69, 80, 64);
+        }
+
+        .errmsg-done {
+            color: rgb(239, 240, 34);
+        }
+
+        #carinfo {
+            height: 300pt;
+            margin-right: 10pt;
+        }
+
+        body {
+            font-size: 18px;
+        }
+
+        .inlinecode {
+            font: bold 14px consolas;
+        }
+
+        html {
+            padding-left: 12pt;
+            padding-right: 12pt;
+        }
+
+        .fullcode {
+            white-space: pre-wrap;
+            padding-top: 5px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            padding-left: 30px;
+            font-family: monospace;
+            font-weight: bold;
+            background: rgb(40,40,40);
+            color: rgb(221, 203, 106);
+            border: 1pt lightgray solid;
+            font-size: 100%;
+        }
+
+        #codingbox {
+            text-align: center;
+        }
+
+        #instructions {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: sans-serif
+        }
+    </style>
+</head>
+<body>
+   
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.2/ace.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <h1>Teaching a computer to drive</h1>
+    <div id="instructions">
+        <table style="margin:auto; text-align:left; width:90%">
+            <tr>
+                <td>
+                    <div id="controlingTheCar">
+                        <h2>Controling a car part 1.</h2>
+                        <p>
+                            Your goal for this exercise is to write a function that steers the car through a track
+                            without crashing. The car is illustrated in the figure on the right. The car has three
+                            sensors in the front, which measure the distance to the edge of the track in three different
+                            directions. Using the current and previous reading of the sensors, your goal will be to write a function
+                            that computes the target velocity and the angle of the steering wheel for the car as shown in the figure.
+                        </p>
+                        <p>
+                            Specifically, your goal is to implement a function <span class="inlinecode">control(sd, pastsd)</span>
+                            that takes as arguments two arrays, <span class="inlinecode">sd</span> and <span class="inlinecode">pastsd</span>
+                            that contain the readings of the three sensors. <span class="inlinecode">sd[0], sd[1], sd[2]</span>
+                            correspond to the left, front and right sensors respectively as shown in the figure.
+                        </p>
+                        <p>
+                            The code below contains the skeleton of the code for you to write your driving function.
+                            The code uses the following functions.
+                            <ul>
+                                <li>
+                                    <span class="inlinecode">track0(), track1(), track2(), track3(), track4()</span>.
+                                    These five functions produce 5 different tracks ranging from easiest to hardest.
+                                </li>
+                                <li>
+                                    <span class="inlinecode">newCar(track)</span>. This function takes as input a track
+                                    and produces a new car positioned at the starting point of the track.
+                                </li>
+                                <li>
+                                    <span class="inlinecode">startDisplay(track, car)</span>.
+                                    Initializes the display with the given track and car.
+                                </li>
+                                
+                                <li>
+                                    <span class="inlinecode">simulate(car, track, timesteps, controler, display)</span>.
+                                    This function runs the simulator with the given car and the given track for a fixed number
+                                    of timesteps. Each timestep corresponds to 0.1 seconds, so 600 timesteps corresponds to a minute of
+                                    driving (It is advised that you don't simulate for more than 1000 timesteps).
+                                    The third argument is the control function that you are going to write, and which should
+                                    return an array [ang, speed], where the angle is in degrees and the speed is in meters per second.
+                                    The last argument is a boolean that determines whether or not
+                                    to display the motion of the car on the track. Displaying the car makes the simulation
+                                    considerably slower, but you get to see your car moving through the track.
+                                    The function returns an object with the following fields:
+                                    <ul>
+                                        <li>
+                                            <span class="inlinecode">dist</span> contains the distance traveled by the car (in meters).
+                                        </li>
+                                        <li>
+                                            <span class="inlinecode">speed</span> contains the average speed of the car (in meters/second).
+                                        </li>
+                                        <li>
+                                            <span class="inlinecode">crash</span> is a boolean that determines whether or not the car crashed.
+                                        </li>
+                                        <li>
+                                            <span class="inlinecode">time</span> total time in seconds before the car crashed or the total number of
+                                            timesteps were completed.
+                                        </li>
+                                        <li>
+                                            <span class="inlinecode">car</span> new state of the car at the end of the simulation.
+                                        </li>
+                                    </ul>
+                                    The simulation
+                                    does not modify the car you give it as input, so if you run it again it will start again from the initial position.
+                                </li>
+                                <li>
+                                    <span class="inlinecode">displayResult(track, result)</span>.
+                                    Takes as argument a track and the result of simulating on that track and displays the result on the track.
+                                </li>
+                            </ul>
+
+                        </p>
+                        <p>
+                            <b>Important constraints</b>. There are limits to how fast the car can change its speed or the angle
+                            of its wheels. In terms of speed, the car can only accelerate at up to 10 m/s<sup>2</sup>. So if
+                            the controller requests a speed that is more than 1 m/s higher than the speed from the previous timestep,
+                            the speed will only increase by 1 m/s (remember a timestep is 0.1 second).
+                            Similarly, the steering angle can only change by at most 100 degrees per second, so if the requested angle is more than
+                            10 degrees above the previous angle, the angle will only change by 10 degrees.
+                        </p>
+                        <p>
+                            <b>Controller ideas. </b> The simplest controller to implement is one that maintains a small constant
+                            speed and at every timestep turns the wheels right or left depending on which sensor gives a smaller reading.
+                            Can you make such a controller work? Do you see any problems with how it works?
+                        </p>
+                        <p>
+                            Another idea is to make the turning angle proportional to the difference between the left and right sensor
+                            reading. Can you make this work?
+                        </p>
+                        <p>
+                            Your controller can go faster if you slow down when approaching a turn. How would you implement this?
+                        </p>
+                        <a href="javascript:displayLearning()">Continue with part 2</a>
+                    </div>
+                    <div id="learningTheController" style="display:none">
+                        <h2>Learning the controller</h2>
+                        For this part of the exercise, we are going to show how to learn a controller using a very simple 
+                        optimization algorithm. The basic setup of the algorithm is as follows. 
+<div class="fullcode">
+<span style="color:lightblue"># define a set of parameters and give them some initial values.</span>
+def control(sd, pastsd):
+    <span style="color:lightblue"># define a controller that uses those parameters</span>
+    return [ang, speed]
+
+bestResult = 0
+bestParams = ...
+for step in range(N):    
+    <span style="color:lightblue"># randomly modify the parameters</span>
+    result = simulate(...)
+    if(result is better than bestResult): 
+        bestResult = result
+        bestParams = ...
+    else:
+        <span style="color:lightblue"># the randomly modified parameters were not better, </span>
+        <span style="color:lightblue"># so change back to the old best parameters</span>
+</div>
+Here are a few pieces of advice. 
+
+<ul>
+    <li>
+        An easy way to randomly modify the parameters is to add a small amount of random noise.
+        In your environment, we have defined a function <span class="inlinecode">random()</span> that
+        returns a random value between 0 and 1 that you can use to add random noise to a parameter.
+        You can also call <span class="inlinecode">random(a,b)</span> to get a random number between 
+        <span class="inlinecode">a</span> and <span class="inlinecode">b</span>.
+    </li>
+
+    <li>
+        We also provide a function <span class="inlinecode">choice(vals, probs)</span> 
+        that takes as input a list of values and a list of probabilities associated with those values
+        and choses a value to return based on those probabilities. 
+        You can use this function to give higher probability to some changes than to others.
+    </li>
+
+    <li>
+        It is often helpful to reduce the amount of noise over time.
+    </li>
+    <li>
+        The function <span class="inlinecode">simulate</span> runs much faster if you don't display
+        the results, but it's fun to see how the controller improves over time. One possibility is to use an
+        expression such as  <span class="inlinecode">(step % K) == 0</span> to have it display only every K steps.
+    </li>
+
+</ul>
+
+
+                        <a href="javascript:displayControling()">Return to part 1</a>
+                    </div>
+
+                </td>
+                <td style="vertical-align:top; padding-top:20px">
+                    <img id="carinfo" src="images/carinfo.png" />
+
+                </td>
+            </tr>
+
+        </table>
+
+
+       
+
+    </div>
+
+    <div id="codingbox">
+        <table style="margin:auto">
+            <tr>
+                <td>
+                    <div id="editorContainer" class="editorContainerStyle">
+                        <div id="editor" class="editorStyle"></div>
+                    </div>
+
+                </td>
+                <td>
+                    <div id="errMsg" class="errorbox">
+                        <div id="errMsgText"></div>
+                    </div>
+
+                </td>
+            </tr>
+
+        </table>
+    </div>
+   
+    <div style="text-align:center">
+        <a href="javascript:runsym()"><img src="images/run.png" style="height:30pt" /></a>
+        <a href="javascript:stopsym()"><img src="images/stop.png" style="height:30pt" /></a>
+
+    </div>
+    
+
+    
+
+    <div id="canvasContainer" style="background-color: white; text-align:center">
+        <canvas id="myCanvas" width="2880" height="1200" class="canvasStyle"
+                tabindex="1"></canvas>
+    </div>
+
+    <p>
+        The creation of this material was supported by the National Science Foundation under Grant No. 1918839. Any opinions, findings,
+        and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views
+        of the National Science Foundation.
+
+        <a href="https://code.playskript.com/view.html?id=f95080238776a2d0b1878313723f0a3cc745141416ae43aa06" target="_blank">The simulation and visualizations</a>  were developed using the <a href="https://code.playskript.com" target="_blank">PlaySkript&reg; visualization platform</a>. 
+    </p>
+    <br />
+    <div id="scratchpad" style="display:none;"></div>
+
+    <script>
+
+        let carinfo = document.getElementById("carinfo");
+        let initPadding = 0;
+
+        document.addEventListener('scroll', () => {
+            let sy = window.scrollY;
+            if (sy < 100) {
+                carinfo.style.marginTop = '0px';
+            } else {
+                if (sy < 600) {
+                    carinfo.style.marginTop = (sy - 100) + 'px';
+                } else {
+                    carinfo.style.marginTop = '500px';
+                }
+            }
+
+        });
+
+
+
+        function displayLearning() {
+            let div = document.getElementById("learningTheController");
+            div.style.display = "block";
+
+            div = document.getElementById("controlingTheCar");
+            div.style.display = "none";
+        }
+        function displayControling() {
+            let div = document.getElementById("learningTheController");
+            div.style.display = "none";
+
+            div = document.getElementById("controlingTheCar");
+            div.style.display = "block";
+        }
+
+
+        ace.config.set("basePath", "https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.2/");
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.getSession().setMode("ace/mode/python");
+
+        editor.insert(`track = track0()
+car = newCar(track)
+startDisplay(track, car)
+
+def control(sd, pastsd):
+    speed = 5
+    ang = 15
+    return [ang, speed]
+
+print("Ready to simulate.")
+
+
+
+simout = simulate(car, track, 750, control, true)
+print("Done!")
+
+displayResult(track, simout)
+`)
+
+        var programState = new ProgramState();
+        var session = { state: programState };
+
+ 
+
+        var slide = Slide("myCanvas", readEditor, session.state, undefined, "slide");
+
+        
+        session.state.setRefreshFun(loadImportedPictures);
+
+        session.state.downloadImports({ cars: 'f95080238776a2d0b1878313723f0a3cc745141416ae43aa06' }, () => {
+
+
+        });
+
+
+        function runsym() {
+            let msgs = document.getElementById("errMsgText");
+            msgs.innerHTML = '';
+            try {
+                slide.play();
+            } catch (e) {
+                errorMsg(e);
+            }
+            
+        }
+        function stopsym() {
+            slide.stop();
+        }
+
+    </script>
+
+
+
+</body>
+</html>

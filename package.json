@@ -1,0 +1,17 @@
+{
+  "name": "expeditionsweb",
+  "version": "1.0.0",
+  "description": "Webpage for expeditions project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "asolar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pdf-thumbnails-generator": "^1.0.6",
+    "rapydscript": "^0.5.62"
+  }
+}
