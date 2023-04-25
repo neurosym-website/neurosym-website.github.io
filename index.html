@@ -1,0 +1,120 @@
+<html>
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expeditions</title>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="/scripts/library.js"></script>
+<script type="text/javascript" src="overrides.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onresize="resizing()">
+
+
+<div class="header">
+<h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
+<h2 style="color: 'black';">Funded through the NSF Expeditions in Computing Program</h2>
+<div class="logos">
+<img title='mit' src='images/mit.png' height='100%' />
+<img title='ut' src='images/ut.png' height='100%'/>
+<img title='caltech' src='images/caltech.png' height='100%'/>
+<img title='rice' src='images/rice.png' height='100%'/>
+<img title='penn' src='images/penn.png' height='100%'/>
+<img title='stanford' src='images/stanford.png' height='100%'/>
+</div>
+<div id='navicon.div' class='navicon'>
+<img id = 'navicon' src="images/burger.rest.png" 
+onmouseenter="iconEnter(this, 'burger')"
+onmouseleave="iconLeave(this, 'burger')"
+onclick = 'toggleNav()'
+title="Navigation" width="34pt"></img>
+</div>
+</div>
+
+
+<div id="navigator" class="sidenav">
+<a href=" index.html">Home</a>
+	<a href=" toc.html">
+Site map</a>
+	<a href=" people.html">
+People</a>
+<a href=" events.html">Events</a>
+	<a href=" summerschool.html">
+Summer School 2022</a>
+	<a href=" software.html">
+Software repository</a>
+</div>
+<script type="text/javascript">
+loadNavBar();
+</script>
+
+<div class="content">
+
+<h1>Overview</h1>
+<p>
+In almost every field of science, it is now possible to capture large amounts of data. This has led machine learning to play an increasingly important role in scientific discovery, for example sifting through large amounts of data to identify interesting events. But modern machine learning techniques are less well suited for the critical tasks of devising hypotheses  consistent  with  the  data  or 
+imagining new experiments to test those hypotheses.
+</p>
+
+<p>
+<slide>
+Main:Slide27
+</slide>
+The goal of our project is to develop new learning techniques that can help automate this process of generating 
+scientific theories from data. In particular, we are working to develop methods for learning 
+<a href="methods.html">neurosymbolic</a> 
+models that 
+combine neural elements capable of identifying 
+complex patterns in data with symbolic constructs that are able to represent higher level concepts. 
+Our approach is based on the observation that programming languages provide a uniquely expressive formalism to describe complex models. Our aim is therefore to develop learning techniques that can produce models that look more like the models that scientists already write by hand in code.
+
+Our proposed techniques will more easily incorporate prior knowledge about the phenomena we want to model, and produce interpretable models that can be analyzed to devise new experiments or to infer causal relations. We believe these techniques have
+the potential to revolutionize the way scientists in a variety of fields interact with data. More broadly, our proposed techniques will be useful in any setting that requires learning more interpretable models with strong requirements on their desired behavior. 
+</p>
+<p>
+In order to drive this research, we have selected four 
+domains where we believe these techniques can have significant 
+impact: <a href="chem.html">organic chemistry</a>, 
+<a href="bio.html">RNA splicing</a>, 
+<a href="cognitive.html"> cognitive science / behavioral modeling</a>, and 
+<a href="">computing systems</a>. Machine learning is 
+already demonstrating value in all of these domains, including predicting 
+properties of organic compounds, recognizing complex social activities, and  
+modeling CPU performance. However, our proposed techniques could have a transformative impact in all of these domains by helping scientists move from black-box predictions to a deeper understanding of the processes that give rise to the data.
+
+</p>
+
+<i>This material is based upon work supported by the National Science Foundation under Grant No. 1918839.
+Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+</i>
+
+
+
+
+<script>
+processDocument();
+</script>
+
+<div class="footnotes">
+
+<footnotes>
+
+</footnotes>
+
+</div>
+</div>
+
+</body>
+
+
+
+</html>

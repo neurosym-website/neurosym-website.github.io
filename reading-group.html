@@ -1,0 +1,244 @@
+﻿<html>
+
+<!--
+    To add a paper:
+
+    1. Add its bibtex entry to the file `biblio.bib`
+    2. Go to the notion notes for the paper and export as html. Unzip the exported directory to the folder `reading-group-notes`.
+    2. Add a <project> frame by copying one of the others. Update the description, citation, and local notion link.
+-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neurosymbolic Reading Group</title>
+
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" src="/scripts/library.js"></script>
+    <script type="text/javascript" src="overrides.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onresize="resizing()">
+
+
+    <div class="header">
+        <h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
+        <h2 style="color: 'black';">Funded through the NSF Expeditions in Computing Program</h2>
+        <div class="logos">
+            <img title='mit' src='images/mit.png' height='100%' />
+            <img title='ut' src='images/ut.png' height='100%' />
+            <img title='caltech' src='images/caltech.png' height='100%' />
+            <img title='rice' src='images/rice.png' height='100%' />
+            <img title='penn' src='images/penn.png' height='100%' />
+            <img title='stanford' src='images/stanford.png' height='100%' />
+        </div>
+        <div id='navicon.div' class='navicon'>
+            <img id='navicon' src="images/burger.rest.png" onmouseenter="iconEnter(this, 'burger')"
+                onmouseleave="iconLeave(this, 'burger')" onclick='toggleNav()' title="Navigation" width="34pt"></img>
+        </div>
+    </div>
+
+
+    <div id="navigator" class="sidenav">
+    </div>
+    <script type="text/javascript">
+        loadNavBar();
+    </script>
+
+    <div class="content">
+
+        <h1>Neurosymbolic Reading Group</h1>
+
+        <p>
+            We are organizing a reading group to discuss papers related to the project. The goal of the reading group is
+            to help us understand the state of the art in the field.
+
+            Currently, we plan to meet on Mondays at 5-6PM EST, but we prioritize meeting authors, so this sometimes can
+            change the meeting time. Specifically, we have confirmed the following dates:
+
+        <ul>
+            <li>2023-04-03: 5:00-6:00 PM EST, Gabe Grand will present a talk</li>
+            <li>2023-04-10: 5:00-6:00 PM EST, Scallop: A language for Neurosymbolic Programming (with Ziyang Li and
+                Jiani Huang)</li>
+            <li>2023-04-17: 5:00-6:00 PM EST, Programmatically Grounded, Compositionally Generalizable Robotic
+                Manipulation (with Jiayuan Mao and Ren Wang)</li>
+        </ul>
+
+        Please contact Alex Gu (gua+nrg@mit.edu) for information on how to join the reading group. If you would like to
+        present,
+        please fill out <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfEUex12WLCk2lFFeP2_x4PWG2VvnG1GFWhx-eJXRTnwqGs4w/viewform">
+            this form</a>.
+        </p>
+
+        <h1>Previously Covered Papers and Notes.</h1>
+
+        <div class="project">
+            <h1>Scallop: A Language for Neurosymbolic Programming</h1>
+        
+            <p><i>Read on April 10, 2023</i></p>
+        
+            We discussed the Scallop paper<cite>li2023scallop</cite> which is upcoming at PLDI 2023 with authors Ziyang Li and Jiani Huang.
+            The paper describes a prolog-like language for neurosymbolic programming that allows a user to write a logical program as the
+            second half of a pipeline that takes as input the outputs of a neural network. The logical program is then treated as manipulating
+            the distributions over the outputs of the neural network, and thus is differentiable, allowing for end-to-end training of the
+            pipeline.
+            
+            Notes can be found <a href="reading-group-notes/Scallop A Language for Neurosymbolic Programming b524edb34ce1449dbb09e4c3af4fd084.html">here</a>.
+        </div>
+
+
+        <div class="project">
+            <h1>From word models to world models: Translating from natural language to the probabilistic language of thought</h1>
+        
+            <p><i>Read on April 3, 2023</i></p>
+        
+            Gabe Grand gave a presentation on an upcoming position paper on the topic of solving reasoning tasks by
+                having a model learn to translate from natural language to the probabilistic language of thought.
+                Specifically, an LLM is prompted with a world model and then used to translate conditions, queries,
+                and even new definitions into Church statements, allowing the use of sampling procedures to infer
+                the answers to queries. This approach outperforms LLMs trying to directly reason without the use
+                of the symbolic component.
+        </div>
+        
+        <div class="project">
+            <h1>Learning Math Reasoning from Self-Sampled Correct and Partially-Correct Solutions and LEVER: Learning to
+                Verify Language-to-Code Generation with Execution</h1>
+
+            <p><i>Read on March 13, 2023</i></p>
+
+            We discussed these papers<cite>nilearning</cite> <cite>ni2023lever</cite> with the author Ansong Ni.
+            These papers describe an approach to learn mathematical solutions from a dataset of prefix programs
+            and an algorithm to improve the output of code generators via a separate
+            reranking network trained to look at their execution results. A video of the presentation can
+            be found <a href="https://mit.zoom.us/rec/play/jmIKan0Rl9Z8secv_FzJ8aRr9jw-PNsf6yww0GH27TqdYvNhrDQKxCOULFnHd9Y-F_zCRzoNEElzByBg.fR9UEOBwkegagn-y?continueMode=true&_x_zm_rtaid=uGdQ0vFoSuC_2qCdG-fMtA.1680209472187.b0d3d23fae60142e3f58ab021d449dee&_x_zm_rhtaid=614">
+                here
+            </a>
+        </div>
+
+
+        <div class="project">
+            <h1>Productivity Assessment of Neural Code Completion</h1>
+
+            <p><i>Read on March 6, 2023</i></p>
+
+            We discussed this paper<cite>ziegler2022productivity</cite> with the author Shawn Simister.
+            This paper discusses aspects of the deployment of copilot as well as metrics of success
+            in improving practical productivity. Notes can be found
+            <a href="reading-group-notes/Productivity Assessment of Neural Code Completion  1316e8b77df7492eb000c6146ceee1f8.html">
+                here
+                </a>.
+        </div>
+
+
+        <div class="project">
+            <h1>Looped Transformers as Programmable Computers</h1>
+
+            <p><i>Read on February 27, 2023</i></p>
+
+            We discussed this paper<cite>giannou2023looped</cite> with the author Dimitris Papailiopoulos.
+            This paper demonstrates an algorithm to convert programs into transformers, highlighting the extent
+            to which this can be accomplished with a small number of transformer layers. Notes will be posted
+            shortly.
+        </div>
+
+
+        <div class="project">
+            <h1>Planning with Large Language Models for Code Generation</h1>
+
+            <p><i>Read on February 13, 2023</i></p>
+
+            We discussed this paper<cite>zhang2022planning</cite> with the authors Shun Zhang and Zhenfang Chen.
+            This paper proposes an algorithm to more effectively sample from code transformers in which prefixes that
+            lead to better programs are weighted more heavily. Our notes can be found
+            <a
+                href="reading-group-notes/Planning with Large Language Models for Code Gener 3eaeb5a0f3454cec83cc5330ad6436b8.html">
+                here</a>.
+        </div>
+
+
+        <div class="project">
+            <h1>Parsel: A Unified Natural Language Framework for Algorithmic Reasoning</h1>
+
+            <p><i>Read on February 6, 2023</i></p>
+
+            We discussed Parsel<cite>zelikman2022parsel</cite> with the authors. This paper proposes a framework
+            enabling automatic
+            implementation and validation of complex algorithms with code LLMs, using hierarchical function descriptions
+            as an intermediate
+            language. It is able to outperform Codex and AlphaCode on the APPS dataset. Our notes can be found
+            <a
+                href="reading-group-notes/Parsel A (De-)compositional Framework for Algorith 73d91ea15e3848bf90a9f5da0ad95639.html">
+                here</a>.
+        </div>
+
+        <div class="project">
+            <h1>Binding language models in symbolic languages</h1>
+
+            <p><i>Read on January 31, 2023</i></p>
+
+            We discussed the new Binder<cite>cheng2022binding</cite> technique with the authors.
+            This paper proposes Binder, a training-free neural-symbolic framework that maps the task input to a program,
+            which (1) allows
+            binding a unified API of language model (LM) functionalities to a programming language (e.g., SQL, Python)
+            to extend its
+            grammar coverage and thus tackle more diverse questions, (2) adopts an LM as both the program parser and the
+            underlying
+            model called by the API during execution, and (3) requires only a few in-context exemplar annotations.
+
+            Our notes can
+            be found
+            <a
+                href="reading-group-notes/Binding Language Models in Symbolic Languages a63033a5fe754b09bed7437917d06601.html">here</a>.
+        </div>
+
+
+        <div class="project">
+            <h1>Learning Differentiable Programs with Admissible Neural Heuristics</h1>
+
+            <p><i>Read on January 24, 2023</i></p>
+
+            We discussed NEAR<cite>shah2020learning</cite>. This paper provides a method to learn differentiable
+            functions expressed
+            as programs in a domain-specific language by relaxing programs into differentiable neural networks. Our
+            notes can be found
+            <a
+                href="reading-group-notes/Learning Differentiable Programs with Admissible N 7800a4696e514f559bc4258bb573b807.html">here</a>.
+        </div>
+
+    </div>
+
+
+
+    <script>
+        processDocument();
+
+
+
+
+
+    </script>
+
+    <div class="footnotes">
+
+        <footnotes>
+
+        </footnotes>
+
+    </div>
+    </div>
+
+</body>
+
+
+
+</html>

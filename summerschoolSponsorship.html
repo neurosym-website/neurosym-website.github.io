@@ -1,0 +1,214 @@
+﻿<html>
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Summer school on Neurosymbolic Programming 2022</title>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="/scripts/library.js"></script>
+<script type="text/javascript" src="overrides.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onresize="resizing()">
+
+
+<div class="header">
+<h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
+<h2 style="color: 'black';">Funded through the NSF Expeditions in Computing Program</h2>
+<div class="logos">
+<img title='mit' src='images/mit.png' height='100%' />
+<img title='ut' src='images/ut.png' height='100%'/>
+<img title='caltech' src='images/caltech.png' height='100%'/>
+<img title='rice' src='images/rice.png' height='100%'/>
+<img title='penn' src='images/penn.png' height='100%'/>
+<img title='stanford' src='images/stanford.png' height='100%'/>
+</div>
+<div id='navicon.div' class='navicon'>
+<img id = 'navicon' src="images/burger.rest.png"
+onmouseenter="iconEnter(this, 'burger')"
+onmouseleave="iconLeave(this, 'burger')"
+onclick = 'toggleNav()'
+title="Navigation" width="34pt"></img>
+</div>
+</div>
+
+
+<div id="navigator" class="sidenav">
+<a href="#about">Lecture 1</a>
+<a href="#services">Lecture 2</a>
+<a href="#clients">Lecture 3</a>
+<a href="#contact">Lecture 4</a>
+</div>
+<script type="text/javascript">
+loadNavBar();
+</script>
+
+
+<div class="content">
+
+    <h1>Summer school on Neurosymbolic Programming July 11-13 2022</h1>
+    <p>
+        <B>Sponsorship opportunities</B>
+        We are seeking sponsors to help make the <a href="summerschool.html">The summer school </a> a success and to help ensure that a broad cross section of students 
+        can attend and benefit from the experience regardless of their funding situation. 
+        Our target for the summer school is to have 80 participants, although as of April 30, we already had 117 applicants with 73% being graduate students and 11.4% being 
+        undergraduates, the rest being academic and industrial researchers. 42% of our applicants so far have expressed that they would only be able to attend if they 
+        receive some financial aid. 
+    </p>
+
+    <p>
+        Specifically, we are asking companies to sponsor travel grants for students.
+        The cost of sponsoring each student would be <b>$960</b>. For each student that the company sponsors,
+        the student will receive a travel grant that will reimburse them for their airfare and hotel for the three days
+        of the event. The grant rate per student was calculated based on our quoted hotel costs (assuming 2 students per room)
+        and on the airfare rates from different cities to LA as of the end of April. Any funds left over after funding the
+        travel grants will be used to help cover some of the costs associated with running the event (mainly food).
+    </p>
+    <p>
+        Every student funded by a travel grant from the company will receive an e-mail that will include an acknowledgement
+        that the sponsoring company will be able to customize. Sponsoring companies will be included in the event website and
+        will be acknowledged during the opening presentation every day of the summer school.        
+        Additional benefits will depend on the number of students sponsored by a company as detailed below.
+
+    </p>
+    <script>
+        function mon() {
+            let div = document.getElementById("monSchedule")
+            div.style.display = 'block';
+            div = document.getElementById("tuesSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("wedSchedule")
+            div.style.display = 'none';
+
+            div = document.getElementById("mondayTag");
+            div.style.backgroundColor = '#dddddd'
+            div = document.getElementById("tuesdayTag");
+            div.style.backgroundColor = '#FFFFFF'
+            div = document.getElementById("wednesdayTag");
+            div.style.backgroundColor = '#FFFFFF'
+        }
+        function tues() {
+            let div = document.getElementById("monSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("tuesSchedule")
+            div.style.display = 'block';
+            div = document.getElementById("wedSchedule")
+            div.style.display = 'none';
+
+            div = document.getElementById("mondayTag");
+            div.style.background = '#FFFFFF'
+            div = document.getElementById("tuesdayTag");
+            div.style.background = '#dddddd'
+            div = document.getElementById("wednesdayTag");
+            div.style.background = '#FFFFFF'
+        }
+        function wed() {
+            let div = document.getElementById("monSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("tuesSchedule")
+            div.style.display = 'none';
+            div = document.getElementById("wedSchedule")
+            div.style.display = 'block';
+
+            div = document.getElementById("mondayTag");
+            div.style.background = '#FFFFFF'
+            div = document.getElementById("tuesdayTag");
+            div.style.background = '#FFFFFF'
+            div = document.getElementById("wednesdayTag");
+            div.style.background = '#dddddd'
+
+        }
+    </script>
+
+
+
+    <div class="summerschedule">
+
+        <table>
+            <tbody>
+               
+                <tr>
+                    <td colspan="3">
+                        <div class="summer">
+                            <div id="monSchedule" style="display:block">
+                                
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th style="width:110px"># of students</th>
+                                            <th>Benefits</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1 to 5 students</td>
+                                            <td>
+                                                Companies sponsoring 1 to 5 students will be acknowledged as <b>Bronze Sponsors</b> in both the 
+                                                website and the opening ceremony. 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6 to 20</td>
+                                            <td>
+                                                Companies sponsoring 6 to 15 students will be acknowledged as <b>Silver Sponsors</b> in both the
+                                                website and the opening ceremony. One company representative will be invited to attend the 
+                                                summer school and they will be introduced as sponsors during the opening day presentation and will 
+                                                have the opportunity to network with event participants. 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>20 and above</td>
+                                            <td>
+                                                Companies sponsoring over 20 students will be acknowledged as <b>Gold Sponsors</b> in both the
+                                                website and the opening ceremony. Up to 3 company representatives will be invited to attend the 
+                                                summer school and they will be allowed to set up a table at the event to promote their company to 
+                                                participants. 
+
+                                            </td>
+                                        </tr>
+
+                                        
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                            <div id="tuesSchedule" style="display:none">
+
+
+
+
+                            </div>
+                           
+                        </div>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <script>
+        processDocument();
+    </script>
+
+    <div class="footnotes">
+
+
+
+    </div>
+</div>
+
+</body>
+
+
+
+</html>
