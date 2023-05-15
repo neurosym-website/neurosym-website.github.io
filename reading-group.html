@@ -66,10 +66,9 @@
             change the meeting time. Specifically, we have confirmed the following dates:
 
         <ul>
-            <li><b>No group meeting on 2023-04-01</b></li>
-            <li>2023-04-08: 5:00-6:00 PM EST discussing TBA</li>
+            <li><b>2023-05-22 and beyond are TBD</b></li>
         </ul>
-            <!-- <li>2023-04-17: 5:00-6:00 PM EST, Programmatically Grounded, Compositionally Generalizable Robotic
+        <!-- <li>2023-04-17: 5:00-6:00 PM EST, Programmatically Grounded, Compositionally Generalizable Robotic
                 Manipulation (with Jiayuan Mao and Ren Wang)</li> -->
 
         Please contact Alex Gu (gua+nrg@mit.edu) for information on how to join the reading group. If you would like to
@@ -82,57 +81,82 @@
         <h1>Previously Covered Papers and Notes.</h1>
 
         <div class="project">
+            <h1>Language Model Query Language</h1>
+
+            <p><i>Read on May 15, 2023</i></p>
+
+            We discussed the paper Prompting Is Programming: A Query Language for
+            Large Language Models <cite>beurer2022prompting</cite> with the authors Luca Beurer-Kellner and
+            Marc Fisher. The paper describes a new programming language that is used to perform structured
+            inference with LLMs.
+        </div>
+
+        <div class="project">
+            <h1>Interpretability Discussion</h1>
+
+            <p><i>Read on May 8, 2023</i></p>
+
+            Omar Costilla Reyes and Atharva Seghal lead a discussion on interpretability.
+        </div>
+
+        <div class="project">
             <h1>Inducing causal structure for interpretable neural networks</h1>
-        
+
             <p><i>Read on April 24, 2023</i></p>
-        
+
             We discussed the paper Inducing causal structure for interpretable neural networks
-                <cite>geiger2022inducing</cite> with the authors Atticus Geiger and Zhengxuan Wu.
-                The paper describes a process by which do-notation-style interchange interventions
-                are performed on a neural network to align certain neurons with certain states in
-                a known causal model of the process being modeled.
+            <cite>geiger2022inducing</cite> with the authors Atticus Geiger and Zhengxuan Wu.
+            The paper describes a process by which do-notation-style interchange interventions
+            are performed on a neural network to align certain neurons with certain states in
+            a known causal model of the process being modeled.
         </div>
 
         <div class="project">
             <h1>Programmatically Grounded, Compositionally Generalizable Robotic
                 Manipulation</h1>
-        
+
             <p><i>Read on April 17, 2023</i></p>
-        
+
             We discussed the paper Programmatically Grounded, Compositionally Generalizable Robotic
-                Manipulation<cite>wangprogrammatically</cite> with the authors Jiayuan Mao and Ren Wang.
-                The paper describes a modular approach to vision-to-actuation robotics pipelines that uses
-                the syntactic and semantic structure of language instructions.
+            Manipulation<cite>wangprogrammatically</cite> with the authors Jiayuan Mao and Ren Wang.
+            The paper describes a modular approach to vision-to-actuation robotics pipelines that uses
+            the syntactic and semantic structure of language instructions.
         </div>
 
         <div class="project">
             <h1>Scallop: A Language for Neurosymbolic Programming</h1>
-        
+
             <p><i>Read on April 10, 2023</i></p>
-        
-            We discussed the Scallop paper<cite>li2023scallop</cite> which is upcoming at PLDI 2023 with authors Ziyang Li and Jiani Huang.
-            The paper describes a prolog-like language for neurosymbolic programming that allows a user to write a logical program as the
-            second half of a pipeline that takes as input the outputs of a neural network. The logical program is then treated as manipulating
-            the distributions over the outputs of the neural network, and thus is differentiable, allowing for end-to-end training of the
+
+            We discussed the Scallop paper<cite>li2023scallop</cite> which is upcoming at PLDI 2023 with authors Ziyang
+            Li and Jiani Huang.
+            The paper describes a prolog-like language for neurosymbolic programming that allows a user to write a
+            logical program as the
+            second half of a pipeline that takes as input the outputs of a neural network. The logical program is then
+            treated as manipulating
+            the distributions over the outputs of the neural network, and thus is differentiable, allowing for
+            end-to-end training of the
             pipeline.
-            
-            Notes can be found <a href="reading-group-notes/Scallop A Language for Neurosymbolic Programming b524edb34ce1449dbb09e4c3af4fd084.html">here</a>.
+
+            Notes can be found <a
+                href="reading-group-notes/Scallop A Language for Neurosymbolic Programming b524edb34ce1449dbb09e4c3af4fd084.html">here</a>.
         </div>
 
 
         <div class="project">
-            <h1>From word models to world models: Translating from natural language to the probabilistic language of thought</h1>
-        
+            <h1>From word models to world models: Translating from natural language to the probabilistic language of
+                thought</h1>
+
             <p><i>Read on April 3, 2023</i></p>
-        
+
             Gabe Grand gave a presentation on an upcoming position paper on the topic of solving reasoning tasks by
-                having a model learn to translate from natural language to the probabilistic language of thought.
-                Specifically, an LLM is prompted with a world model and then used to translate conditions, queries,
-                and even new definitions into Church statements, allowing the use of sampling procedures to infer
-                the answers to queries. This approach outperforms LLMs trying to directly reason without the use
-                of the symbolic component.
+            having a model learn to translate from natural language to the probabilistic language of thought.
+            Specifically, an LLM is prompted with a world model and then used to translate conditions, queries,
+            and even new definitions into Church statements, allowing the use of sampling procedures to infer
+            the answers to queries. This approach outperforms LLMs trying to directly reason without the use
+            of the symbolic component.
         </div>
-        
+
         <div class="project">
             <h1>Learning Math Reasoning from Self-Sampled Correct and Partially-Correct Solutions and LEVER: Learning to
                 Verify Language-to-Code Generation with Execution</h1>
@@ -143,7 +167,8 @@
             These papers describe an approach to learn mathematical solutions from a dataset of prefix programs
             and an algorithm to improve the output of code generators via a separate
             reranking network trained to look at their execution results. A video of the presentation can
-            be found <a href="https://mit.zoom.us/rec/play/jmIKan0Rl9Z8secv_FzJ8aRr9jw-PNsf6yww0GH27TqdYvNhrDQKxCOULFnHd9Y-F_zCRzoNEElzByBg.fR9UEOBwkegagn-y?continueMode=true&_x_zm_rtaid=uGdQ0vFoSuC_2qCdG-fMtA.1680209472187.b0d3d23fae60142e3f58ab021d449dee&_x_zm_rhtaid=614">
+            be found <a
+                href="https://mit.zoom.us/rec/play/jmIKan0Rl9Z8secv_FzJ8aRr9jw-PNsf6yww0GH27TqdYvNhrDQKxCOULFnHd9Y-F_zCRzoNEElzByBg.fR9UEOBwkegagn-y?continueMode=true&_x_zm_rtaid=uGdQ0vFoSuC_2qCdG-fMtA.1680209472187.b0d3d23fae60142e3f58ab021d449dee&_x_zm_rhtaid=614">
                 here
             </a>
         </div>
@@ -157,9 +182,10 @@
             We discussed this paper<cite>ziegler2022productivity</cite> with the author Shawn Simister.
             This paper discusses aspects of the deployment of copilot as well as metrics of success
             in improving practical productivity. Notes can be found
-            <a href="reading-group-notes/Productivity Assessment of Neural Code Completion  1316e8b77df7492eb000c6146ceee1f8.html">
+            <a
+                href="reading-group-notes/Productivity Assessment of Neural Code Completion  1316e8b77df7492eb000c6146ceee1f8.html">
                 here
-                </a>.
+            </a>.
         </div>
 
 
