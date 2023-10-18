@@ -1,5 +1,61 @@
 [
   {
+    "name": "FI-ODE: Certified and Robust Forward Invariance in Neural ODEs",
+    "blurb": "We study how to certifiably enforce forward invariance properties in neural ODEs. Forward invariance implies that the hidden states of the ODE will stay in a "good" region, and a robust version would hold even under adversarial perturbations to the input",
+    "authors": "Yujia Huang, Ivan Dario Jimenez Rodriguez, Huan Zhang, Yuanyuan Shi, Yisong Yue",
+    "link": "https://github.com/yjhuangcd/FI-ODE"
+  }
+
+  {
+    "name": "Policy Optimization with Linear Temporal Logic Constraints",
+    "blurb": "A method for undiscounted policy optimization under LTL constraints with a generative model in the presence of unknown dynamics",
+    "authors": "Cameron Voloshin, Hoang Minh Le, Swarat Chaudhuri, Yisong Yue",
+    "link": "https://openreview.net/attachment?id=yZcPRIZEwOG&name=supplementary_material"
+  }
+
+  {
+    "name": "Versatile Offline Imitation from Observations and Examples via Regularized State-Occupancy Matching",
+    "blurb": "We propose State Matching Offline DIstribution Correction Estimation (SMODICE), a novel and versatile regression-based offline imitation learning (IL) algorithm derived via state-occupancy matching.",
+    "authors": "Yecheng Jason Ma, Andrew Shen, Dinesh Jayaraman, Osbert Bastani",
+    "link": "https://github.com/JasonMa2016/SMODICE#smodice-versatile-offline-imitation-learning-via-state-occupancy-matching"
+  }
+  {
+    "name": "Eventual Discounting Temporal Logic Counterfactual Experience Replay",
+    "blurb": " This paper makes two contributions. First, we develop a new value-function based proxy, using a technique we call eventual discounting, under which one can find policies that satisfy the LTL specification with highest achievable probability. Second, we develop a new experience replay method for generating off-policy data from on-policy rollouts via counterfactual reasoning on different ways of satisfying the LTL specification.",
+    "authors": "Cameron Voloshin, Abhinav Verma, Yisong Yue",
+    "link": "https://github.com/clvoloshin/RL-LTL"
+  }
+
+  {
+    "name": "DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking ",
+    "blurb": "Predicting the binding structure of a small molecule ligand to a protein---a task known as molecular docking---is critical to drug design. Recent deep learning methods that treat docking as a regression problem have decreased runtime compared to traditional search-based methods but have yet to offer substantial improvements in accuracy. We instead frame molecular docking as a generative modeling problem and develop DiffDock, a diffusion generative model over the non-Euclidean manifold of ligand poses.",
+    "authors": "Gabriele Corso, Hannes Stärk, Bowen Jing, Regina Barzilay, Tommi S. Jaakkola",
+    "link": "https://github.com/gcorso/DiffDock/"
+  }
+
+  {
+    "name": "Top-Down Synthesis for Library Learning",
+    "blurb": "This project introduces corpus-guided top-down synthesis as a mechanism for synthesizing library functions that capture common functionality from a corpus of programs in a domain specific language (DSL). ",
+    "authors": "Matthew Bowers, Theo X. Olausson, Lionel Wong, Gabriel Grand, Joshua B. Tenenbaum, Kevin Ellis, Armando Solar-Lezama",
+    "link": "https://github.com/mlb2251/stitch"
+  },
+
+  {
+    "name": "Geoclidean: Few-Shot Generalization in Euclidean Geometry ",
+    "blurb": "We introduce Geoclidean, a domain-specific language for Euclidean geometry, and use it to generate two datasets of geometric concept learning tasks for benchmarking generalization judgements of humans and machines. ",
+    "authors": "Joy Hsu, Jiajun Wu, Noah Goodman",
+    "link": "https://github.com/joyhsu0504/geoclidean_framework#geoclidean-few-shot-generalization-in-euclidean-geometry"
+  }
+
+  {
+    "name": "Peano: learning formal mathematical reasoning",
+    "blurb": " we introduce Peano, a theorem-proving environment where the set of valid actions at any point is finite. We use Peano to formalize introductory algebra problems and axioms, obtaining well-defined search problems.",
+    "authors": " Gabriel Poesia and Noah D. Goodman",
+    "link": "https://github.com/gpoesia/peano#peano---learning-formal-mathematical-reasoning"
+  },
+
+
+  {
     "name": "Metric Program Synthesis",
     "blurb": "We present a new domain-agnostic synthesis technique for generating programs from input-output examples. Our method, called metric program synthesis, relaxes the well-known observational equivalence idea (used widely in bottom-up enumerative synthesis) into a weaker notion of observational similarity, with the goal of reducing the search space that the synthesizer needs to explore. <cite>FeserDS22metric-ours</cite>",
     "authors": "Feser, John, Isil Dillig, and Armando Solar-Lezama",
@@ -179,5 +235,18 @@
     "blurb":"We introducing a large-scale, multi-agent trajectory dataset from real-world behavioral neuroscience experiments that covers a range of behavior analysis tasks. Our dataset consists of trajectory data from common model organisms, with 9.6 million frames of mouse data and 4.4 million frames of fly data, in a variety of experimental settings, such as different strains, lengths of interaction, and optogenetic stimulation. <cite>sun2022mabe22-ours</cite>",
     "authors": "Jennifer J. Sun, Andrew Ulmer, Dipam Chakraborty, Brian Geuther, Edward Hayes, Heng Jia, Vivek Kumar, Zachary Partridge, Alice Robie, Catherine E. Schretter, Chao Sun, Keith Sheppard, Param Uttarwar, Pietro Perona, Yisong Yue, Kristin Branson, Ann Kennedy",
     "link": "https://data.caltech.edu/records/8kdn3-95j37"
+  }
+
+  {
+    "name": "Leveraging Language to Learn Program Abstractions and Search Heuristics",
+    "blurb": "We introduce LAPS (Language for Abstraction and Program Search), a technique for using natural language annotations to guide joint learning of libraries and neurally-guided search models for synthesis.",
+    "authors": "Catherine Wong, Kevin Ellis, Joshua B. Tenenbaum, Jacob Andreas",
+    "link": "https://github.com/CatherineWong/laps_dreamcoder"
+  }
+  {
+    "name": "Programming with neural surrogates of programs",
+    "blurb": " Surrogates, models that mimic the behavior of programs, form the basis of a variety of development workflows. We study three surrogate-based design patterns, evaluating each in case studies on a large-scale CPU simulator.",
+    "authors": "Alex Renda, Yi Ding, Michael Carbin",
+    "link": "https://github.com/psg-mit/programming-with-neural-surrogates-of-programs"
   }
 ]
