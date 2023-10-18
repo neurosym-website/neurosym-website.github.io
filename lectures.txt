@@ -8,7 +8,9 @@ Education, education.html, Education;
 Research Papers, papersla.html, Research Papers;
 
 Reading Group, reading-group.html, Reading Group;
-AI for Code and Science, aiscience.html, AI for Code and Science;
+AI for Code and Science Workshop 2023, aiscience.html, AI for Code and Science Workshop 2023;
+Neurosymbolic programming for science lectures, seminars.html, Neurosymbolic programming for science lectures;
+
 
 
 Research:;
