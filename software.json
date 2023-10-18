@@ -1,59 +1,58 @@
 [
   {
     "name": "FI-ODE: Certified and Robust Forward Invariance in Neural ODEs",
-    "blurb": "We study how to certifiably enforce forward invariance properties in neural ODEs. Forward invariance implies that the hidden states of the ODE will stay in a good region, and a robust version would hold even under adversarial perturbations to the input",
+    "blurb": "We study how to certifiably enforce forward invariance properties in neural ODEs. Forward invariance implies that the hidden states of the ODE will stay in a good region, and a robust version would hold even under adversarial perturbations to the input <cite>huang2022fi-ours</cite>",
     "authors": "Yujia Huang, Ivan Dario Jimenez Rodriguez, Huan Zhang, Yuanyuan Shi, Yisong Yue",
     "link": "https://github.com/yjhuangcd/FI-ODE"
   },
 
   {
     "name": "Policy Optimization with Linear Temporal Logic Constraints",
-    "blurb": "A method for undiscounted policy optimization under LTL constraints with a generative model in the presence of unknown dynamics",
+    "blurb": "A method for undiscounted policy optimization under LTL constraints with a generative model in the presence of unknown dynamics <cite>voloshin2022policy-ours</cite>",
     "authors": "Cameron Voloshin, Hoang Minh Le, Swarat Chaudhuri, Yisong Yue",
     "link": "https://openreview.net/attachment?id=yZcPRIZEwOG&name=supplementary_material"
   },
 
   {
     "name": "Versatile Offline Imitation from Observations and Examples via Regularized State-Occupancy Matching",
-    "blurb": "We propose State Matching Offline DIstribution Correction Estimation (SMODICE), a novel and versatile regression-based offline imitation learning (IL) algorithm derived via state-occupancy matching.",
+    "blurb": "We propose State Matching Offline DIstribution Correction Estimation (SMODICE), a novel and versatile regression-based offline imitation learning (IL) algorithm derived via state-occupancy matching. <cite>ma2022versatile-ours</cite>",
     "authors": "Yecheng Jason Ma, Andrew Shen, Dinesh Jayaraman, Osbert Bastani",
     "link": "https://github.com/JasonMa2016/SMODICE#smodice-versatile-offline-imitation-learning-via-state-occupancy-matching"
   },
   {
     "name": "Eventual Discounting Temporal Logic Counterfactual Experience Replay",
-    "blurb": " This paper makes two contributions. First, we develop a new value-function based proxy, using a technique we call eventual discounting, under which one can find policies that satisfy the LTL specification with highest achievable probability. Second, we develop a new experience replay method for generating off-policy data from on-policy rollouts via counterfactual reasoning on different ways of satisfying the LTL specification.",
+    "blurb": " This paper makes two contributions. First, we develop a new value-function based proxy, using a technique we call eventual discounting, under which one can find policies that satisfy the LTL specification with highest achievable probability. Second, we develop a new experience replay method for generating off-policy data from on-policy rollouts via counterfactual reasoning on different ways of satisfying the LTL specification. <cite>voloshin2023eventual-ours</cite>",
     "authors": "Cameron Voloshin, Abhinav Verma, Yisong Yue",
     "link": "https://github.com/clvoloshin/RL-LTL"
   },
 
   {
     "name": "DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking ",
-    "blurb": "Predicting the binding structure of a small molecule ligand to a protein---a task known as molecular docking---is critical to drug design. Recent deep learning methods that treat docking as a regression problem have decreased runtime compared to traditional search-based methods but have yet to offer substantial improvements in accuracy. We instead frame molecular docking as a generative modeling problem and develop DiffDock, a diffusion generative model over the non-Euclidean manifold of ligand poses.",
+    "blurb": "Predicting the binding structure of a small molecule ligand to a protein---a task known as molecular docking---is critical to drug design. Recent deep learning methods that treat docking as a regression problem have decreased runtime compared to traditional search-based methods but have yet to offer substantial improvements in accuracy. We instead frame molecular docking as a generative modeling problem and develop DiffDock, a diffusion generative model over the non-Euclidean manifold of ligand poses. <cite>corso2022diffdock-ours</cite>",
     "authors": "Gabriele Corso, Hannes Stärk, Bowen Jing, Regina Barzilay, Tommi S. Jaakkola",
     "link": "https://github.com/gcorso/DiffDock/"
   },
 
   {
     "name": "Top-Down Synthesis for Library Learning",
-    "blurb": "This project introduces corpus-guided top-down synthesis as a mechanism for synthesizing library functions that capture common functionality from a corpus of programs in a domain specific language (DSL). ",
+    "blurb": "This project introduces corpus-guided top-down synthesis as a mechanism for synthesizing library functions that capture common functionality from a corpus of programs in a domain specific language (DSL). <cite>stitch-ours</cite>",
     "authors": "Matthew Bowers, Theo X. Olausson, Lionel Wong, Gabriel Grand, Joshua B. Tenenbaum, Kevin Ellis, Armando Solar-Lezama",
     "link": "https://github.com/mlb2251/stitch"
   },
 
   {
     "name": "Geoclidean: Few-Shot Generalization in Euclidean Geometry ",
-    "blurb": "We introduce Geoclidean, a domain-specific language for Euclidean geometry, and use it to generate two datasets of geometric concept learning tasks for benchmarking generalization judgements of humans and machines. ",
+    "blurb": "We introduce Geoclidean, a domain-specific language for Euclidean geometry, and use it to generate two datasets of geometric concept learning tasks for benchmarking generalization judgements of humans and machines. <cite>hsu2022geoclidean-ours</cite>",
     "authors": "Joy Hsu, Jiajun Wu, Noah Goodman",
     "link": "https://github.com/joyhsu0504/geoclidean_framework#geoclidean-few-shot-generalization-in-euclidean-geometry"
   },
 
   {
     "name": "Peano: learning formal mathematical reasoning",
-    "blurb": " we introduce Peano, a theorem-proving environment where the set of valid actions at any point is finite. We use Peano to formalize introductory algebra problems and axioms, obtaining well-defined search problems.",
+    "blurb": " we introduce Peano, a theorem-proving environment where the set of valid actions at any point is finite. We use Peano to formalize introductory algebra problems and axioms, obtaining well-defined search problems. <cite>poesia2023peano-ours</cite>",
     "authors": " Gabriel Poesia and Noah D. Goodman",
     "link": "https://github.com/gpoesia/peano#peano---learning-formal-mathematical-reasoning"
   },
-
 
   {
     "name": "Metric Program Synthesis",
@@ -113,7 +112,7 @@
 
   {
     "name": "DiffTune: Optimizing CPU Simulator Parameters with Learned Differentiable Surrogates",
-    "blurb":"CPU simulators are useful tools for modeling CPU execution behavior. However, they suffer from inaccuracies due to the cost and complexity of setting their fine-grained parameters, such as the latencies of individual instructions. This complexity arises from the expertise required to design benchmarks and measurement frameworks that can precisely measure the values of parameters at such fine granularity. <cite>renda2020difftune</cite>",
+    "blurb":"CPU simulators are useful tools for modeling CPU execution behavior. However, they suffer from inaccuracies due to the cost and complexity of setting their fine-grained parameters, such as the latencies of individual instructions. This complexity arises from the expertise required to design benchmarks and measurement frameworks that can precisely measure the values of parameters at such fine granularity. <cite>renda2020difftune-ours</cite>",
     "authors": "Renda, Alex, Yishen Chen, Charith Mendis, and Michael Carbin",
     "link": "https://github.com/ithemal/DiffTune "
   },
@@ -239,13 +238,13 @@
 
   {
     "name": "Leveraging Language to Learn Program Abstractions and Search Heuristics",
-    "blurb": "We introduce LAPS (Language for Abstraction and Program Search), a technique for using natural language annotations to guide joint learning of libraries and neurally-guided search models for synthesis.",
+    "blurb": "We introduce LAPS (Language for Abstraction and Program Search), a technique for using natural language annotations to guide joint learning of libraries and neurally-guided search models for synthesis. <cite>wong2021leveraging-ours</cite>",
     "authors": "Catherine Wong, Kevin Ellis, Joshua B. Tenenbaum, Jacob Andreas",
     "link": "https://github.com/CatherineWong/laps_dreamcoder"
   },
   {
     "name": "Programming with neural surrogates of programs",
-    "blurb": " Surrogates, models that mimic the behavior of programs, form the basis of a variety of development workflows. We study three surrogate-based design patterns, evaluating each in case studies on a large-scale CPU simulator.",
+    "blurb": " Surrogates, models that mimic the behavior of programs, form the basis of a variety of development workflows. We study three surrogate-based design patterns, evaluating each in case studies on a large-scale CPU simulator. <cite>renda2021programming-ours</cite>",
     "authors": "Alex Renda, Yi Ding, Michael Carbin",
     "link": "https://github.com/psg-mit/programming-with-neural-surrogates-of-programs"
   }
