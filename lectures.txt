@@ -9,7 +9,7 @@ Research Papers, papersla.html, Research Papers;
 
 Reading Group, reading-group.html, Reading Group;
 AI for Code and Science Workshop 2023, aiscience.html, AI for Code and Science Workshop 2023;
-Neurosymbolic programming for science lectures, seminars.html, Neurosymbolic programming for science lectures;
+Neurosymbolic programming for science lectures, https://www.youtube.com/@NeurosymbolicForScience/videos, Neurosymbolic programming for science lectures;
 
 
 
