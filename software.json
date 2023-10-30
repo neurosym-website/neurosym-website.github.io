@@ -1,4 +1,30 @@
 [
+
+  {
+    "name": "Data Extraction via Semantic Regular Expression Synthesis",
+    "blurb": "We introduce semantic regexes, a generalization of regular expressions that facilitates combined syntactic and semantic reasoning about textual data. <cite>dataext-ours</cite>",
+    "authors": "Qiaochu Chen, Arko Banerjee, Çağatay Demiralp, Greg Durrett, Isil Dillig",
+    "link": "https://github.com/utopia-group/Smore"
+  },
+
+
+
+  {
+    "name": "ImageEye: Batch Image Processing Using Program Synthesis",
+    "blurb": " This project presents a new synthesis-based approach for batch image processing. Unlike existing tools that can only apply global edits to the entire image, our method can apply fine-grained edits to individual objects within the image<cite>imageeye-ours</cite>",
+    "authors": "",
+    "link": "https://github.com/celestebarnaby/ImageEye"
+  },
+
+
+  {
+    "name": "SatLM: Satisfiability-Aided Language Models Using Declarative Prompting",
+    "blurb": "  In this project, we propose a new satisfiability-aided language modeling (SatLM) approach for improving the reasoning capabilities of large language models<cite>ye2023satlm-ours</cite>",
+    "authors": "",
+    "link": "https://github.com/xiye17/sat-lm"
+  },
+
+
   {
     "name": "FI-ODE: Certified and Robust Forward Invariance in Neural ODEs",
     "blurb": "We study how to certifiably enforce forward invariance properties in neural ODEs. Forward invariance implies that the hidden states of the ODE will stay in a good region, and a robust version would hold even under adversarial perturbations to the input <cite>huang2022fi-ours</cite>",
