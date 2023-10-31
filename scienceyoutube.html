@@ -1,24 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
+<!--
+    To add a paper:
+
+    1. Add its bibtex entry to the file `biblio.bib`
+    2. Go to the notion notes for the paper and export as html. Unzip the exported directory to the folder `reading-group-notes`.
+    2. Add a <project> frame by copying one of the others. Update the description, citation, and local notion link.
+-->
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neurosymbolic Programming for Science Talks</title>
+
+    <title>Neurosymbolic Reading Group</title>
+
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" src="/scripts/library.js"></script>
+    <script type="text/javascript" src="overrides.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
-<body>
-    <div class="event"> <span class="event_title" id="BroadInstituteTalk"> 07/2022: Broad Institute talk </span> Jacob Lemieux and Fritz Obermeyer from the Broad Institute will present a state-of-the-art probabilistic model for predicting COVID-19 lineage fitness.
-        Copy code
-        
-        <div class="talk_box">
-            <h1>Analysis of 6.4 million SARS-CoV-2 genomes identifies mutations associated with fitness</h1>
-            Repeated emergence of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) variants with increased fitness underscores the value of rapid detection and characterization of new lineages. We have developed PyR0, a hierarchical Bayesian multinomial logistic regression model that infers relative prevalence of all viral lineages across geographic regions, detects lineages increasing in prevalence, and identifies mutations relevant to fitness. Applying PyR0 to all publicly available SARS-CoV-2 genomes, we identify numerous substitutions that increase fitness, including previously identified spike mutations and many nonspike mutations within the nucleocapsid and nonstructural proteins. PyR0 forecasts growth of new lineages from their mutational profile, ranks the fitness of lineages as new sequences become available, and prioritizes mutations of biological and public health concern for functional characterization.
+
+<body onresize="resizing()">
+
+
+    <div class="header">
+        <h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
+        <h2 style="color: 'black';">Funded through the NSF Expeditions in Computing Program</h2>
+        <div class="logos">
+            <img title='mit' src='images/mit.png' height='100%' />
+            <img title='ut' src='images/ut.png' height='100%' />
+            <img title='caltech' src='images/caltech.png' height='100%' />
+            <img title='rice' src='images/rice.png' height='100%' />
+            <img title='penn' src='images/penn.png' height='100%' />
+            <img title='stanford' src='images/stanford.png' height='100%' />
+        </div>
+        <div id='navicon.div' class='navicon'>
+            <img id='navicon' src="images/burger.rest.png" onmouseenter="iconEnter(this, 'burger')"
+                onmouseleave="iconLeave(this, 'burger')" onclick='toggleNav()' title="Navigation" width="34pt"></img>
+        </div>
+    </div>
+
+
+    <div id="navigator" class="sidenav">
+    </div>
+    <script type="text/javascript">
+        loadNavBar();
+    </script>
+
+    <div class="content">
+
+        <h1>Neurosymbolic programming for science talk series</h1>
+
+        <p>
+            The Neurosymbolic Programming for Science talk series explores the intersection of neural networks and program synthesis in scientific research. It showcases advancements in merging deep learning with symbolic reasoning, encourages collaboration among experts, discusses real-world applications, addresses integration challenges, and contemplates the future of neurosymbolic programming in science. The series features insights from leading experts and offers interactive sessions for attendees to engage and collaborate.
+
+        Please contact Omar Costilla-Reyes for information on how to join the mailing list for the talks. 
+
+        <h1>Previously Covered Papers and Notes.</h1>
+
+        <div class="event"> <span class="event_title" id="BroadInstituteTalk"> 07/2022: Broad Institute talk </span> Jacob Lemieux and Fritz Obermeyer from the Broad Institute will present a state-of-the-art probabilistic model for predicting COVID-19 lineage fitness.
+            Copy code
             
-            <div class="whenwhere">
-                <B>When:</B> Friday July 22nd 4 PM-5PM ET<br>
-                <B>Watch:</B> <a href='https://mit.zoom.us/j/7567359959'>Youtube</a>
+            <div class="talk_box">
+                <h1>Analysis of 6.4 million SARS-CoV-2 genomes identifies mutations associated with fitness</h1>
+                Repeated emergence of severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) variants with increased fitness underscores the value of rapid detection and characterization of new lineages. We have developed PyR0, a hierarchical Bayesian multinomial logistic regression model that infers relative prevalence of all viral lineages across geographic regions, detects lineages increasing in prevalence, and identifies mutations relevant to fitness. Applying PyR0 to all publicly available SARS-CoV-2 genomes, we identify numerous substitutions that increase fitness, including previously identified spike mutations and many nonspike mutations within the nucleocapsid and nonstructural proteins. PyR0 forecasts growth of new lineages from their mutational profile, ranks the fitness of lineages as new sequences become available, and prioritizes mutations of biological and public health concern for functional characterization.
+                
+                <div class="whenwhere">
+                    <B>When:</B> Friday July 22nd 4 PM-5PM ET<br>
+                    <B>Watch:</B> <a href='https://youtu.be/XjBYHtVLrFw?si=CqtfC9vwyNdVqRoJ'>Youtube</a>
+                </div>
+            
             </div>
-        
-        </div>
-        </div>
+
+    </div>
+
+
+
+    <script>
+        processDocument();
+
+
+
+
+
+    </script>
+
+    <div class="footnotes">
+
+        <footnotes>
+
+        </footnotes>
+
+    </div>
+    </div>
+
 </body>
+
+
+
 </html>

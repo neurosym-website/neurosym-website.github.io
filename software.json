@@ -1,5 +1,25 @@
 [
 
+  
+  {
+    "name": "LILO: Learning Interpretable Libraries by Compressing and Documenting Code",
+    "blurb": " <cite>grand2023lilo</cite>",
+    "authors": "Gabriel Grand, Lionel Wong, Matthew Bowers, Theo X. Olausson, Muxin Liu, Joshua B. Tenenbaum, Jacob Andreas",
+    "link": "https://arxiv.org/abs/2310.19791"
+  },
+
+
+  
+  {
+    "name": "From Word Models to World Models: Translating from Natural Language to the Probabilistic Language of Thought",
+    "blurb": " We frame linguistic meaning as a context-sensitive mapping from natural language into a probabilistic language of thought (PLoT)--a general-purpose symbolic substrate for generative world modeling. <cite>wong2023word-ours</cite>",
+    "authors": "Lionel Wong, Gabriel Grand, Alexander K. Lew, Noah D. Goodman, Vikash K. Mansinghka, Jacob Andreas, Joshua B. Tenenbaum",
+    "link": "https://github.com/gabegrand/world-models"
+  },
+
+
+
+
   {
     "name": "Data Extraction via Semantic Regular Expression Synthesis",
     "blurb": "We introduce semantic regexes, a generalization of regular expressions that facilitates combined syntactic and semantic reasoning about textual data. <cite>dataext-ours</cite>",
