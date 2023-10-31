@@ -3,7 +3,7 @@
   
   {
     "name": "LILO: Learning Interpretable Libraries by Compressing and Documenting Code",
-    "blurb": " <cite>grand2023lilo</cite>",
+    "blurb": "In this project, we introduce LILO, a neurosymbolic framework that iteratively synthesizes, compresses, and documents code to build libraries tailored to particular problem domains. <cite>grand2023lilo</cite>",
     "authors": "Gabriel Grand, Lionel Wong, Matthew Bowers, Theo X. Olausson, Muxin Liu, Joshua B. Tenenbaum, Jacob Andreas",
     "link": "https://github.com/gabegrand/lilo"
   },
