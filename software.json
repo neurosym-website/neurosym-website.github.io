@@ -5,7 +5,7 @@
     "name": "LILO: Learning Interpretable Libraries by Compressing and Documenting Code",
     "blurb": " <cite>grand2023lilo</cite>",
     "authors": "Gabriel Grand, Lionel Wong, Matthew Bowers, Theo X. Olausson, Muxin Liu, Joshua B. Tenenbaum, Jacob Andreas",
-    "link": "https://arxiv.org/abs/2310.19791"
+    "link": "https://github.com/gabegrand/lilo"
   },
 
 
