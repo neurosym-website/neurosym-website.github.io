@@ -130,6 +130,20 @@ allow-top-navigation" height="500" width="500">
   <p>Your browser does not support iframes.</p>
 </iframe>
 
+<br>New research from our group <cite>gupta2023improved-ours</cite> aims to better understand how cells process genetic information to make proteins. When a gene is active, it is first copied into a messenger molecule called RNA. But this RNA message contains extra pieces that need to be cut out before it can be translated into a protein. Small proteins called RNA-binding proteins help guide which pieces get cut out by attaching to specific spots on the RNA message.
+
+<br>The researchers wanted to build a computer model that could predict where these RNA-binding proteins will attach on an RNA message based on its sequence. This could help understand how mutations in the RNA sequence affect protein production. They started with measurements of where 79 RNA-binding proteins attach on short RNA sequences in a test tube. Then they trained a neural network model on a large dataset of full RNA sequences and locations where pieces were cut out.
+
+<br>The key findings are:
+
+<br>The model greatly improved its ability to predict where RNA-binding proteins will attach compared to just using the test tube measurements. This suggests it learned features relevant to how binding happens inside cells.
+<br>The model outperformed previous computer models at predicting which pieces of the RNA sequence will be cut out. It got 67% of splice sites correct.
+<br>Unlike previous "black box" models, this model allows interpretability. The researchers can see which RNA-binding proteins it predicts will attach where, and delete specific ones to see how splicing predictions change.
+<br>The model largely learned an appropriate pattern of activity for different classes of RNA-binding proteins based on their known biology.
+
+<br>Overall, this interpretable model integrates both lab measurements and genomic data to better reveal the "splicing code" - the specific rules cells use to process RNA messages into proteins. This can help understand diseases caused by splicing errors and guide engineering of RNA processing.
+
+
 
 <script>
 processDocument();
