@@ -1,105 +1,4 @@
 [
-
-  
-  {
-    "name": "LILO: Learning Interpretable Libraries by Compressing and Documenting Code",
-    "blurb": "In this project, we introduce LILO, a neurosymbolic framework that iteratively synthesizes, compresses, and documents code to build libraries tailored to particular problem domains. <cite>grand2023lilo</cite>",
-    "authors": "Gabriel Grand, Lionel Wong, Matthew Bowers, Theo X. Olausson, Muxin Liu, Joshua B. Tenenbaum, Jacob Andreas",
-    "link": "https://github.com/gabegrand/lilo"
-  },
-
-
-  
-  {
-    "name": "From Word Models to World Models: Translating from Natural Language to the Probabilistic Language of Thought",
-    "blurb": " We frame linguistic meaning as a context-sensitive mapping from natural language into a probabilistic language of thought (PLoT)--a general-purpose symbolic substrate for generative world modeling. <cite>wong2023word-ours</cite>",
-    "authors": "Lionel Wong, Gabriel Grand, Alexander K. Lew, Noah D. Goodman, Vikash K. Mansinghka, Jacob Andreas, Joshua B. Tenenbaum",
-    "link": "https://github.com/gabegrand/world-models"
-  },
-
-
-
-
-  {
-    "name": "Data Extraction via Semantic Regular Expression Synthesis",
-    "blurb": "We introduce semantic regexes, a generalization of regular expressions that facilitates combined syntactic and semantic reasoning about textual data. <cite>dataext-ours</cite>",
-    "authors": "Qiaochu Chen, Arko Banerjee, Çağatay Demiralp, Greg Durrett, Isil Dillig",
-    "link": "https://github.com/utopia-group/Smore"
-  },
-
-
-
-  {
-    "name": "ImageEye: Batch Image Processing Using Program Synthesis",
-    "blurb": " This project presents a new synthesis-based approach for batch image processing. Unlike existing tools that can only apply global edits to the entire image, our method can apply fine-grained edits to individual objects within the image<cite>imageeye-ours</cite>",
-    "authors": "",
-    "link": "https://github.com/celestebarnaby/ImageEye"
-  },
-
-
-  {
-    "name": "SatLM: Satisfiability-Aided Language Models Using Declarative Prompting",
-    "blurb": "  In this project, we propose a new satisfiability-aided language modeling (SatLM) approach for improving the reasoning capabilities of large language models<cite>ye2023satlm-ours</cite>",
-    "authors": "",
-    "link": "https://github.com/xiye17/sat-lm"
-  },
-
-
-  {
-    "name": "FI-ODE: Certified and Robust Forward Invariance in Neural ODEs",
-    "blurb": "We study how to certifiably enforce forward invariance properties in neural ODEs. Forward invariance implies that the hidden states of the ODE will stay in a good region, and a robust version would hold even under adversarial perturbations to the input <cite>huang2022fi-ours</cite>",
-    "authors": "Yujia Huang, Ivan Dario Jimenez Rodriguez, Huan Zhang, Yuanyuan Shi, Yisong Yue",
-    "link": "https://github.com/yjhuangcd/FI-ODE"
-  },
-
-  {
-    "name": "Policy Optimization with Linear Temporal Logic Constraints",
-    "blurb": "A method for undiscounted policy optimization under LTL constraints with a generative model in the presence of unknown dynamics <cite>voloshin2022policy-ours</cite>",
-    "authors": "Cameron Voloshin, Hoang Minh Le, Swarat Chaudhuri, Yisong Yue",
-    "link": "https://openreview.net/attachment?id=yZcPRIZEwOG&name=supplementary_material"
-  },
-
-  {
-    "name": "Versatile Offline Imitation from Observations and Examples via Regularized State-Occupancy Matching",
-    "blurb": "We propose State Matching Offline DIstribution Correction Estimation (SMODICE), a novel and versatile regression-based offline imitation learning (IL) algorithm derived via state-occupancy matching. <cite>ma2022versatile-ours</cite>",
-    "authors": "Yecheng Jason Ma, Andrew Shen, Dinesh Jayaraman, Osbert Bastani",
-    "link": "https://github.com/JasonMa2016/SMODICE#smodice-versatile-offline-imitation-learning-via-state-occupancy-matching"
-  },
-  {
-    "name": "Eventual Discounting Temporal Logic Counterfactual Experience Replay",
-    "blurb": " This paper makes two contributions. First, we develop a new value-function based proxy, using a technique we call eventual discounting, under which one can find policies that satisfy the LTL specification with highest achievable probability. Second, we develop a new experience replay method for generating off-policy data from on-policy rollouts via counterfactual reasoning on different ways of satisfying the LTL specification. <cite>voloshin2023eventual-ours</cite>",
-    "authors": "Cameron Voloshin, Abhinav Verma, Yisong Yue",
-    "link": "https://github.com/clvoloshin/RL-LTL"
-  },
-
-  {
-    "name": "DiffDock: Diffusion Steps, Twists, and Turns for Molecular Docking ",
-    "blurb": "Predicting the binding structure of a small molecule ligand to a protein---a task known as molecular docking---is critical to drug design. Recent deep learning methods that treat docking as a regression problem have decreased runtime compared to traditional search-based methods but have yet to offer substantial improvements in accuracy. We instead frame molecular docking as a generative modeling problem and develop DiffDock, a diffusion generative model over the non-Euclidean manifold of ligand poses. <cite>corso2022diffdock-ours</cite>",
-    "authors": "Gabriele Corso, Hannes Stärk, Bowen Jing, Regina Barzilay, Tommi S. Jaakkola",
-    "link": "https://github.com/gcorso/DiffDock/"
-  },
-
-  {
-    "name": "Top-Down Synthesis for Library Learning",
-    "blurb": "This project introduces corpus-guided top-down synthesis as a mechanism for synthesizing library functions that capture common functionality from a corpus of programs in a domain specific language (DSL). <cite>stitch-ours</cite>",
-    "authors": "Matthew Bowers, Theo X. Olausson, Lionel Wong, Gabriel Grand, Joshua B. Tenenbaum, Kevin Ellis, Armando Solar-Lezama",
-    "link": "https://github.com/mlb2251/stitch"
-  },
-
-  {
-    "name": "Geoclidean: Few-Shot Generalization in Euclidean Geometry ",
-    "blurb": "We introduce Geoclidean, a domain-specific language for Euclidean geometry, and use it to generate two datasets of geometric concept learning tasks for benchmarking generalization judgements of humans and machines. <cite>hsu2022geoclidean-ours</cite>",
-    "authors": "Joy Hsu, Jiajun Wu, Noah Goodman",
-    "link": "https://github.com/joyhsu0504/geoclidean_framework#geoclidean-few-shot-generalization-in-euclidean-geometry"
-  },
-
-  {
-    "name": "Peano: learning formal mathematical reasoning",
-    "blurb": " we introduce Peano, a theorem-proving environment where the set of valid actions at any point is finite. We use Peano to formalize introductory algebra problems and axioms, obtaining well-defined search problems. <cite>poesia2023peano-ours</cite>",
-    "authors": " Gabriel Poesia and Noah D. Goodman",
-    "link": "https://github.com/gpoesia/peano#peano---learning-formal-mathematical-reasoning"
-  },
-
   {
     "name": "Metric Program Synthesis",
     "blurb": "We present a new domain-agnostic synthesis technique for generating programs from input-output examples. Our method, called metric program synthesis, relaxes the well-known observational equivalence idea (used widely in bottom-up enumerative synthesis) into a weaker notion of observational similarity, with the goal of reducing the search space that the synthesizer needs to explore. <cite>FeserDS22metric-ours</cite>",
@@ -158,7 +57,7 @@
 
   {
     "name": "DiffTune: Optimizing CPU Simulator Parameters with Learned Differentiable Surrogates",
-    "blurb":"CPU simulators are useful tools for modeling CPU execution behavior. However, they suffer from inaccuracies due to the cost and complexity of setting their fine-grained parameters, such as the latencies of individual instructions. This complexity arises from the expertise required to design benchmarks and measurement frameworks that can precisely measure the values of parameters at such fine granularity. <cite>renda2020difftune-ours</cite>",
+    "blurb":"CPU simulators are useful tools for modeling CPU execution behavior. However, they suffer from inaccuracies due to the cost and complexity of setting their fine-grained parameters, such as the latencies of individual instructions. This complexity arises from the expertise required to design benchmarks and measurement frameworks that can precisely measure the values of parameters at such fine granularity. <cite>renda2020difftune</cite>",
     "authors": "Renda, Alex, Yishen Chen, Charith Mendis, and Michael Carbin",
     "link": "https://github.com/ithemal/DiffTune "
   },
@@ -280,18 +179,5 @@
     "blurb":"We introducing a large-scale, multi-agent trajectory dataset from real-world behavioral neuroscience experiments that covers a range of behavior analysis tasks. Our dataset consists of trajectory data from common model organisms, with 9.6 million frames of mouse data and 4.4 million frames of fly data, in a variety of experimental settings, such as different strains, lengths of interaction, and optogenetic stimulation. <cite>sun2022mabe22-ours</cite>",
     "authors": "Jennifer J. Sun, Andrew Ulmer, Dipam Chakraborty, Brian Geuther, Edward Hayes, Heng Jia, Vivek Kumar, Zachary Partridge, Alice Robie, Catherine E. Schretter, Chao Sun, Keith Sheppard, Param Uttarwar, Pietro Perona, Yisong Yue, Kristin Branson, Ann Kennedy",
     "link": "https://data.caltech.edu/records/8kdn3-95j37"
-  },
-
-  {
-    "name": "Leveraging Language to Learn Program Abstractions and Search Heuristics",
-    "blurb": "We introduce LAPS (Language for Abstraction and Program Search), a technique for using natural language annotations to guide joint learning of libraries and neurally-guided search models for synthesis. <cite>wong2021leveraging-ours</cite>",
-    "authors": "Catherine Wong, Kevin Ellis, Joshua B. Tenenbaum, Jacob Andreas",
-    "link": "https://github.com/CatherineWong/laps_dreamcoder"
-  },
-  {
-    "name": "Programming with neural surrogates of programs",
-    "blurb": " Surrogates, models that mimic the behavior of programs, form the basis of a variety of development workflows. We study three surrogate-based design patterns, evaluating each in case studies on a large-scale CPU simulator. <cite>renda2021programming-ours</cite>",
-    "authors": "Alex Renda, Yi Ding, Michael Carbin",
-    "link": "https://github.com/psg-mit/programming-with-neural-surrogates-of-programs"
   }
 ]

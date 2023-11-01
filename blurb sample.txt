@@ -1,6 +1,0 @@
-  {
-    "name": "",
-    "blurb": "",
-    "authors": "",
-    "link": ""
-  }

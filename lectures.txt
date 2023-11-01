@@ -8,8 +8,8 @@ Education, education.html, Education;
 Research Papers, papersla.html, Research Papers;
 
 Reading Group, reading-group.html, Reading Group;
-AI for Code and Science Workshop 2023, aiscience.html, AI for Code and Science Workshop 2023;
-Neurosymbolic programming for science lectures, scienceyoutube.html, Neurosymbolic programming for science lectures;
+AI for Code and Science, aiscience.html, AI for Code and Science;
+
 
 Research:;
 Neurosymbolic Learning, methods.html, Machine learning meets program synthesis; 
@@ -17,3 +17,5 @@ Chemistry Application, chem.html, Organic Chemistry;
 Biology Application, bio.html, RNA Splicing;
 Cognitive Science Application, cognitive.html, Cognitive and Behavioral Science;
 Systems Application, systems.html , Modeling Computer Systems;
+
+
