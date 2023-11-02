@@ -1,0 +1,200 @@
+<html>
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Summer school on Neurosymbolic Programming 2022</title>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="/scripts/library.js"></script>
+<script type="text/javascript" src="overrides.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onresize="resizing()">
+
+
+<div class="header">
+<h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
+<h2 style="color: 'black';">Funded through the NSF Expeditions in Computing Program</h2>
+<div class="logos">
+<img title='mit' src='images/mit.png' height='100%' />
+<img title='ut' src='images/ut.png' height='100%'/>
+<img title='caltech' src='images/caltech.png' height='100%'/>
+<img title='rice' src='images/rice.png' height='100%'/>
+<img title='penn' src='images/penn.png' height='100%'/>
+<img title='stanford' src='images/stanford.png' height='100%'/>
+</div>
+<div id='navicon.div' class='navicon'>
+<img id = 'navicon' src="images/burger.rest.png"
+onmouseenter="iconEnter(this, 'burger')"
+onmouseleave="iconLeave(this, 'burger')"
+onclick = 'toggleNav()'
+title="Navigation" width="34pt"></img>
+</div>
+</div>
+
+
+<div id="navigator" class="sidenav">
+<a href="#about">Lecture 1</a>
+<a href="#services">Lecture 2</a>
+<a href="#clients">Lecture 3</a>
+<a href="#contact">Lecture 4</a>
+</div>
+<script type="text/javascript">
+loadNavBar();
+</script>
+
+
+<div class="content"></div>
+
+<h2>Type-Directed Synthesis and Program Synthesis</h2>
+<p>Type-directed synthesis of visualizations from natural language queries <cite>chen2022type-ours</cite></p>
+<p>Program Synthesis for Robot Learning from Demonstrations <cite>patton2024program-ours</cite></p>
+<p>ImageEye: Batch Image Processing Using Program Synthesis <cite>imageeye-ours</cite></p>
+<p>Seq2seq Type Inference using Static Analysis <cite>wei2022typet5-ours</cite></p>
+
+
+<h2>Code Transformation and Synthesis</h2>
+<p>Automated Transpilation of Imperative to Functional Code using Neural-Guided Program Synthesis <cite>mariano-ours</cite></p>
+<p>Semantic Code Refactoring for Abstract Data Types <cite>pailoor2024semantic-ours</cite></p>
+
+<h2>Surveys</h2>
+<p>Neurosymbolic Programming<cite>ChaudhuriEPSSY21-ours</cite></p>
+<p>Neurosymbolic Programming for Science <cite>sun2022neurosymbolic-ours</cite></p>
+
+<h2>Neurosymbolic Reasoning and Learning</h2>
+<p>LEMMA: Bootstrapping High-Level Mathematical Reasoning with Learned Symbolic Abstractions <cite>li2022lemma-ours</cite></p>
+<p>Neurosymbolic transformers for multi-agent communication <cite>inala2020neurosymbolic-ours</cite></p>
+<p>Contrastive Reinforcement Learning of Symbolic Reasoning Domains <cite>poesia2021contrastive-ours</cite></p>
+<p>Left to the Reader: Abstracting Solutions in Mathematical Reasoning <cite>poesia2022left-ours</cite></p>
+<p>Neurosymbolic reinforcement learning with formally verified exploration <cite>anderson2021neurosymbolic-ours</cite></p>
+
+<h2>Neurosymbolic Reinforcement Learning</h2>
+<p>How Far I'll Go: Offline Goal-Conditioned Reinforcement Learning via f-Advantage Regression <cite>ma2022far-ours</cite></p>
+<p>Versatile offline imitation from observations and examples via regularized state-occupancy matching <cite>ma2022versatile-ours</cite></p>
+<p>Policy optimization with linear temporal logic constraints <cite>voloshin2022policy-ours</cite></p>
+<p>Eventual Discounting Temporal Logic Counterfactual Experience Replay <cite>voloshin2023eventual-ours</cite></p>
+<p>Program synthesis guided reinforcement learning for partially observed environments <cite>yang2021program-ours</cite></p>
+<p>Guiding Safe Exploration with Weakest Preconditions <cite>anderson2023guiding-ours</cite></p>
+<p>Computably Continuous Reinforcement-Learning Objectives Are PAC-Learnable <cite>yang2023computably-ours</cite></p>
+
+
+<h2>Neurosymbolic Safety and Verification</h2>
+<p>Safe Neurosymbolic Learning with Differentiable Symbolic Execution <cite>safe-ours</cite></p>
+
+<h2>Interpretable Machine Learning</h2>
+<p>Learning Differentiable Programs with Admissible Neural Heuristics <cite>near-ours</cite></p>
+<p>Unsupervised Learning of Neurosymbolic Encoders <cite>zhan2021unsupervised-ours</cite></p>
+<p>Counterfactual Explanations for Natural Language Interfaces <cite>tolkachev2022counterfactual-ours</cite></p>
+<p>Neurosymbolic Programming for Science <cite>sun2022neurosymbolic-ours</cite></p>
+<p>LILO: Learning Interpretable Libraries by Compressing and Documenting Code <cite>grand2023lilo-ours</cite></p>
+
+
+<h2>Datasets</h2>
+<p>The multi-agent behavior dataset: Mouse dyadic social interactions <cite>sun2021multi-ours</cite></p>
+<p>The MABe22 Benchmarks for Representation Learning of Multi-Agent Behavior <cite>sun2022mabe22-ours</cite></p>
+
+<h2>Vision</h2>
+<p>BKinD-3D: Self-Supervised 3D Keypoint Discovery from Multi-View Videos <cite>sun2022bkind-ours</cite></p>
+<p>Automatic Synthesis of Diverse Weak Supervision Sources for Behavior Analysis <cite>tseng2022automatic-ours</cite></p>
+<p>Self-Supervised Keypoint Discovery in Behavioral Videos <cite>sun2022self-ours</cite></p>
+<p>Interpreting Expert Annotation Differences in Animal Behavior <cite>annotation-ours</cite></p>
+<p>Few-Shot Image Classification: Just Use a Library of Pre-Trained Feature Extractors and a Simple Classifier <cite>Chowdhury_2021_ICCV-ours</cite></p>
+<p>Leveraging language to learn program abstractions and search heuristics <cite>wong2021leveraging-ours</cite></p>
+<p>Task programming: Learning data efficient behavior representations <cite>sun2021task-ours</cite></p>
+<p>Federated Learning Over Images: Vertical Decompositions and Pre-Trained Backbones Are Difficult to Beat <cite>hu2023federated-ours</cite></p>
+
+<h2>Natural Language Processing</h2>
+<p>Parsel: A Unified Natural Language Framework for Algorithmic Reasoning <cite>zelikman2022parsel-ours</cite></p>
+<p>Certified Reasoning with Language Models <cite>poesia2023certified-ours</cite></p>
+<p>From Word Models to World Models: Translating from Natural Language to the Probabilistic Language of Thought <cite>wong2023word-ours</cite></p>
+
+<h2>Program Induction</h2>
+<p>Combining Functional and Automata Synthesis to Discover Causal Reactive Programs <cite>Ria21aiplans-ours</cite></p>
+<p>Top-Down Synthesis for Library Learning <cite>stitch-ours</cite></p>
+<p>Neural Program Generation Modulo Static Analysis <cite>neurostatistic-ours</cite></p>
+
+<h2>Library Learning</h2>
+<p>LILO: Learning Interpretable Libraries by Compressing and Documenting Code <cite>grand2023lilo-ours</cite></p>
+<p>DreamCoder: bootstrapping inductive program synthesis with wake-sleep library learning <cite>EllisWNSMHCST21-ours</cite></p>
+
+<h2>Mathematical Reasoning</h2>
+<p>Pragmatic Code Autocomplete <cite>poesia2021pragmatic-ours</cite></p>
+<p>Geoclidean: Few-Shot Generalization in Euclidean Geometry <cite>hsu2022geoclidean-ours</cite></p>
+<p>Why think step by step? Reasoning emerges from the locality of experience <cite>prystawski2023think-ours</cite></p>
+
+<h2>Scientific discovery</h2>
+<p>Synthesizing theories of human language with Bayesian program induction <cite>Ellis22Linguistics-ours</cite></p>
+<p>Neurosymbolic Programming for Science <cite>sun2022neurosymbolic-ours</cite></p>
+
+<h2>Chemistry</h2>
+<p>Torsional diffusion for molecular conformer generation <cite>jing2022torsional-ours</cite></p>
+<p>Crystal diffusion variational autoencoder for periodic material generation <cite>xie2021crystal-ours</cite></p>
+<p>Diffusion probabilistic modeling of protein backbones in 3D for the motif-scaffolding problem <cite>trippe2022diffusion-ours</cite></p>
+<p>SE (3) diffusion model with application to protein backbone generation <cite>yim2023se-ours</cite></p>
+<p>Equibind: Geometric deep learning for drug binding structure prediction <cite>stark2022equibind-ours</cite></p>
+<p>Diffdock: Diffusion steps, twists, and turns for molecular docking <cite>corso2022diffdock-ours</cite></p>
+<p>MolScribe: Robust Molecular Structure Recognition with Image-to-Graph Generation <cite>qian2023molscribe-ours</cite></p>
+
+<h2>Biology</h2>
+<p>Improved modeling of RNA-binding protein motifs in an interpretable neural model of RNA splicing <cite>gupta2023improved-ours</cite></p>
+<p>SPARLING: Learning Latent Representations with Extremely Sparse Activations <cite>gupta2023sparling-ours</cite></p>
+
+<h2>Cognitive Science and Human-Computer Interaction</h2>
+<p>Why think step by step? Reasoning emerges from the locality of experience <cite>prystawski2023think-ours</cite></p>
+<p>Web question answering with neurosymbolic program synthesis <cite>webq-ours</cite></p>
+
+
+<h2>Probability and Statistical Learning</h2>
+<p>A Probabilistic Framework for Modular Continual Learning <cite>valkov2023probabilistic-ours</cite></p>
+<p>Diffusion probabilistic modeling of protein backbones in 3D for the motif-scaffolding problem <cite>trippe2022diffusion-ours</cite></p>
+<p>Crystal diffusion variational autoencoder for periodic material generation <cite>xie2021crystal-ours</cite></p>
+<p>Torsional diffusion for molecular conformer generation <cite>jing2022torsional-ours</cite></p>
+
+<h2>Formal Methods and Theorem Proving</h2>
+<p>A Language-Agent Approach to Formal Theorem-Proving <cite>thakur2023language-ours</cite></p>
+<p>Synthesizing trajectory queries from examples <cite>mell2023synthesizing-ours</cite></p>
+<p>Neurosymbolic Grounding for Compositional World Models <cite>sehgal2023neurosymbolic-ours</cite></p>
+
+<h2>Generative Models and Differentiation</h2>
+<p>Auto-Differentiation of Relational Computations for Very Large Scale Machine Learning <cite>pmlr-v202-tang23a-ours</cite></p>
+<p>PFGM++: Unlocking the Potential of Physics-Inspired Generative Models <cite>pmlr-v202-xu23m-ours</cite></p>
+<p>Restart Sampling for Improving Generative Processes <cite>xu2023restart-ours</cite></p>
+
+<h2>Language and     Code</h2>
+SatLM: Satisfiability-Aided Language Models <cite>ye2023satlm-ours</cite> <br>
+Pragmatic Code Autocomplete <cite>poesia2021pragmatic-ours</cite> <br>
+
+<h2>Sparse Learning and Representation</h2>
+<p>SPARLING: Learning Latent Representations with Extremely Sparse Activations <cite>gupta2023sparling-ours</cite></p>
+
+<script>
+    processDocument();
+
+
+
+
+
+</script>
+
+<div class="footnotes">
+
+    <footnotes>
+
+    </footnotes>
+
+</div>
+</div>
+
+</body>
+
+
+
+</html>

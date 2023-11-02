@@ -1,0 +1,143 @@
+<html>
+
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Summer school on Neurosymbolic Programming 2022</title>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="/scripts/library.js"></script>
+<script type="text/javascript" src="overrides.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onresize="resizing()">
+
+
+<div class="header">
+<h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
+<h2 style="color: 'black';">Funded through the NSF Expeditions in Computing Program</h2>
+<div class="logos">
+<img title='mit' src='images/mit.png' height='100%' />
+<img title='ut' src='images/ut.png' height='100%'/>
+<img title='caltech' src='images/caltech.png' height='100%'/>
+<img title='rice' src='images/rice.png' height='100%'/>
+<img title='penn' src='images/penn.png' height='100%'/>
+<img title='stanford' src='images/stanford.png' height='100%'/>
+</div>
+<div id='navicon.div' class='navicon'>
+<img id = 'navicon' src="images/burger.rest.png"
+onmouseenter="iconEnter(this, 'burger')"
+onmouseleave="iconLeave(this, 'burger')"
+onclick = 'toggleNav()'
+title="Navigation" width="34pt"></img>
+</div>
+</div>
+
+
+<div id="navigator" class="sidenav">
+<a href="#about">Lecture 1</a>
+<a href="#services">Lecture 2</a>
+<a href="#clients">Lecture 3</a>
+<a href="#contact">Lecture 4</a>
+</div>
+<script type="text/javascript">
+loadNavBar();
+</script>
+
+
+<div class="content"></div>
+
+<h2>Program Synthesis</h2>
+- Synthesizing Trajectory Queries from Examples <cite>mell2023synthesizing-ours</cite> <br>
+- Automated Transpilation from Imperative to Functional Code <cite>mariano2022automated-ours</cite> <br>
+- Synthesizing Visualizations from Natural Language Queries <cite>chen2022type-ours</cite> <br>
+- ImageEye: Batch Image Processing via Program Synthesis <cite>imageeye-ours</cite> <br>
+- Web Question Answering with Neurosymbolic Program Synthesis <cite>webq-ours</cite> <br>
+- Reinforcement Learning in Partially Observed Environments <cite>yang2021program-ours</cite> <br>
+<h2>Reinforcement Learning</h2>  
+- Offline Goal-Conditioned Learning via $f$-Advantage Regression <cite>ma2022far-ours</cite> <br>
+- Imitation from Observations with Regularized State-Occupancy Matching <cite>ma2022versatile-ours</cite> <br>
+- Formally Verified Exploration in Neurosymbolic RL <cite>anderson2021neurosymbolic-ours</cite> <br>
+- PAC-Learnability of Computably Continuous RL Objectives <cite>yang2023computably-ours</cite> <br>
+- Guiding Exploration with Weakest Preconditions <cite>anderson2023guiding-ours</cite> <br>
+<h2>Weak Supervision & Self-Supervision</h2>
+- Synthesis of Diverse Weak Supervision Sources <cite>tseng2022automatic-ours</cite> <br>  
+- Self-Supervised Discovery of Behavioral Keypoints <cite>sun2022self-ours</cite> <br>
+- Task Programming for Data-Efficient Behavior Representations <cite>sun2021task-ours</cite> <br> 
+- BKinD-3D: 3D Keypoint Discovery from Multi-View Videos <cite>sun2022bkind-ours</cite> <br>
+<h2>Behavior & Multi-Agent Analysis</h2>
+- Multi-Agent Behavior Dataset and Benchmarks <cite>sun2021multi-ours</cite> <cite>sun2022mabe22-ours</cite> <br>
+- Interpreting Annotation Differences in Animal Behavior <cite>annotation-ours</cite> <br>
+<h2>Formal Methods & Logic</h2>  
+- Learning Formal Mathematical Reasoning <cite>poesia2023peano-ours</cite> <br>
+- Formal Theorem-Proving with Language Agents <cite>thakur2023language-ours</cite> <br>
+- Policy Optimization with Temporal Logic Constraints <cite>voloshin2022policy-ours</cite> <br>  
+- Eventual Discounting in Temporal Logic <cite>voloshin2023eventual-ours</cite> <br>
+<h2>Neural Networks & Learning Models</h2>
+- Neural ODEs: Certified Forward Invariance <cite>huang2022fi-ours</cite> <br>
+- SPARLING: Sparse Activation Learning <cite>gupta2023sparling-ours</cite> <br>
+- Unsupervised Learning of Neurosymbolic Encoders <cite>zhan2021unsupervised-ours</cite> <br>
+- Neurosymbolic Programming for Scientific Discovery <cite>sun2022neurosymbolic-ours</cite> <br>
+<h2>Counterfactuals & Explanations</h2>
+- Counterfactual Explanations for Natural Language Interfaces <cite>tolkachev2022counterfactual-ours</cite> <br>
+<h2>Geometry & Reasoning</h2>
+- Few-Shot Generalization in Euclidean Geometry <cite>hsu2022geoclidean-ours</cite> <br>
+- Step-by-Step Reasoning and Locality of Experience <cite>prystawski2023think-ours</cite> <br>
+<h2>Interpretability in Machine Learning</h2>
+- Interpretable Neural Modeling of RNA Splicing <cite>gupta2023improved-ours</cite> <br>
+- Learning Interpretable Libraries by Compressing Code <cite>grand2023lilo-ours</cite> <br>
+<h2>Neurosymbolic Methods</h2>
+- Neurosymbolic Grounding for Compositional World Models <cite>sehgal2023neurosymbolic-ours</cite> <br>
+- Semantic Regular Expression Synthesis <cite>dataext-ours</cite> <br>
+- Neurosymbolic Transformers for Multi-Agent Communication <cite>inala2020neurosymbolic-ours</cite> <br>
+<h2>Generative & Diffusion Models</h2>
+- Diffdock: Molecular Docking with Diffusion Models <cite>corso2022diffdock-ours</cite> <br>
+- Torsional Diffusion for Molecular Conformer Generation <cite>jing2022torsional-ours</cite> <br>
+- SE (3) Diffusion for Protein Backbone Generation <cite>yim2023se-ours</cite> <br>
+<h2>Language & Code</h2>
+- SatLM: Satisfiability-Aided Language Models <cite>ye2023satlm-ours</cite> <br>
+- Pragmatic Code Autocomplete <cite>poesia2021pragmatic-ours</cite> <br>
+- Neurosymbolic Programming Survey <cite>ChaudhuriEPSSY21-ours</cite> <br>
+<h2>Scientific & Algorithmic Reasoning</h2>
+- Parsel: A Framework for Algorithmic Reasoning <cite>zelikman2022parsel-ours</cite> <br>
+- From Word Models to World Models: Probabilistic Language of Thought <cite>wong2023word-ours</cite> <br>
+<h2>Image & Vision Processing</h2>
+- ImageEye: Program Synthesis for Batch Image Processing <cite>imageeye-ours</cite> <br>
+- Self-Supervised 3D Keypoint Discovery <cite>sun2022bkind-ours</cite> <br>
+<h2>Static Analysis & Verification</h2>
+- Type Inference with Seq2seq Static Analysis <cite>wei2022typet5-ours</cite> <br>
+- Safe Learning with Differentiable Symbolic Execution <cite>safe-ours</cite> <br>
+<h2>Robustness & Safety in AI</h2>
+- Certified Reasoning with Language Models <cite>poesia2023certified-ours</cite> <br>
+- Guiding Safe Exploration in Reinforcement Learning <cite>anderson2023guiding-ours</cite> <br>
+
+<script>
+    processDocument();
+
+
+
+
+
+</script>
+
+<div class="footnotes">
+
+    <footnotes>
+
+    </footnotes>
+
+</div>
+</div>
+
+</body>
+
+
+
+</html>

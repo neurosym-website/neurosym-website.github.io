@@ -6,6 +6,8 @@ Software, software.html, Software;
 Summer School, summerschool.html, Summer School 2022;
 Education, education.html, Education;
 Research Papers, papersla.html, Research Papers;
+Categories, categoriesv3.html, Categories;
+
 
 Reading Group, reading-group.html, Reading Group;
 AI for Code and Science Workshop 2023, aiscience.html, AI for Code and Science Workshop 2023;
