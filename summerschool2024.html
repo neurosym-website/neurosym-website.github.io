@@ -1,4 +1,7 @@
-﻿<html>
+﻿Here's the updated HTML formatted similarly to the given example:
+
+```html
+<html>
 
 <head>
 <meta charset="utf-8"/>
@@ -6,9 +9,7 @@
 
 <title>Summer School on Neurosymbolic Programming 2024</title>
 
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
 </script>
@@ -18,7 +19,6 @@
 </head>
 
 <body onresize="resizing()">
-
 
 <div class="header">
 <h1 style="color: rgb(165, 42, 42);">Understanding the World Through Code</h1>
@@ -32,14 +32,12 @@
 <img title='stanford' src='images/stanford.png' height='100%'/>
 </div>
 <div id='navicon.div' class='navicon'>
-<img id = 'navicon' src="images/burger.rest.png"
+<img id='navicon' src="images/burger.rest.png"
 onmouseenter="iconEnter(this, 'burger')"
 onmouseleave="iconLeave(this, 'burger')"
-onclick = 'toggleNav()'
-title="Navigation" width="34pt"></img>
+onclick='toggleNav()' title="Navigation" width="34pt"></img>
 </div>
 </div>
-
 
 <div id="navigator" class="sidenav">
 <a href="#about">Lecture 1</a>
@@ -51,7 +49,6 @@ title="Navigation" width="34pt"></img>
 loadNavBar();
 </script>
 
-
 <div class="content">
 
     <h1>Summer school on Neurosymbolic Programming June 10-12 2024</h1>
@@ -59,20 +56,19 @@ loadNavBar();
 
     <p style="text-align:center;">
     </p>
-    
 
     <p>
         The second edition of the Summer School in Neurosymbolic Programming is an event that will explore the fields of Program Synthesis and Machine Learning. This field focuses on developing models that integrate programmatic structures in machine learning models. The summer school is designed to assemble a diverse group of students and researchers interested in the latest advancements, practical applications, and research challenges within this domain.
     </p>
-    
+
     <p>
-        The summer school is scheduled for June 10-12 in Salem, Massachusetts, USA, the event will feature a series of lectures and tutorials led by leaders in the field. Attendance is complimentary for all selected participants. Complemetary accommodation is limited and will be available to qualified graduate students on a first-come, first-served basis.
+        The summer school is scheduled for June 10-12 in Salem, Massachusetts, USA. The event will feature a series of lectures and tutorials led by leaders in the field. Attendance is complimentary for all selected participants. Complimentary accommodation is limited and will be available to qualified graduate students on a first-come, first-served basis.
     </p>
-    
+
     <p>
         For those interested in participating, please complete the application form available at <a href="https://forms.gle/PBynteGevUwJPm6a8">https://forms.gle/PBynteGevUwJPm6a8</a> by the deadline of May 6, 2024.
     </p>
-    
+
     <p>
         We are pleased to announce the following confirmed speakers:
     
@@ -87,10 +83,8 @@ loadNavBar();
         <li>Professor Swarat Chaudhuri, University of Texas at Austin</li>
         <li>Professor Armando Solar-Lezama, Massachusetts Institute of Technology (MIT)</li>
         <li>Dr. Tom Silver, Massachusetts Institute of Technology (MIT)</li>
-
     </ul>
-
-
+    </p>
 
     <script>
         function showInfo(talk) {
@@ -155,213 +149,171 @@ loadNavBar();
         }
     </script>
 
+<div class="summerschedule">
 
+    <table>
+        <tbody>
+            <tr>
+                <th id="mondayTag" style="background-color:#dddddd;"><a href="javascript:mon()">Monday June 10</a></th>
+                <th id="tuesdayTag"><a href="javascript:tues()">Tuesday June 11</a></th>
+                <th id="wednesdayTag"><a href="javascript:wed()">Wednesday June 12</a></th>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="summer">
+                        <div id="monSchedule" style="display:block">
 
-    <div class="summerschedule">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2">Monday June 10</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Event</th>
+                                    </tr>
+                                    <tr>
+                                        <td>9:30 to 10:30</td>
+                                        <td>Swarat & Armando Tutorial</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10:30 to 11:00</td>
+                                        <td>Coffee Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00 to 12:00</td>
+                                        <td>Swarat & Armando Tutorial</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:00 to 1:00</td>
+                                        <td>Lunch Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1:00 to 2:00</td>
+                                        <td>Mayur Naik Tutorial</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2:00 to 3:00</td>
+                                        <td>Vikash Tutorial</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3:00 to 3:30</td>
+                                        <td>Coffee Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3:30 to 4:30</td>
+                                        <td>Isil Dillig</td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-        <table>
-            <tbody>
-                <tr>
-                    <th id="mondayTag" style="background-color:#dddddd;"><a href="javascript:mon()">Monday June 10 2024</a></th>
-                    <th id="tuesdayTag"><a href="javascript:tues()">Tuesday June 11 2024</a></th>
-                    <th id="wednesdayTag"><a href="javascript:wed()">Wednesday June 12 2024</a></th>
-                </tr>
-            </tbody>
-        </table>
+                        </div>
+                        <div id="tuesSchedule" style="display:none">
 
-        <div id="monSchedule" style="display:block;">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>9:30</td>
-                        <td>Swarat & Armando Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>10:00</td>
-                        <td>Swarat & Armando Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>10:30</td>
-                        <td>Coffee Break</td>
-                    </tr>
-                    <tr>
-                        <td>11:00</td>
-                        <td>Swarat & Armando Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>11:30</td>
-                        <td>Swarat & Armando Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>12:00</td>
-                        <td>Lunch Break</td>
-                    </tr>
-                    <tr>
-                        <td>1:00</td>
-                        <td>Mayur Naik Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>1:30</td>
-                        <td>Mayur Naik Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>2:00</td>
-                        <td>Vikash Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>2:30</td>
-                        <td>Vikash Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>3:00</td>
-                        <td>Coffee Break</td>
-                    </tr>
-                    <tr>
-                        <td>3:30</td>
-                        <td>Isil Dillig</td>
-                    </tr>
-                    <tr>
-                        <td>4:00</td>
-                        <td>Isil Dillig</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2">Tuesday June 11</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Event</th>
+                                    </tr>
+                                    <tr>
+                                        <td>9:30 to 10:30</td>
+                                        <td>Armando Solar</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10:30 to 11:00</td>
+                                        <td>Coffee Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00 to 12:00</td>
+                                        <td>Sean Welleck</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:00 to 1:00</td>
+                                        <td>Lunch Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1:00 to 2:00</td>
+                                        <td>Mayur Naik Tutorial</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2:00 to 3:00</td>
+                                        <td>Vikash Tutorial</td>
+                                    </tr>
+                                   
 
-        <div id="tuesSchedule" style="display:none;">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>9:30</td>
-                        <td>Armando Solar</td>
-                    </tr>
-                    <tr>
-                        <td>10:00</td>
-                        <td>Armando Solar</td>
-                    </tr>
-                    <tr>
-                        <td>10:30</td>
-                        <td>Coffee Break</td>
-                    </tr>
-                    <tr>
-                        <td>11:00</td>
-                        <td>Sean Welleck</td>
-                    </tr>
-                    <tr>
-                        <td>11:30</td>
-                        <td>Sean Welleck</td>
-                    </tr>
-                    <tr>
-                        <td>12:00</td>
-                        <td>Lunch Break</td>
-                    </tr>
-                    <tr>
-                        <td>1:00</td>
-                        <td>Mayur Naik Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>1:30</td>
-                        <td>Mayur Naik Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>2:00</td>
-                        <td>Vikash Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>2:30</td>
-                        <td>Vikash Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>3:00</td>
-                        <td>Coffee Break</td>
-                    </tr>
-                    <tr>
-                        <td>3:30</td>
-                        <td>Baishakhi Ray</td>
-                    </tr>
-                    <tr>
-                        <td>4:00</td>
-                        <td>Baishakhi Ray</td>
-                    </tr>
-                    <tr>
-                        <td>4:30</td>
-                        <td>Poster Session</td>
-                    </tr>
-                    <tr>
-                        <td>5:00</td>
-                        <td>Poster Session</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<tr>
+                                        <td>3:00 to 3:30</td>
+                                        <td>Coffee Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3:30 to 4:30</td>
+                                        <td>Baishakhi Ray</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4:30 to 6:00</td>
+                                        <td>Poster Session</td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-        <div id="wedSchedule" style="display:none;">
-            <table>
-                <tbody>
-                    <tr>
-                        <td>9:30</td>
-                        <td>Zenna ChiRho Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>10:00</td>
-                        <td>Zenna ChiRho Tutorial</td>
-                    </tr>
-                    <tr>
-                        <td>10:30</td>
-                        <td>Coffee Break</td>
-                    </tr>
-                    <tr>
-                        <td>11:00</td>
-                        <td>Jesse Thaler</td>
-                    </tr>
-                    <tr>
-                        <td>11:30</td>
-                        <td>Jesse Thaler</td>
-                    </tr>
-                    <tr>
-                        <td>12:00</td>
-                        <td>Lunch Break</td>
-                    </tr>
-                    <tr>
-                        <td>1:00</td>
-                        <td>Tom Silver</td>
-                    </tr>
-                    <tr>
-                        <td>1:30</td>
-                        <td>Tom Silver</td>
-                    </tr>
-                    <tr>
-                        <td>2:00</td>
-                        <td>Outing</td>
-                    </tr>
-                    <tr>
-                        <td>2:30</td>
-                        <td>Outing</td>
-                    </tr>
-                    <tr>
-                        <td>3:00</td>
-                        <td>Outing</td>
-                    </tr>
-                    <tr>
-                        <td>3:30</td>
-                        <td>Outing</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                        </div>
+                        <div id="wedSchedule" style="display:none">
 
-    </div>
-    
-    <p>All summer school participants were expected to abide by the <a href="summerschoolConduct.html">Summer School Code of Conduct</a></p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2">Wednesday June 12</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Event</th>
+                                    </tr>
+                                    <tr>
+                                        <td>9:30 to 10:30</td>
+                                        <td>Zenna ChiRho Tutorial</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10:30 to 11:00</td>
+                                        <td>Coffee Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11:00 to 12:00</td>
+                                        <td>Jesse Thaler</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12:00 to 1:00</td>
+                                        <td>Lunch Break</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1:00 to 2:00</td>
+                                        <td>Tom Silver</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2:00 to 6:00</td>
+                                        <td>Outing</td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
+                        </div>
+                    </div>
 
-    <script>
-        processDocument();
-    </script>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-    <div class="footnotes">
+</div>
 
-    </div>
+<script>
+    processDocument();
+</script>
+
+<div class="footnotes"></div>
 </div>
 
 </body>
