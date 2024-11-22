@@ -4,4 +4,4 @@
 #in particular, projects that use the playskript 'canvas' construct might not display 
 #correctly unless you run them through a web server using this command. 
 
-python -m http.server 8080  | python -mwebbrowser http://localhost:8080/index.html
+python3 -m http.server 8080  | python3 -mwebbrowser http://localhost:8080/index.html

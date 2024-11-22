@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
 
-    <script src="./node_modules/rapydscript/lib/rapydscript_web.js"></script>
+    <script src="./rapydscript_web.js"></script>
 
     <script src="ml4kids.js"></script>
     <script src="https://code.playskript.com/js/AST.js"></script>
@@ -451,7 +451,7 @@ displayResult(track, simout)
 `)
 
         var programState = new ProgramState();
-        var session = { state: programState };
+	    var session = { state: programState, setProgram:(p)=>{} };
 
  
 
